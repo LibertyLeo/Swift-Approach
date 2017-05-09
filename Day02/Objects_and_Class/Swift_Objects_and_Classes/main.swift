@@ -164,3 +164,12 @@ print(triangleAndSquare.triangle.sideLength)
 triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
 print(triangleAndSquare.triangle.sideLength)
 print(triangleAndSquare.square.sideLength)
+
+/* 
+ When working with optional values, you can write ? before operations like
+ methods, properties, and subscripting. If the value before the ? is nil,
+ everything after the ? is ignored and the value of the whole expression is nil.
+ */
+let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+let sideLength = optionalSquare?.sideLength
+print(sideLength ?? 0)
