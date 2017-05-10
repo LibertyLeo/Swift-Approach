@@ -12,4 +12,9 @@ Remeber to the initializer of subclass needs three different steps:
 	1. Setting the value of properties that subclass declares.
 	2. Calling the superclass's initializer.
 	3. Changing the value of properties defined by the superclass. Any additional setup work that use methods, getters, or setters can also be done at this point.
-3. Enumeration and struct creation.	**(P.S one struct experiment method hasn't been done!)**
+3. Enumeration and struct creation.	
+**(P.S one struct experiment method hasn't been done!)**
+
+## Day03 May 9, 2017
+Protocol and extension usage for expand original type such as classes, enumerations, strcture...
+**(P.S one enumeration experiment method hasn't bee done!)**
