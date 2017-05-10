@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Swift_Function.xcodeproj">
+      location = "self:Swift_Function_and_Closures.xcodeproj">
    </FileRef>
 </Workspace>
