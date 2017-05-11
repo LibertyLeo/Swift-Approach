@@ -15,7 +15,10 @@ Remeber to the initializer of subclass needs three different steps:
 	3. Changing the value of properties defined by the superclass. Any additional setup work that use methods, getters, or setters can also be done at this point.
 3. **`Enumeration`** and **`struct`** creation.	
 
-## Day03 May 9, 2017
+## Day03 May 10, 2017
 1. **`Protocol`** and **`extension`** usage for expand original type such as classes, enumerations, strcture...
 2. **`Error handling`**. Use `error` and `do-catch` with `try` to handle error that you use `throw` to throw it out.
 3. **`Generics`** is to defined the specified type of the function or type.
+
+## Day04 May 11, 2017
+Some missing parts that was not declared in detail in the front three-days work.
