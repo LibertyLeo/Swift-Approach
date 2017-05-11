@@ -1,5 +1,6 @@
 # Swift_Learning
-A repository created for swift learning recording.
+A repository created for swift learning recording.    
+The comment follwed by `(Exp)` are the experiment declared by the Apple Inc.
 
 ## Day01 May 8, 2017
 Some usage and grammar for `constant`, `variable`, `sets`, `control flow`.     
@@ -18,4 +19,3 @@ Remeber to the initializer of subclass needs three different steps:
 1. **`Protocol`** and **`extension`** usage for expand original type such as classes, enumerations, strcture...
 2. **`Error handling`**. Use `error` and `do-catch` with `try` to handle error that you use `throw` to throw it out.
 3. **`Generics`** is to defined the specified type of the function or type.
-**(P.S Each type has an experiment method hasn't bee done!)**

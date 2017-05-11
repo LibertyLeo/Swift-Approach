@@ -85,10 +85,7 @@ print(sumOf(numbers: 42, 597, 12))
  Write a function that calculates the average of its arguments. (Exp)
  */
 func averageOf(numbers: Int...) -> Int {
-    var sum = 0
-    for number in numbers {
-        sum += number
-    }
+    let sum = numbers.reduce(0, +)
     return (numbers.count == 0 ? 0 : sum / numbers.count)
 }
 

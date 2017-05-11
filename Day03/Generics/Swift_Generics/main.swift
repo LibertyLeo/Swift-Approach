@@ -32,6 +32,7 @@ enum OptionalValue<Wrapped> {
 
 var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
+//possibleInteger = .some(10.2)   //  Uncomment to see the error
 
 /*
  Use where right before the body to specify a list of requirements--for example,
@@ -54,17 +55,17 @@ let commonElements: Bool = anyCommonElements([1, 2, 3], [3])
 print(commonElements)
 
 /*
- Modify the anyCommonElements(_:_:) function to make a function that returns an
- array of the elements that any two sequences have in common.   (Exp)
+ Modify the 'anyCommonElements(_:_:)' function to make a function that returns 
+ an array of the elements that any two sequences have in common.   (Exp)
  */
-func anyCommonElementsInArray<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [Int]
+func anyCommonElementsInArray<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [T.Iterator.Element]
     where T.Iterator.Element: Equatable, T.Iterator.Element == U.Iterator.Element {
-        var commonArray = [Int]()
+        var commonArray: [T.Iterator.Element] = []
+        commonArray = []
         for lhsItem in lhs {
             for rhsItem in rhs {
                 if lhsItem == rhsItem {
-                    //  FIXME: Don't know the type of append data
-                    commonArray.append(3)
+                    commonArray.append(lhsItem)
                 }
             }
         }
@@ -73,3 +74,5 @@ func anyCommonElementsInArray<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [
 
 let commonElementArrays = anyCommonElementsInArray([1, 2, 3], [3])
 print(commonElementArrays)
+
+//  Writing <T: Equatable> is the same as writing <T> ... where T: Equatable.
