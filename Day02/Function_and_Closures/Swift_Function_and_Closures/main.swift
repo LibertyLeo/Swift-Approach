@@ -138,29 +138,44 @@ func lessThanTen(number: Int) -> Bool {
 var numbers = [20, 19, 7, 12]
 print(hasAnyMatches(list: numbers, condition: lessThanTen))
 
+
+
+
+
+//  MARK: Closures
+
 /*
  Functions are actually a special case of closures: blocks of code
  that can be called later.
  You can write a closure without a name by surrounding code with braces ({}).
- Use 'in' to separate the argument and return type from the body
+ Use 'in' to separate the argument and return type from the body.
  */
-let mappedNumber = numbers.map({ (number: Int) -> Int in
-    //    let result = 3 * number
-    //  Rewrite the close to return zero for all odd numbers    (Exp)
-    let result = (number % 2 == 0 ? number : 0)
+let multipliedNumber = numbers.map({ (number: Int) -> Int in
+    let result = 3 * number
     return result
 })
-print(mappedNumber)
+
+print("All number are multiply by 3, then it becomes \(multipliedNumber).")
+
+//  Rewrite the closure to return zero for all odd numbers    (Exp)
+let oddNumbers = numbers.map({ (number: Int) -> Int in
+    let result = number % 2 == 0 ? number : 0
+    return result
+})
+
+print("All even numbers are \(oddNumbers).")
 
 /*
- When a closure's type is already known, such as the callback for a
- delegate, you can omit the type of its parameter, its return type, or both
+ When a closure's type is already known, such as the callback for a delegate, 
+ you can omit the type of its parameter, its return type, or both.
  */
 let mappedNumbers = numbers.map({ number in 3 * number})
 print(mappedNumbers)
 
 /*
- You can refer to parameters by number instead of by name
+ You can refer to parameters by number instead of by name.
+ When a closure is the only argument to a function, you can omit the parenthese
+ entirely.
  */
 let sortedNumbers = numbers.sorted { $0 > $1 }
 print(sortedNumbers)
