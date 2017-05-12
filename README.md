@@ -22,3 +22,6 @@ Remeber to the initializer of subclass needs three different steps:
 
 ## Day04 May 11, 2017
 Some missing parts that was not declared in detail in the front three-days work.
+
+## Day05 May 12, 2017
+Warming up is just finished. The supplementary job of basic parts.

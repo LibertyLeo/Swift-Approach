@@ -9,7 +9,7 @@
 import Foundation
 
 /*
- Constant and variable names can contain almost anycharacter, including
+ Constant and variable names can contain almost any character, including
  Unicode character.
  Constant and variable names cannot contain whitespace characters, mathmatical
  symbols, arrows, private-use(or invalid) Unicode code points, or line- and
@@ -21,12 +21,17 @@ let 🐶🐮 = "dogcow"
 
 
 
+
+
 /*
  Swift does not require you to write a semicolon(';') after each statement in
  your code, although you can do so if you wish. However, semicolons are required 
  if you want to write multiple separate statements on a single line.
  */
-let cat = "🐱"; print(cat)  //  Prints "🐱"
+let cat = "🐱"; print(cat)
+//  Prints "🐱"
+
+
 
 
 
@@ -41,6 +46,8 @@ let cat = "🐱"; print(cat)  //  Prints "🐱"
  */
 let minValue = UInt8.min    //  minValue is equal to 0, and is of type UInt8
 let maxValue = UInt8.max    //  maxValue is equal to 255, and is of type UInt8
+
+
 
 
 
@@ -89,6 +96,8 @@ let justOverOneMillion = 1_000_000.000_000_1
 
 
 
+
+
 /*
  A number that will not fit into a constant or variable of a sized integer type
  is reported as an error when your code is complied.
@@ -104,7 +113,7 @@ let twoThousandAndOne = twoThousand + UInt16(one)
 
 /*
  Conversion between integer and floating-point numeric types must be made
- explicit
+ explicit.
  */
 let three = 3
 let pointOneFourOneFiveNine = 0.14159
@@ -117,12 +126,17 @@ let intergerPi = Int(pi)
 
 
 
+
+
 /*
  Type aliases define alternative name for an exiting type.
  You define type aliases with the typealias keyword.
  */
 typealias AudioSample = UInt16
-var maxAmplitudeFound = AudioSample.min    //  maxAmplitude is now 0
+var maxAmplitudeFound = AudioSample.min
+//  maxAmplitude is now 0
+
+
 
 
 
@@ -157,6 +171,8 @@ let ii = 1
 if ii == 1 {
     // this example will compile successfully
 }
+
+
 
 
 
@@ -208,6 +224,8 @@ print("The status message is \(http200Status.description)")
 
 
 
+
+
 /*
  Because the initializer might fail, it returns an optional 'Int', rather than
  an 'Int'.
@@ -226,3 +244,215 @@ var serverResponseCode: Int? = 404
 //  serverResponseCode contains an actual Int value of 404
 serverResponseCode = nil
 //  serverresponseCode now contains no value
+
+/*
+ If you define an optional variable with out providing a default value, the
+ variable is automatically set to 'nil' for you
+ */
+var surverAnswer: String?
+//  surverAnswer is automatically set to nil
+
+
+
+
+
+/*
+ You can use an 'if' statement to find out whether an optional contains a value
+ by comparing the optional against 'nil.
+ If an optioanal has a value, it is considered to be "not equal to" nil
+ */
+if convertedNumber != nil {
+    print("convertedNumber contains some integer value.")
+}
+//  Prints "convertedNumber contains some integer value."
+
+/*
+ Once you're sure that the optional dose contain a value, you can access its
+ underlying value by adding an exclamation mark (!) to the endd of this 
+ optional's name.
+ */
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}
+//  Prints ""convertedNumber has an integer value of 123."
+
+
+
+
+
+/*
+ You use optional binding to find out whether an optioanl contanins a value.
+ Write an optional binding for an 'if' statement as follows.
+ */
+if let actualNumber = Int(possibleNumber) {
+    print("\"\(possibleNumber)\" has an integer value of \(actualNumber)")
+} else {
+    print("\"\(possibleNumber)\" couble not be converted to an integer")
+}
+//  Prints ""123" has an integer value of 123"
+/*
+ If you want to manipulate the value of 'actualNumber' within the first branch 
+ of the 'if' statement,You could write 'if var actualNumber' instead.
+ */
+
+/*
+ You can include as many optional bindings and Boolean conditions in a single
+ 'if' statement as you need to, separated by commas.
+ If any of the values in the optional bindings are 'nil' or any Boolean condition
+ evaluates to 'false', the whole 'if' statement's condition is considered to be 
+ 'false.
+ Example as follows are equivalent.
+ */
+if let firstNumber = Int("4"), let secondNumber = Int("42"),
+    firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+//  Prints "4 < 42 < 100"
+
+if let firstNumber = Int ("4") {
+    if let secondNumber = Int("42") {
+        if firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+    }
+}
+//  Prints "4 < 42 < 100"
+
+
+
+
+
+/*
+ You write an implicitly unwrapped optional by placing an exclamation mark
+ (String!) rather than  a question mark (String?) after the type that you
+ want to make optional.
+ The following example shows the difference in behavior between an optioanl
+ string and an implicitly unwrapped optional string when accessing their
+ wrapped value as an explicit.
+ */
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString!  //  requires an exclamation mark
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString  //  no need for an exclamation mark
+/*
+ NOTE:  If an implicitly unwrapped optional is 'nil' and you try to access its
+ wrapped value, you'll trigger a runtime error.
+ */
+
+/*
+ You can still treat an implicitly unwrapped optional like a normal optional,
+ to check if it contains a value.
+ */
+if assumedString != nil {
+    print(assumedString)
+}
+//  Prints "An implicitly unwrapped optional string."
+
+/*
+ You can also use an implicitly unwrapped optional with optional binding, to 
+ check and unwrap its value in a single statement.
+ */
+if let definiteString = assumedString {
+    print(definiteString)
+}
+//  Prints "An implicitly unwrapped optional string."
+
+/*
+ NOTE:  Do not use an implicitly unwrapped optional when there is a possibility
+ of a variable becoming 'nil' at a later point. Always use a normal optional 
+ type if you need to check for a 'nil' value during the lifetime of a variable.
+ */
+
+
+
+
+
+/*
+ A function indicates that it can throw an error by including the 'throws' 
+ keyword in its declaration.
+ */
+func canThrowsAnError() throws {
+    //  this function may or may not throw an error
+}
+
+/*
+ When you call a function that can throw an error, you prepared the 'try' 
+ keyword to the expression.
+ Swift automatically propagates errors out of their current scope until they
+ are handled by a 'catch' clause.
+ */
+do {
+    try canThrowsAnError()
+    // no error was thrown
+} catch {
+    // an error was thrown
+}
+
+/*
+ A 'do' statement creates a new containing scope, which allows errors to be 
+ propagated to one or more catch clasuse.
+ */
+enum SandwichError: Error {
+    case outOfCleanDishes
+    case missingIngredients
+}
+
+func eatASandwich() {
+    print("Mmm, it is a very delicious sandwich!")
+}
+
+func washDishes() {
+    print("Woah, there is no clean dishes for putting sandwich!")
+}
+
+func buyGroceries(_ ingredients: Any) {
+    print("Oops, I have to buy \(ingredients) before I make a sandwich!")
+}
+
+func makeASandwich() throws {
+    //...
+}
+
+do {
+    try makeASandwich()
+    eatASandwich()
+} catch SandwichError.outOfCleanDishes {
+    washDishes()
+} catch SandwichError.missingIngredients(let ingredients) {
+    buyGroceries(ingredients)
+}
+
+
+
+
+
+/*
+ You can trigger an assertion in your code to end code execution and to provide
+ an opportunity to debug the cause of the absent or invalid value.
+ You write an assertion by calling the Swift standard library global
+ 'assert(_:_:file:line:)' function.
+ */
+let age = -3
+//assert(age >= 0, "A person's age cannot be less than zero")
+//  This causes the assertion to trigger, because the age if not >= 0
+
+//  The assertion message can be omitted if desired.
+//assert(age >= 0)
+
+/*
+ NOTE:  Assertions are disabled when your code is compiled with optimizations,
+ such as when an app target's default Release configuration in Xcode.
+ */
+
+/*
+ Use an assertion whenever a condition has the potential to be false, but must
+ definitely be true in order for your code to continue execution.
+ Suitable scenarios for an assertion check include:
+    An integer subscript Index is passes to a custom subscript implementation, 
+ but the subscript index value could be too low or too high.
+    A value is passed to a function, but an invalid value means that the 
+ function cannot fulfill its task.
+    An optional value is currently 'nil', but a 'non-nil' value is essential
+ for scusequent code to execute successfully,
+ */
