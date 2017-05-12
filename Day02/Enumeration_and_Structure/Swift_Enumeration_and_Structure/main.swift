@@ -9,7 +9,7 @@
 import Foundation
 
 //  MARK: Enumeration
-^
+
 /*
  Use enum to create an enumeration. Like classes and all other named types,
  enumertaions can have methods associated with them.

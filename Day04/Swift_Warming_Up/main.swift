@@ -8,6 +8,7 @@
 
 import Foundation
 
+//  MARK: - Simple Value
 /*
  Constant and variable names can contain almost any character, including
  Unicode character.
@@ -102,9 +103,9 @@ let justOverOneMillion = 1_000_000.000_000_1
  A number that will not fit into a constant or variable of a sized integer type
  is reported as an error when your code is complied.
  */
-//let cannotBeNegative: UInt8 = -1
+let cannotBeNegative: UInt8 = -1
 //  UInt 8 can not store negative numbers, and so this will report an error.
-//let tooBig: Int8 = Int8.max + 1
+let tooBig: Int8 = Int8.max + 1
 //  Int8 cannot store a number larger than its maximum value,
 //  and so this will also report an error.
 let twoThousand: UInt16 = 2_000
@@ -140,6 +141,8 @@ var maxAmplitudeFound = AudioSample.min
 
 
 
+//  MARK: Control Flow
+
 /*
  Boolean values are referred to as logical, because they can only ever be true
  or false.Swift provides two Boolean constant values, 'true' adn 'false'.
@@ -162,10 +165,10 @@ if turnipsAreDelicious {
  Swift's type safety prevents non-Boolean values from being substitued for
  'Bool'.
  */
-//let i = 1
-//if i {
+let i = 1
+if i {
     //  this example will not compile, and will report an error
-//}
+}
 
 let ii = 1
 if ii == 1 {
@@ -175,6 +178,8 @@ if ii == 1 {
 
 
 
+
+//  MARK: Tuple
 
 /*
  Tuples group multiple values into a single compound value. The values within
@@ -225,6 +230,8 @@ print("The status message is \(http200Status.description)")
 
 
 
+
+//  MARK: - Optionals
 
 /*
  Because the initializer might fail, it returns an optional 'Int', rather than
@@ -280,6 +287,8 @@ if convertedNumber != nil {
 
 
 
+//  MARK: Optional Binding
+
 /*
  You use optional binding to find out whether an optioanl contanins a value.
  Write an optional binding for an 'if' statement as follows.
@@ -321,6 +330,8 @@ if let firstNumber = Int ("4") {
 
 
 
+
+//  MARK: Implicitly Unwrapped Optionals
 
 /*
  You write an implicitly unwrapped optional by placing an exclamation mark
@@ -368,6 +379,7 @@ if let definiteString = assumedString {
 
 
 
+//  MARK: - Error Handling
 /*
  A function indicates that it can throw an error by including the 'throws' 
  keyword in its declaration.
@@ -427,6 +439,8 @@ do {
 
 
 
+//  MARK: - Assertions
+
 /*
  You can trigger an assertion in your code to end code execution and to provide
  an opportunity to debug the cause of the absent or invalid value.
@@ -434,11 +448,11 @@ do {
  'assert(_:_:file:line:)' function.
  */
 let age = -3
-//assert(age >= 0, "A person's age cannot be less than zero")
+assert(age >= 0, "A person's age cannot be less than zero")
 //  This causes the assertion to trigger, because the age if not >= 0
 
 //  The assertion message can be omitted if desired.
-//assert(age >= 0)
+assert(age >= 0)
 
 /*
  NOTE:  Assertions are disabled when your code is compiled with optimizations,
