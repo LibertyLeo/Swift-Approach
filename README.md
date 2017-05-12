@@ -26,3 +26,4 @@ Some missing parts that was not declared in detail in the front three-days work.
 ## Day05 May 12, 2017
 1. Warming up. The supplementary job of basic parts.
 2. Basic_Operators. Some extension of Swift's operators that compared by C and Objc.
+3. String literals and Characters. Some interesting Unicode knowledge that I have never known.
