@@ -24,4 +24,5 @@ Remeber to the initializer of subclass needs three different steps:
 Some missing parts that was not declared in detail in the front three-days work.
 
 ## Day05 May 12, 2017
-Warming up is just finished. The supplementary job of basic parts.
+1. Warming up. The supplementary job of basic parts.
+2. Basic_Operators. Some extension of Swift's operators that compared by C and Objc.
