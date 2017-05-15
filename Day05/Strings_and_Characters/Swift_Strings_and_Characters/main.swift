@@ -9,7 +9,8 @@
 import Foundation
 
 /*
- NOTE:  Swift's 'String' tyoe is bridge with Foundation's 'NSString' class.
+ NOTE:
+ Swift's 'String' tyoe is bridge with Foundation's 'NSString' class.
  If you import Foundation, you can access those 'NSString' methods on 'String'
  without casting.
  */
@@ -128,8 +129,9 @@ welcome.append(exclamaMark)
 //  welcome now equals "hello there!"
 
 /*
- NOTE:  You can't append a 'String' or 'Character' to an existing 'Character'
- variable, because a 'Character' value must contain a single character only.
+ NOTE: 
+ You can't append a 'String' or 'Character' to an existing 'Character' variable,
+ because a 'Character' value must contain a single character only.
  */
 
 
@@ -147,9 +149,9 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 //  message is "3 times 2.5 is 7.5
 
 /*
- NOTE:  The expressions you write inside parentheses within an interpolated 
- string cannot contain an unescaped backslash (\), a carriage return, or a 
- line feed.
+ NOTE:  
+ The expressions you write inside parentheses within an interpolated string 
+ cannot contain an unescaped backslash (\), a carriage return, or a line feed.
  */
 
 
@@ -165,10 +167,11 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
  */
 
 /*
- NOTE:  A Unicode scalar is any Unicode code point in the range 'U+0000' to 
- 'U+D7FF' inclusive or 'U+E000' to 'U+10FFFF' inclusive. Unicode scalars do not
- include the Unicode surrogate pair code points, which are the code points in 
- the range 'U+D800' to 'U+DFFF' inclusive.
+ NOTE:
+ A Unicode scalar is any Unicode code point in the range 'U+0000' to 'U+D7FF'
+ inclusive or 'U+E000' to 'U+10FFFF' inclusive. Unicode scalars do not include
+ the Unicode surrogate pair code points, which are the code points in the range 
+ 'U+D800' to 'U+DFFF' inclusive.
  */
 
 
@@ -293,7 +296,8 @@ print("")
 //  Prints "G u t e n   T a g ! "
 
 /*
- NOTE:  You can use the 'startIndex' and 'endIndex' properties and the 
+ NOTE: 
+ You can use the 'startIndex' and 'endIndex' properties and the
  '(index(before:)', 'index(after:)', and '(index(_:offsetBy:)' methods on any
  type that conforms to the 'Collection' protocol. This includes 'String', as
  shown here, as well as collection types such as 'Array', 'Dictionary', and 'Set'.
@@ -328,7 +332,8 @@ welcomeInsert.removeSubrange(range)
 // welcome now equals "hello"
 
 /*
- NOTE:  Above methods on any type that conforms the 'RangeReplaceableCollection'
+ NOTE: 
+ Above methods on any type that conforms the 'RangeReplaceableCollection'
  protocol. This includes 'String' as shown here, as well as collection types
  such as 'Array', 'Dictionary', and 'Set'.
  */
@@ -443,9 +448,10 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
 // Prints "6 mansion scenes; 2 cell scenes"
 
 /*
- NOTE:  The 'hasPrefix(_:)' and 'hasSuffix(_:)' methods perform a 
- character-by-character canonical equivalence comparison between the extended
- grapheme clusters in each string.
+ NOTE: 
+ The 'hasPrefix(_:)' and 'hasSuffix(_:)' methods perform a character-by-character
+ canonical equivalence comparison between the extended grapheme clusters in each 
+ string.
  */
 
 

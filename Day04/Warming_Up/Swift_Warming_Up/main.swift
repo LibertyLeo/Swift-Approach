@@ -347,8 +347,9 @@ let forcedString: String = possibleString!  //  requires an exclamation mark
 let assumedString: String! = "An implicitly unwrapped optional string."
 let implicitString: String = assumedString  //  no need for an exclamation mark
 /*
- NOTE:  If an implicitly unwrapped optional is 'nil' and you try to access its
- wrapped value, you'll trigger a runtime error.
+ NOTE:  
+ If an implicitly unwrapped optional is 'nil' and you try to access its wrapped
+ value, you'll trigger a runtime error.
  */
 
 /*
@@ -370,9 +371,10 @@ if let definiteString = assumedString {
 //  Prints "An implicitly unwrapped optional string."
 
 /*
- NOTE:  Do not use an implicitly unwrapped optional when there is a possibility
- of a variable becoming 'nil' at a later point. Always use a normal optional 
- type if you need to check for a 'nil' value during the lifetime of a variable.
+ NOTE:  
+ Do not use an implicitly unwrapped optional when there is a possibility of a 
+ variable becoming 'nil' at a later point. Always use a normal optional type 
+ if you need to check for a 'nil' value during the lifetime of a variable.
  */
 
 
@@ -455,8 +457,9 @@ assert(age >= 0, "A person's age cannot be less than zero")
 assert(age >= 0)
 
 /*
- NOTE:  Assertions are disabled when your code is compiled with optimizations,
- such as when an app target's default Release configuration in Xcode.
+ NOTE:  
+ Assertions are disabled when your code is compiled with optimizations, such as
+ when an app target's default Release configuration in Xcode.
  */
 
 /*

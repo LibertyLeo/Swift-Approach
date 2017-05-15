@@ -46,7 +46,8 @@ if (-9 % 4) == (-9 % (-4)) {
 //  MARK: Compound Assign Operators
 
 /*
- NOTE:  The compound assignment operators do not return a value.
+ NOTE: 
+ The compound assignment operators do not return a value.
  For example, you cannot write let b = a+= 2.
  */
 
@@ -78,9 +79,10 @@ if (4, "dog") == (4, "dog") {
 }
 
 /*
- NOTE:  The Swift standard library includes tuple comparison operators for 
- tuples with fewer than seven elements. To compare tuples with seven or more
- elements, you must implement the comparison operators yourself.
+ NOTE:
+ The Swift standard library includes tuple comparison operators for tuples with 
+ fewer than seven elements. To compare tuples with seven or more elements, you 
+ must implement the comparison operators yourself.
  */
 
 
@@ -151,8 +153,9 @@ if enteredDoorCode && passedRetinaScan || hasDoorKey || knowsOverridePassword {
 }
 
 /*
- NOTE:  The Swift logical operators '&&' and '||' are left-associative, meaning
- that compound expressions with multiple logical operators evaluate the leftmost
+ NOTE:
+ The Swift logical operators '&&' and '||' are left-associative, meaning that
+ compound expressions with multiple logical operators evaluate the leftmost
  subexpression first.
  */
 
