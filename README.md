@@ -27,3 +27,6 @@ Some missing parts that was not declared in detail in the front three-days work.
 1. Warming up. The supplementary job of basic parts.
 2. Basic_Operators. Some extension of Swift's operators that compared by C and Objc.
 3. String literals and Characters. Some interesting Unicode knowledge that I have never known.
+
+## Day06 May 15, 2017
+Unicode scalars usage and representation about String literals.
