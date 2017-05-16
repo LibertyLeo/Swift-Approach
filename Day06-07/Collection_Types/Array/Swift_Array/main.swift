@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  Swift_Arrays
+//  Swift_Array
 //
 //  Created by Leo_Lei on 5/15/17.
 //  Copyright © 2017 LibertyLeo. All rights reserved.
