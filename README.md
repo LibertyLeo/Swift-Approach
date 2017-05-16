@@ -1,8 +1,9 @@
 # Swift_Learning
 A repository created for swift learning recording.    
-The comment follwed by `(Exp)` are the experiment declared by the Apple Inc.
-You can read the official document yourself, by clicking [Swift's official](/The_Swift_Programming_Language_(Swift 3.1).epub).    
-Or you can read the [chinese version](/The_Swift_Programming_Language_中文版3.0.epub) for convenience.
+The comment follwed by `(Exp)` are the experiment declared by the Apple Inc.    
+You can download the [Swift's Official][Official] for reading and get a better understanding as you wish.    
+Alternatively, if you find it's hard to read the original, a [Chinese Version][Chinese] is also provided.
+But we take no responsibility of misunderstanding on the translation.:-)
 
 ## Day01 May 8, 2017
 Some usage and grammar for `constant`, `variable`, `sets`, `control flow`.     
@@ -36,3 +37,6 @@ Some interesting Unicode knowledge that I have never known.
 1. Unicode scalars usage and representation about String literals.
 2. Learn about one of the collection types, **`Array`**.    
 Knows its creation, accessing, modifying and iterating.
+
+[Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master／Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
+[Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master／Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
