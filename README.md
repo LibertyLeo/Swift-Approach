@@ -39,11 +39,9 @@ Some interesting Unicode knowledge that I have never known.
 Knows its creation, accessing, modifying and iterating.
 
 ## Day07 May 16, 2017
-Learn about **`Set`**, and provide the most important parts of declaration about the relationship between Sets.
-
+1. Learn about **`Set`**, and provide the most important parts of declaration about the relationship between Sets.
+2. Learn about **`Dictionary`**.    
+Knows its common usage and convenient method 'updateValue(_:forKey:)' to check out whether or not an update took place.
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
-
-
-
