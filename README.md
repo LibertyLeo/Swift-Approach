@@ -1,9 +1,8 @@
 # Swift_Learning
 A repository created for swift learning recording.    
 The comment follwed by `(Exp)` are the experiment declared by the Apple Inc.
-You can read the official document yourself, by clicking [Swift's official](/The Swift Programming Language (Swift 3.1).epub).    
-Or you can read the [chinese version](/The Swift Programming Language 中文版3.0.epub) for convenience.
-
+You can read the official document yourself, by clicking [Swift's official](/The_Swift_Programming_Language_(Swift 3.1).epub).    
+Or you can read the [chinese version](/The_Swift_Programming_Language_中文版3.0.epub) for convenience.
 
 ## Day01 May 8, 2017
 Some usage and grammar for `constant`, `variable`, `sets`, `control flow`.     
