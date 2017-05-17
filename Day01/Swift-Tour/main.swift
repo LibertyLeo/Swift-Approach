@@ -62,7 +62,7 @@ print(nameGreeting)
 
 //  MARK: Array and Dictionary
 /* 
- Create arrays and dictionaries using brackets('[]').
+ Create arrays and dictionaries using brackets([]).
  ',' is allowed after last element.
  */
 var shoppingList = ["catfish", "water", "tulips", "blue paint"]

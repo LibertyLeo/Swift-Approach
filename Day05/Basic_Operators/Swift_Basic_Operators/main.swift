@@ -98,7 +98,7 @@ if (4, "dog") == (4, "dog") {
  value, or returns a default value 'b' is 'a' is 'nil'.
  The nil-coalescing operator is shorthand for the code(a != nil ? a! : b).
  The nil-coalescing operator provides a more elegant way to encapsulate this
- conditional checking and unwrapping in a concise and readable form.( a ?? b)
+ conditional checking and unwrapping in a concise and readable form.(a ?? b)
  */
 
 

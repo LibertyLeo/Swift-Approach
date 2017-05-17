@@ -44,7 +44,8 @@ Knows its creation, accessing, modifying and iterating.
 Knows its common usage and convenient method 'updateValue(_:forKey:)' to check out whether or not an update took place.
 
 ## Day08 May 17, 2017
-Fulfill of the **`Dictionary`** with removal and iteration parts.
+1. Fulfill of the **`Dictionary`** with removal and iteration parts.
+2. **`Control-Flow`** of displaying about 'for-in', 'while', 'repeat-while' loops, and also 'if' conditional statements.
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub

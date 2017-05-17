@@ -193,10 +193,10 @@ let sparklingHeart = "\u{1F496}"    //  💖, Unicode scalar U+1F496
 /*
  Every instance of Swift's 'Character' type represents a single extended 
  grapheme cluster.
- The letter 'é' can be representd as the single Unicode scalar 'é' ('LATEN SMALL
- LETTER E WITH ACUTE', or 'U+00E9'). However, the same letter can also be
- represented as a pair of scalars--a standard letter 'e' ('LATIN SMALL LETTER E, 
- or U+0065'), followed by the 'COMBINING ACUTE ACCENT' scalar('U+0301').
+ The letter 'é' can be representd as the single Unicode scalar 'é' (LATEN SMALL
+ LETTER E WITH ACUTE, or U+00E9). However, the same letter can also be
+ represented as a pair of scalars--a standard letter 'e' (LATIN SMALL LETTER E,
+ or U+0065), followed by the 'COMBINING ACUTE ACCENT' scalar(U+0301).
  */
 let eAcute: Character = "\u{E9}"                //  é
 let combinedEAcute: Character = "\u{65}\u{301}" //  é followed by '
@@ -369,8 +369,8 @@ if eAcuteQuestion == combinedEAcuteQustion {
 // Prints "These two strings are considered equal"
 
 /*
- Conversely, 'LATIN CAPITAL LETTER A' ('U+0041, or "A"), as used in English, is 
- not quivalent to 'CYRILLIC CAPITAL LETTER A' ('U+0410', or "A"), as used in 
+ Conversely, LATIN CAPITAL LETTER A (U+0041, or "A"), as used in English, is
+ not quivalent to CYRILLIC CAPITAL LETTER A (U+0410, or "A"), as used in
  Russian. THe characters are visually similar, but do not have the same 
  linguistic meaning
  */
@@ -467,9 +467,9 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
     UTF-32 encoding form (accessed with the string's 'unicodeScalars' property)
 
     Each example below shows a different representation of the following string,
-    which is made up of the characters 'D', 'o', 'g', '!!' ('DOUBLE EXCLAMATION
-    MARK', or Unicode scalar 'U+203C'), and the 🐶 character ('DOG FACE', or
-    Unicode scalar 'U+1F436')
+    which is made up of the characters 'D', 'o', 'g', '!!' (DOUBLE EXCLAMATION
+    MARK, or Unicode scalar U+203C), and the 🐶 character (DOG FACE, or
+    Unicode scalar U+1F436)
  */
 let dogString = "Dog‼🐶"
 

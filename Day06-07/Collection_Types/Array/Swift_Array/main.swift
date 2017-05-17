@@ -89,7 +89,7 @@ var threeDoubles = Array(repeating: 0.0, count: 3)
 //  MARK: Creating an Array by Adding Two Arrays Together
 /*
  You can create a new array by adding together two existing arrays with
- compatible types with the addition operator ('+').
+ compatible types with the addition operator (+).
  */
 var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
 // anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]
@@ -139,7 +139,7 @@ if shoppingList.isEmpty {
 
 /*
  You can add a new item to the end of an array by calling the array's
- 'append(_:)' method, or with the additon assignment operator ('+=').
+ 'append(_:)' method, or with the additon assignment operator (+=).
  */
 shoppingList.append("Flour")
 // shoppingList now contains 3 items, and someone is making pancakes.

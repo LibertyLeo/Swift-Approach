@@ -21,7 +21,7 @@ let 你好 = "你好世界"
 let 🐶🐮 = "dogcow"
 
 /*
- Swift does not require you to write a semicolon(';') after each statement in
+ Swift does not require you to write a semicolon (;) after each statement in
  your code, although you can do so if you wish. However, semicolons are required 
  if you want to write multiple separate statements on a single line.
  */
