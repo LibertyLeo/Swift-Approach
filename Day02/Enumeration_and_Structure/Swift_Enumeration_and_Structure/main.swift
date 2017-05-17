@@ -9,7 +9,6 @@
 import Foundation
 
 //  MARK: Enumeration
-
 /*
  Use enum to create an enumeration. Like classes and all other named types,
  enumertaions can have methods associated with them.
@@ -39,8 +38,8 @@ let aceRawValue = ace.rawValue;
 print("The first rank is \(ace), and its raw value is \(aceRawValue).")
 
 /*
- Write a function that compares two 'Rank' values by comparing
- their raw values.  (Exp)
+ Write a function that compares two 'Rank' values by comparing their raw 
+ values.  (Exp)
  */
 enum RankExp: Int {
     case ace = 1
@@ -182,10 +181,7 @@ case let .noresponse(message):
 
 
 
-
-
 //  MARK: Structure
-
 /*
  Use 'struct' to create a structure. Structures support many of the same
  behavior as classes, including methods and initalizers. One of the most
@@ -205,10 +201,9 @@ let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 print("The three of spades describes as \(threeOfSpadesDescription).")
 
-
 /*
- Add a method to Card that creates a full deck of cards, with one card of
- each combination of rank and suit. (Exp)
+ Add a method to Card that creates a full deck of cards, with one card of each 
+ combination of rank and suit. (Exp)
  */
 struct CardExp {
     var rank: Rank
@@ -219,7 +214,6 @@ struct CardExp {
     }
     
     func wholeDeckDescription() -> [String] {
-        // FIXME: This methods is unfinished
         var allSuits = [Suit.spades, Suit.hearts, Suit.diamonds, Suit.clubs]
         var cards = [String]()
         for suitIndex in 0..<4 {

@@ -20,10 +20,6 @@ let π = 3.14159265359
 let 你好 = "你好世界"
 let 🐶🐮 = "dogcow"
 
-
-
-
-
 /*
  Swift does not require you to write a semicolon(';') after each statement in
  your code, although you can do so if you wish. However, semicolons are required 
@@ -32,25 +28,17 @@ let 🐶🐮 = "dogcow"
 let cat = "🐱"; print(cat)
 //  Prints "🐱"
 
-
-
-
-
 /*
  You can access the minimum and maximum values of each integer type with its
  'min' and 'max' properties.
  In most cases, you don't need to pick a specific size of integer to use in your
  code. Swift provides an additional integer type, 'Int', which has the same size
  as the current platform's native word size:
- On a 32-bit platform, 'Int' is the same size as Int32.
- On a 64-bit platform, 'Int' is the same size as Int64.
+    On a 32-bit platform, 'Int' is the same size as Int32.
+    On a 64-bit platform, 'Int' is the same size as Int64.
  */
 let minValue = UInt8.min    //  minValue is equal to 0, and is of type UInt8
 let maxValue = UInt8.max    //  maxValue is equal to 255, and is of type UInt8
-
-
-
-
 
 /*
  Integer literals can be written as:
@@ -65,19 +53,15 @@ let octalInteger = 0o21         //  17 in octal notation
 let hexadecimalInteger = 0x11   //  17 in hexadeciamlInteger notation
 
 /*
- /*
- For decimal numbers with an exponent of 'exp', the base number is multiplied 
- by 10^exp.
-    1.25e2 means 1.25 x 10^2, or 125.0.
-    1.25e-2 means 1.25 x 10^(-2), or 0.0125.
- */
+ For decimal numbers with an exponent of 'exp', the base number is
+ multiplied by 10^exp.
+    1.25e2 means 1.25 x 10^2, or 125.0
+    1.25e-2 means 1.25 x 10^(-2), or 0.0125
 
- /*
- For hexadecimal numbers with an exponent of 'exp', the base number is multiplied
- by 2^exp.
-    0xFp2 means 15 x 2^2, or 60.0.
+ For hexadecimal numbers with an exponent of 'exp', the base number is 
+ multiplied by 2^exp.
+    0xFp2 means 15 x 2^2, or 60.0
     0xFp-2 means 15 x 2^(-2), or 3.75
- */
  
  All of these floating-point literals have a decimal value of 12.1875:
 */
@@ -94,10 +78,6 @@ let hexadecimalDouble = 0xC.3p0
 let paddedDouble = 000123.456
 let oneMillion = 1_000_000
 let justOverOneMillion = 1_000_000.000_000_1
-
-
-
-
 
 /*
  A number that will not fit into a constant or variable of a sized integer type
@@ -119,15 +99,11 @@ let twoThousandAndOne = twoThousand + UInt16(one)
 let three = 3
 let pointOneFourOneFiveNine = 0.14159
 let pi = Double(three) + pointOneFourOneFiveNine
-//  pi equals 3.14159, and is inferred to be of type Double
+//  pi equals 3.14159, and is inferred to be of type Double.
 
 //  An integer type can be initialized with a 'Double' or 'Float' value
 let intergerPi = Int(pi)
 //  integerPi equals 3, and is inferred to be of type Int
-
-
-
-
 
 /*
  Type aliases define alternative name for an exiting type.
@@ -139,10 +115,7 @@ var maxAmplitudeFound = AudioSample.min
 
 
 
-
-
 //  MARK: Control Flow
-
 /*
  Boolean values are referred to as logical, because they can only ever be true
  or false.Swift provides two Boolean constant values, 'true' adn 'false'.
@@ -151,8 +124,8 @@ let orangeAreOrange = true
 let turnipsAreDelicious = false
 
 /*
- Boolean values are particularly useful when you work with conditional 
- statements such as the 'if' statement
+ Boolean values are particularly useful when you work with conditional statements 
+ such as the 'if' statement.
  */
 if turnipsAreDelicious {
     print("Mmm, tasty turnips!")
@@ -162,8 +135,7 @@ if turnipsAreDelicious {
 //  Prints "Eww, turnips are horrible."
 
 /*
- Swift's type safety prevents non-Boolean values from being substitued for
- 'Bool'.
+ Swift's type safety prevents non-Boolean values from being substitued for 'Bool'.
  */
 let i = 1
 if i {
@@ -177,10 +149,7 @@ if ii == 1 {
 
 
 
-
-
 //  MARK: Tuple
-
 /*
  Tuples group multiple values into a single compound value. The values within
  a tuple can be of any type and do not have to be of the same type as each other.
@@ -190,8 +159,8 @@ let http404Error = (404, "Not Found")
 //  http404Error is of type (Int, String), and equals (404, "Not Found")
 
 /*
- You can decompose a tuple's content into separate constants or variables,
- which you then access as usual.
+ You can decompose a tuple's content into separate constants or variables, which 
+ you then access as usual.
  */
 let (statusCode, statusMessage) = http404Error
 print("The status code is \(statusCode)")
@@ -229,10 +198,7 @@ print("The status message is \(http200Status.description)")
 
 
 
-
-
 //  MARK: - Optionals
-
 /*
  Because the initializer might fail, it returns an optional 'Int', rather than
  an 'Int'.
@@ -259,10 +225,6 @@ serverResponseCode = nil
 var surverAnswer: String?
 //  surverAnswer is automatically set to nil
 
-
-
-
-
 /*
  You can use an 'if' statement to find out whether an optional contains a value
  by comparing the optional against 'nil.
@@ -282,8 +244,6 @@ if convertedNumber != nil {
     print("convertedNumber has an integer value of \(convertedNumber!).")
 }
 //  Prints ""convertedNumber has an integer value of 123."
-
-
 
 
 
@@ -326,8 +286,6 @@ if let firstNumber = Int ("4") {
     }
 }
 //  Prints "4 < 42 < 100"
-
-
 
 
 
@@ -376,8 +334,6 @@ if let definiteString = assumedString {
  variable becoming 'nil' at a later point. Always use a normal optional type 
  if you need to check for a 'nil' value during the lifetime of a variable.
  */
-
-
 
 
 
@@ -439,10 +395,7 @@ do {
 
 
 
-
-
 //  MARK: - Assertions
-
 /*
  You can trigger an assertion in your code to end code execution and to provide
  an opportunity to debug the cause of the absent or invalid value.

@@ -20,7 +20,6 @@ enum PrinterError: Error {
  error. If you throw an error in a function, the function returns immediately
  and the code that called the function hadnles the error.
  */
-
 func send(job: Int, toPrinter printerName: String) throws -> String {
     if printerName == "Never Has Toner" {
         throw PrinterError.noToner
@@ -29,10 +28,11 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 }
 
 /*
- There are several ways to handle errors. One way is to use 'do-catch'. Inside 
- the 'do' block, you mark code that can throw an error by writing 'try' in 
- front of it. Inside the 'catch' block, the error is automatically given the 
- name 'error' unless you give it a different name.
+ There are several ways to handle errors. One way is to use 'do-catch'. 
+ Inside the 'do' block, you mark code that can throw an error by writing 'try'
+ in front of it. 
+ Inside the 'catch' block, the error is automatically given the name 'error' 
+ unless you give it a different name.
  */
 do {
     let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
@@ -53,8 +53,8 @@ do {
 }
 
 /*
- You can provide multiple 'catch' blocks that handle specific errors. You write
- a pattern after 'catch' just as you do after 'case' in a 'switch'.
+ You can provide multiple 'catch' blocks that handle specific errors. 
+ You write a pattern after 'catch' just as you do after 'case' in a 'switch'.
  */
 do {
     let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")

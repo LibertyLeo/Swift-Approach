@@ -59,7 +59,7 @@ import Foundation
 //  MARK: Creating and Initializing an Empty Set
 var letters = Set<Character>()
 print("leeters is of type Set<Element> with \(letters.count) items.")
-// Prints "leeters is of type Set<Element> with 0 items."
+//  Prints "leeters is of type Set<Element> with 0 items."
 
 /*
  Alternatively, if the context provided type information, such as a function
@@ -67,10 +67,10 @@ print("leeters is of type Set<Element> with \(letters.count) items.")
  with an empty array literal
  */
 letters.insert("a")
-// letters now contains 1 value of type Character
+//  letters now contains 1 value of type Character
 
 letters = []
-// letters is now an empty set, but is still of type Set<Character>
+//  letters is now an empty set, but is still of type Set<Character>
 
 
 
@@ -109,13 +109,11 @@ if favoriteGenres.isEmpty {
 } else {
     print("I have particular music preferences.")
 }
-// Prints "I have particular music preferences."
+//  Prints "I have particular music preferences."
 
-/*
- You can add a new item into a set by calling the set's 'insert(_:)' method
- */
+//  You can add a new item into a set by calling the set's 'insert(_:)' method.
 favoriteGenres.insert("Jazz")
-// favoriteGeneras now contains 4 items
+//  favoriteGeneras now contains 4 items
 
 /*
  You can remove an item from a set by calling the set's 'remove(_:)' method,
@@ -128,7 +126,7 @@ if let removedGenre = favoriteGenres.remove("Rock") {
 } else {
     print("I never much cared for that.")
 }
-// Prints "Rock? I'm over it.
+//  Prints "Rock? I'm over it.
 
 /*
  To check whether a set contains a particular item, use the 'contains(_:)' method.
@@ -138,7 +136,7 @@ if favoriteGenres.contains("Funk") {
 } else {
     print("It's too funky in here.")
 }
-// Prints "It's too funky in here."
+//  Prints "It's too funky in here."
 
 
 
@@ -146,9 +144,9 @@ if favoriteGenres.contains("Funk") {
 for genre in favoriteGenres {
     print("\(genre)")
 }
-// Jazz
-// Hip hop
-// Classical
+//  Jazz
+//  Hip hop
+//  Classical
 
 /*
  Swift's 'Set' type does not have a defined ordering.
@@ -158,9 +156,9 @@ for genre in favoriteGenres {
 for genre in favoriteGenres.sorted() {
     print("\(genre)")
 }
-// Classical
-// Hip hop
-// Jazz
+//  Classical
+//  Hip hop
+//  Jazz
 
 
 
@@ -168,29 +166,28 @@ for genre in favoriteGenres.sorted() {
 /*
  The case below describes two sets--'a' and 'b'--with the results of various set
  operations.
-    /*
-        Use the 'intersection(_:)' method to create a new set with only the 
-    values common to both sets.
+
+        Use the 'intersection(_:)' method to create a new set with only the values
+    common to both sets.
         Use the 'symmetricDifference(_:)' method to create a new set with values
     in either set, but not both.
         Use the 'union(_:)' method to create a new set with all of the values
     in both sets.
         Use the 'subtracting(_:)' method to create a new set with values not in
-    the specified set
-    */
+    the specified set.
  */
 let oddDigits: Set = [1, 3, 5, 7, 9]
 let evenDigits: Set = [0, 2, 4, 6, 8]
 let singleDigitPrimeNumber: Set = [2, 3, 5, 7]
 
 oddDigits.union(evenDigits).sorted()
-// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+//  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 oddDigits.intersection(evenDigits).sorted()
-// []
+//  []
 oddDigits.subtracting(singleDigitPrimeNumber).sorted()
-// [1, 9]
+//  [1, 9]
 oddDigits.symmetricDifference(singleDigitPrimeNumber).sorted()
-// [1, 2, 9]
+//  [1, 2, 9]
 
 
 
@@ -203,7 +200,7 @@ oddDigits.symmetricDifference(singleDigitPrimeNumber).sorted()
  also contained by 'a'.
  Set 'b' and Set 'c' are disjoint with one another, because they share no 
  elements in common.
-    /*
+
         Use the "is equal" operator (==) to determine whether two sets contain 
     all of the same values.
         Use the 'isSubset(of:)' method to determine whether all of the values of
@@ -215,7 +212,6 @@ oddDigits.symmetricDifference(singleDigitPrimeNumber).sorted()
     specified set.
         Use the 'isDisjoint(with:)' method to determine whether two sets have no
     values in common.
-    */
  */
 let houseAnimals: Set = ["🐶", "🐱"]
 let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]

@@ -35,7 +35,7 @@ import Foundation
  intializer syntax.
  */
 var namesOfIntegers = [Int: String]()
-// namesOfIntegers is an empty [Int: String] dictionary
+//  namesOfIntegers is an empty [Int: String] dictionary
 
 /*
  If the context already provides type information, you can create an empty 
@@ -43,9 +43,9 @@ var namesOfIntegers = [Int: String]()
  inside a pair of square brackets):
  */
 namesOfIntegers[16] = "sixteen"
-// namesOfIntegers now contain 1 key-value pair
+//  namesOfIntegers now contain 1 key-value pair
 namesOfIntegers = [:]
-// namesOfIntegers is once again an empty dictionary of type [Int: String]
+//  namesOfIntegers is once again an empty dictionary of type [Int: String]
 
 
 
@@ -75,7 +75,7 @@ var airportsShort = ["YYZ":" Toronto Pearson", "DUB": "Dublin"]
  checking its read-only 'count' property
  */
 print("The airports dictionary contains \(airports.count) items.")
-// Prints "The airports dictionary contains 2 items."
+//  Prints "The airports dictionary contains 2 items."
 
 /*
  Use the Boolean 'isEmpty' property as a shortcut for checking whether the
@@ -86,7 +86,7 @@ if airports.isEmpty {
 } else {
     print("The airports dictionary is not empty.")
 }
-// Prints "The airports dictionary is not empty."
+//  Prints "The airports dictionary is not empty."
 
 /*
  You can add a new item to a dictionary with subscript syntax. Use a new key of
@@ -94,14 +94,14 @@ if airports.isEmpty {
  appropriate type.
  */
 airports["LHR"] = "London"
-// the airports dictionary now contains 3 items
+//  the airports dictionary now contains 3 items
 
 /*
  You can also use subscript syntax to change the value associated with a 
  particular key.
  */
 airports["LHR"] = "London Heathrow"
-// the value for "LHR" has been change to "London Heathrow"
+//  the value for "LHR" has been change to "London Heathrow"
 
 /*
  As an alternative to subscripting, use a dictionary's 'updateValue(_:forKey:)'
@@ -120,7 +120,7 @@ airports["LHR"] = "London Heathrow"
 if let oldValue = airports.updateValue("Dublin Airprt", forKey: "DUB") {
     print("The old value for DUB was \(oldValue).")
 }
-// Prints "The old value for DUB was Dublin."
+//  Prints "The old value for DUB was Dublin."
 
 /*
  You can also use subscripts syntax to retrieve a value from the dictionary for
@@ -134,7 +134,7 @@ if let airportName = airports["DUB"] {
 } else {
     print("The airport is not tin the airports dictionary.")
 }
-// Prints "The name of the airport is Dublin Airport."
+//  Prints "The name of the airport is Dublin Airport."
 
 /*
  You can use the subscript syntax to remove a key-value pair from a dictionary 
@@ -155,7 +155,7 @@ if let removedValue = airports.removeValue(forKey: "DUB") {
 } else {
     print("The airports dictionary does not contain a value for DUB.")
 }
-// Prints "The removed airport's name is Dublin Airport."
+//  Prints "The removed airport's name is Dublin Airport."
 
 
 
@@ -169,8 +169,8 @@ if let removedValue = airports.removeValue(forKey: "DUB") {
 for (airportCode, airportName) in airports {
     print("\(airportCode): \(airportName)")
 }
-// YYZ: Toronto Pearson
-// LHR: London Heathrow
+//  YYZ: Toronto Pearson
+//  LHR: London Heathrow
 
 /*
  You can also retrieve an iterable collection of a dictionary's keys or values
@@ -179,24 +179,24 @@ for (airportCode, airportName) in airports {
 for airportCode in airports.keys {
     print("Airport code: \(airportCode)")
 }
-// Airport code: YYZ
-// Airport code: LHR
+//  Airport code: YYZ
+//  Airport code: LHR
 
 for airportName in airports.values {
     print("Airport name: \(airportName)")
 }
-// Airport name: Toronto Pearson
-// Airport code: London Heathrow
+//  Airport name: Toronto Pearson
+//  Airport code: London Heathrow
 
 /*
  If you need to use a dicitonary's keys or values with an API that takes an
  'Array' instance, initialize a new array with the 'keys' or 'values' property
  */
 let airportCodes = [String](airports.keys)
-// airportCode is ["YYZ", "LHR"]
+//  airportCode is ["YYZ", "LHR"]
 
 let airportName = [String](airports.values)
-// airportName is ["Toronto Pearson", "London Heathrow"]
+//  airportName is ["Toronto Pearson", "London Heathrow"]
 
 /*
  To iterate over the keys or values of a dictionary in a specific order, use

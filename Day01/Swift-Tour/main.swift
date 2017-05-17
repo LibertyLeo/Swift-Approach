@@ -9,7 +9,6 @@
 import Foundation
 
 //  MARK: Simple Value and Print
-
 /*
  Use 'let' to make a constant and 'var' to make a variable, the value must 
  assign exactly once.
@@ -28,8 +27,8 @@ let explicitFloat: Float = 4
 print("The explicit value is \(explicitFloat).")
 
 /*
- If you need to convert a value to a different type, explicitly make an 
- instance of the desired type.
+ If you need to convert a value to a different type, explicitly make an instance 
+ of the desired type.
  */
 let label = "The width is "
 let width = 100
@@ -61,12 +60,9 @@ print(nameGreeting)
 
 
 
-
-
 //  MARK: Array and Dictionary
-
 /* 
- Create arrays and dictionaries using brackets('[]')
+ Create arrays and dictionaries using brackets('[]').
  ',' is allowed after last element.
  */
 var shoppingList = ["catfish", "water", "tulips", "blue paint"]
@@ -93,15 +89,12 @@ occupations = [:]
 
 
 
-
-
 //  MARK: Control Flow
-
 /*
  Use 'if' and 'switch' to make contidionals, and use 'for-in', 'for', 'while',
  and 'repeat-while' to make loops.
- In a if statement, the conditional must be a Boolean expression,
- which means the code such as if score { ... } is an error.
+ In a if statement, the conditional must be a Boolean expression, which means 
+ the code such as if score { ... } is an error.
  */
 let individualScores = [75, 43, 103, 87, 12]
 var teamScore =  0
@@ -115,15 +108,14 @@ for score in individualScores {
 print(teamScore)
 
 /*
- Write a question mark (?) after the type of a value to mark the value
- as optional.
+ Write a question mark (?) after the type of a value to mark the value as optional.
  */
 var optionalString: String? = "Hello"
 print(optionalString == nil)
 
 /*
- Use 'if' and 'let' together to work, when the constant is nil, 
- the code in braces is skipped.
+ Use 'if' and 'let' together to work, when the constant is nil, the code in 
+ braces is skipped.
  */
 var optionalName: String? = "John Appleseed"
 var greeting = "Hello!"
@@ -147,8 +139,8 @@ if let name = optionName {
 print("Greeting custom: \(greetingCustom)")
 
 /*
- One way to handler optional values is to provide a default value using
- the '??' operator.
+ One way to handler optional values is to provide a default value using the '??' 
+ operator.
  */
 let nickName: String? = nil;
 let fullName: String = "John Appleseed"
@@ -175,8 +167,8 @@ default:
 }
 
 /*
- You use 'for-in' to iterate over items in a dictionary by providing a pair
- of names to use for each key-value pair.
+ You use 'for-in' to iterate over items in a dictionary by providing a pair of
+ names to use for each key-value pair.
  Add variable to keep track of which kind of number was the largest (Exp)
  */
 let interestingNumbers = [
@@ -195,8 +187,8 @@ for (kind, numbers) in interestingNumbers {
 print(largest)
 
 /*
- Add another variable to keep track of which kind of number was the largest,
- as well as what the largest number was.    (Exp)
+ Add another variable to keep track of which kind of number was the largest, as
+ well as what the largest number was.    (Exp)
  */
 largest = 0
 var largestKind: String = "Prime"
@@ -212,8 +204,8 @@ print("\(largestKind) has largest number \(largest)")
 
 /*
  Use 'while' to repeat a block of code until a condition changes.
- The condition of loop can be at the end instead, 
- ensuring that the loop is run at least once.
+ The condition of loop can be at the end instead, ensuring that the loop is run
+ at least once.
  */
 var n = 2
 while n < 100 {

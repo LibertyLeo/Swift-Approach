@@ -15,8 +15,6 @@ import Foundation
  without casting.
  */
 
-
-
 //  MARK: String Literals
 /*
  You can include predefined 'String' values within your code as string literals.
@@ -66,9 +64,9 @@ let constantString = "Highlander"
 //  MARK: String Are Value Types
 /*
  Swift's 'String' type is a value type.
- Swift's copy-by-default 'String' behavior ensures that when a funciton or 
- method passes you a 'String' value, it is clear that you own that exact 
- 'String' value, regardless of where it came from.
+ Swift's copy-by-default 'String' behavior ensures that when a funciton or method 
+ passes you a 'String' value, it is clear that you own that exact 'String' value, 
+ regardless of where it came from.
  Behind the scenes, Swift's compiler optimizes string usage so that actual
  copying takes place only when absolutely necessary.
  */
@@ -92,8 +90,7 @@ for character in "Dog!🐶".characters {
 
 /*
  Alternatively, you can create a stand-alone 'Charcter' constant or variable
- from a single-character string literal by providing a 'Charcter' type 
- annotation.
+ from a single-character string literal by providing a 'Charcter' type annotation.
  */
 let exclamationMark: Character = "!"
 
@@ -249,10 +246,8 @@ print("the number of chacters in \(word) is \(word.characters.count)")
 // Prints "the number of characters in cafe is 4"
 
 word += "\u{301}"   //  COMBINING ACUTE ACCENT, U+0301
-
 print("the number of chacters in \(word) is \(word.characters.count)")
 // Prints "the number of characters in cafe is 4"
-
 
 
 
@@ -264,7 +259,7 @@ print("the number of chacters in \(word) is \(word.characters.count)")
  must iterate over each Unicode scalar from the start or end of the 'String'.
  For this reason, Swift strings cannot be indexed by integer values.
  You can use subscript syntax to access the 'Character' at a particular 'String'
- index
+ index.
  */
 let greeting = "Guten Tag!"
 greeting[greeting.startIndex]
@@ -279,7 +274,7 @@ greeting[index]
 
 /*
  Attempting to access an index outside of a string's range or a 'Chacter' at an
- index outside of a string's range will trigger a runtime error,
+ index outside of a string's range will trigger a runtime error.
  */
 //greeting[greeting.endIndex]                 // Error
 //greeting.index(after: greeting.endIndex)    // Error
@@ -292,7 +287,6 @@ for index in greeting.characters.indices {
     print("\(greeting[index])", terminator: " ")
 }
 print("")
-
 //  Prints "G u t e n   T a g ! "
 
 /*
@@ -340,12 +334,10 @@ welcomeInsert.removeSubrange(range)
 
 
 
-
 /*
  Swift provides three ways to compare textual values: string and character
  equality, prefix equality and suffix equality.
  */
-
 //  MARK: String and Character Equality
 /*
  String and charater equality is checked with the "equal to" operator (==) and 
@@ -465,23 +457,19 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
  You can iterate over the string with a 'for-in' statement, to access its 
  individual 'Character' values as Unicode extended grapheme clusters.
 
-    /*
-    Alternatively, access a 'String' value in one of three other Unicode-compliant
-    representations:
+    Alternatively, access a 'String' value in one of three other
+    Unicode-compliant epresentations:
         A collection of UTF-8 code units (accessed with the string's 'utf8' 
     property)
         A collection of UTF-16 code units (accessed with the string's 'utf16'
     property)
         A collection of 21-bit Unicode scalar values, equivalent to string's
     UTF-32 encoding form (accessed with the string's 'unicodeScalars' property)
-    */
 
-    /*
     Each example below shows a different representation of the following string,
     which is made up of the characters 'D', 'o', 'g', '!!' ('DOUBLE EXCLAMATION
     MARK', or Unicode scalar 'U+203C'), and the 🐶 character ('DOG FACE', or
     Unicode scalar 'U+1F436')
-    */
  */
 let dogString = "Dog‼🐶"
 
@@ -490,8 +478,8 @@ let dogString = "Dog‼🐶"
  You can access a UTF-8 representation of a 'String' by iterating over its 'utf8'
  property. This property is of type 'String.UTF8View', which is a collection of
  unsigned 8-bit (UInt8) values, one for each byte in the string's UTF-8 
- representation
-    /*
+ representation.
+
     Character     D       o       g         ‼            🐶
                 U+0044  U+006F  U+0067   U+203C        U+1F436
 
@@ -499,7 +487,7 @@ let dogString = "Dog‼🐶"
     Code Unit
 
     Position      0       1       2     3   4   5      6   7   8   9
-    */
+
  */
 for codeUnit in dogString.utf8 {
     print("\(codeUnit)", terminator:" ")

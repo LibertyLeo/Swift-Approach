@@ -9,11 +9,10 @@
 import Foundation
 
 //  MARK: Function and Closures
-
 /*
  Use 'func' to declare a function. 
- Use '->' to separate the parameter names and types from 
- the function's return type.
+ Use '->' to separate the parameter names and types from the function's return 
+ type.
  */
 func greet(person: String, day: String) -> String {
     return "Hello \(person), today is \(day)."
@@ -32,9 +31,9 @@ func greetWithLunch(person: String, lunch: String) -> String {
 print(greetWithLunch(person: "Leo", lunch: "pork"))
 
 /*
- By default, functions use their parameter names as labels for their
- arguments. Write custom argument label before the parameter name,
- or write _ to use no argument label.
+ By default, functions use their parameter names as labels for their arguments. 
+ Write custom argument label before the parameter name, or write _ to use no 
+ argument label.
  */
 func greetOnce(_ person: String, on day: String) -> String {
     return "Hello \(person), today is \(day)."
@@ -67,8 +66,8 @@ print(statistics.sum)
 print(statistics.2)
 
 /*
- Functions can also take a variable number of arguments, collecting them
- into array.
+ Functions can also take a variable number of arguments, collecting them into 
+ array.
  */
 func sumOf(numbers: Int...) -> Int {
     var sum = 0
@@ -105,8 +104,7 @@ func returnFifteen() -> Int {
 print("This value must be 15, actually it is \(returnFifteen()).")
 
 /*
- Functions are a first-class type, so it can return another function 
- as its value.
+ Functions are a first-class type, so it can return another function as its value.
  */
 func makeIncrement() -> ((Int) -> Int) {
     func addOne(number: Int) -> Int {
@@ -137,13 +135,10 @@ print(hasAnyMatches(list: numbers, condition: lessThanTen))
 
 
 
-
-
 //  MARK: Closures
-
 /*
- Functions are actually a special case of closures: blocks of code
- that can be called later.
+ Functions are actually a special case of closures: blocks of code that can be 
+ called later.
  You can write a closure without a name by surrounding code with braces ({}).
  Use 'in' to separate the argument and return type from the body.
  */

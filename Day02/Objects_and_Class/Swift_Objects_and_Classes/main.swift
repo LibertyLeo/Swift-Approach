@@ -18,8 +18,8 @@ class Shape {
 }
 
 /*
- Add a constant property with 'let', and add another method 
- that takes an argument.   (Exp)
+ Add a constant property with 'let', and add another method that takes an 
+ argument.   (Exp)
  */
 class ShapeExp {
     var numberOfSides = 0
@@ -106,8 +106,8 @@ print(testCircle.area())
 print(testCircle.simpleDescription())
 
 /* 
- In addition to simple properties that are stored, properties can have 
- a getter and setter.
+ In addition to simple properties that are stored, properties can have a getter 
+ and setter.
  During the initializer take thress steps:
  1. Setting the value of properties that the subclass declares.
  2. Calling the superclass's initializer.

@@ -44,7 +44,6 @@ import Foundation
 
 
 
-
 //  MARK: Array Type Shorthand Syntax
 /*
  The type of a Swift array is written in full as 'Array<Element>', where
