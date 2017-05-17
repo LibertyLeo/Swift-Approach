@@ -110,5 +110,95 @@ airports["LHR"] = "London Heathrow"
  updates that value if that key already exists.
  Unlike the old value after performing an update. This enables you to check
  whether or not an update took place.
+ 
+ The 'updateValue(_:forKey:)' method returns an optional value of the 
+ dictionary's value. For a dictionary that stores 'String' values, for example, 
+ the method returns a value of type 'String?', or "optional String".
+ This optional value contains the old value for that key if one existed before
+ the update, or 'nil' if no value existed,
  */
+if let oldValue = airports.updateValue("Dublin Airprt", forKey: "DUB") {
+    print("The old value for DUB was \(oldValue).")
+}
+// Prints "The old value for DUB was Dublin."
 
+/*
+ You can also use subscripts syntax to retrieve a value from the dictionary for
+ a particular key.
+ If the dictionary contains a value for the requested key, the subscript returns
+ an optional value containing the existing value for the key. Otherwise, the 
+ subscript returns 'nil'.
+ */
+if let airportName = airports["DUB"] {
+    print("The name of the airport is \(airportName).")
+} else {
+    print("The airport is not tin the airports dictionary.")
+}
+// Prints "The name of the airport is Dublin Airport."
+
+/*
+ You can use the subscript syntax to remove a key-value pair from a dictionary 
+ by assigning a value of 'nil' for that key.
+ */
+airports["APL"] = "Apple International"
+// "Apple International" is not the real airport for APL, so delete it.
+airports["APL"] = nil
+// APL has now removed from the dictionary
+
+/*
+ Alternatively, remove a key-value pair from a dictionary with the 
+ 'removeValue(forKey:)' method. This method removes the key-value pair if it
+ exists and returns the removed value, or returns 'nil' if no value existed.
+ */
+if let removedValue = airports.removeValue(forKey: "DUB") {
+    print("The removed airport's name is \(removedValue).")
+} else {
+    print("The airports dictionary does not contain a value for DUB.")
+}
+// Prints "The removed airport's name is Dublin Airport."
+
+
+
+//  MARK: Iterating Over a Dictionary
+/*
+ You can iterate over the key-value pairs in a dictionary with a 'for-in' loop.
+ Each item in the dictionary is returned as a '(key, value)' tuple, and you can
+ decompose the tuple's members into temporary constants or variables as part of
+ the iteration
+ */
+for (airportCode, airportName) in airports {
+    print("\(airportCode): \(airportName)")
+}
+// YYZ: Toronto Pearson
+// LHR: London Heathrow
+
+/*
+ You can also retrieve an iterable collection of a dictionary's keys or values
+ by accessing its 'keys' and 'values' properties
+ */
+for airportCode in airports.keys {
+    print("Airport code: \(airportCode)")
+}
+// Airport code: YYZ
+// Airport code: LHR
+
+for airportName in airports.values {
+    print("Airport name: \(airportName)")
+}
+// Airport name: Toronto Pearson
+// Airport code: London Heathrow
+
+/*
+ If you need to use a dicitonary's keys or values with an API that takes an
+ 'Array' instance, initialize a new array with the 'keys' or 'values' property
+ */
+let airportCodes = [String](airports.keys)
+// airportCode is ["YYZ", "LHR"]
+
+let airportName = [String](airports.values)
+// airportName is ["Toronto Pearson", "London Heathrow"]
+
+/*
+ To iterate over the keys or values of a dictionary in a specific order, use
+ the 'sorted()' method on its 'keys' or 'values' property.
+ */
