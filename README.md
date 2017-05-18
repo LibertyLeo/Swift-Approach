@@ -45,7 +45,13 @@ Knows its common usage and convenient method 'updateValue(_:forKey:)' to check o
 
 ## Day08 May 17, 2017
 1. Fulfill of the **`Dictionary`** with removal and iteration parts.
-2. **`Control-Flow`** of displaying about 'for-in', 'while', 'repeat-while' loops, and also 'if' conditional statements.
+2. **`Control Flow`** of displaying about 'for-in', 'while', 'repeat-while' loops, and also 'if' conditional statements.
+
+## Day09 May 18, 2017
+1. Make **`Conditional Statements`** which take high attention to **`switch`** usage, separate from **`Control Flow`**.    
+And also many extraordinary apply of **`Interval Matching`**, **`Tuples`**, **`Value Bindings`** and so on.
+2. Focus on the difference of **`Control Transfer Statement`** between Swift and C.    
+By using **`labeled statements`** to make it more clear when control statement needs to be terminated, and use **`guard`** for requirements improves the readability of code, compare to doing the same check with an **`if`** statement.   
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
