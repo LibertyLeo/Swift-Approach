@@ -8,8 +8,7 @@
 
 import Foundation
 
-//  MARK: Control Flow
-//  MARK: - For-In Loops
+//  MARK: For-In Loops
 /*
  You use the for-in loop to iterate over a sequence, such as items in an array,
  ranges of numbers, or characters in a string.
@@ -205,13 +204,13 @@ var diceRollRepeat = 0
 
 repeat {
     //  move up or down for a snake or ladder
-    square += board[square]
+    squareRepeat += boardRepeat[squareRepeat]
     //  roll the dice
-    diceRoll += 1
-    if diceRoll == 7 { diceRoll = 1 }
+    diceRollRepeat += 1
+    if diceRollRepeat == 7 { diceRollRepeat = 1 }
     //  move by the rolled amount
-    square += diceRoll
-} while square < finalSquare
+    squareRepeat += diceRollRepeat
+} while squareRepeat < finalSquareRepeat
 print("Game over!")
 
 /*
@@ -221,62 +220,3 @@ print("Game over!")
  This behavior removes the need for the array bounds check seen in the 'while'
  loop version of the game described earlier.
  */
-
-
-
-//  MARK: - Conditional Statements
-/*
- Swift provides two ways to add conditional branches to your code: the 'if'
- statement and the 'switch' statement.
- Typically, you use the 'if' statement to evaluate simple conditions with only a
- few possible outcomes.
- The 'switch' statement is better suited to more complex conditions with multiple
- possible permutations and is useful in situations where pattern matching can 
- help select an appropriate code branch to execute.
- */
-
-//  MARK: If
-/*
- In its simplest form, the 'if' statement has a single if condition.
- */
-var temperatureInFahrenheit = 30
-if temperatureInFahrenheit <= 32 {
-    print("It's very code. Consider wearing a scarf.")
-}
-//  Prints "It's very code. Consider wearing a scarf."
-
-/*
- The 'if' statement can provide an alternative set of statements, known as an
- else clause, for situations when the 'if' condition is false.
- */
-temperatureInFahrenheit = 40
-if temperatureInFahrenheit <= 32 {
-    print("It's very code. Consider wearing a scarf.")
-} else {
-    print("It's not that cold. Wear a t-shirt.")
-}
-//  Prints "It's not that cold. Wear a t-shirt."
-
-/*
- You can chain multiple 'if' statements together to consider additional clauses.
- */
-temperatureInFahrenheit = 90
-if temperatureInFahrenheit <= 32 {
-    print("It's very code. Consider wearing a scarf.")
-} else if temperatureInFahrenheit >= 86 {
-    print("It's really warm. Don't forget to wear sunscreen.")
-} else {
-    print("It's not that cold. Wear a t-shirt.")
-}
-//  Prints "It's really warm. Don't forget to wear sunscreen."
-
-/*
- The final 'else' clause is optional, however, and can be excluded if the set of
- conditions does not need to be complete.
- */
-temperatureInFahrenheit = 72
-if temperatureInFahrenheit <= 32 {
-    print("It's very code. Consider wearing a scarf.")
-} else if temperatureInFahrenheit >= 86 {
-    print("It's really warm. Don't forget to wear sunscreen.")
-}
