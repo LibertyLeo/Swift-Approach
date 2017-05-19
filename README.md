@@ -51,7 +51,11 @@ Knows its common usage and convenient method 'updateValue(_:forKey:)' to check o
 1. Make **`Conditional Statements`** which take high attention to **`switch`** usage, separate from **`Control Flow`**.    
 And also many extraordinary apply of **`Interval Matching`**, **`Tuples`**, **`Value Bindings`** and so on.
 2. Focus on the difference of **`Control Transfer Statement`** between Swift and C.    
-By using **`labeled statements`** to make it more clear when control statement needs to be terminated, and use **`guard`** for requirements improves the readability of code, compare to doing the same check with an **`if`** statement.   
+By using **`labeled statements`** to make it more clear when control statement needs to be terminated, and use **`guard`** for requirements improves the readability of code, compare to doing the same check with an **`if`** statement.
+
+## Day09 May 18, 2017
+Learn about Swift's **`Function`**.    
+Not only just the grammar difference from the past language, but also for the new usage of the function type and the **`Nested function`** is also great help!
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
