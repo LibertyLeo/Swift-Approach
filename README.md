@@ -53,9 +53,14 @@ And also many extraordinary apply of **`Interval Matching`**, **`Tuples`**, **`V
 2. Focus on the difference of **`Control Transfer Statement`** between Swift and C.    
 By using **`labeled statements`** to make it more clear when control statement needs to be terminated, and use **`guard`** for requirements improves the readability of code, compare to doing the same check with an **`if`** statement.
 
-## Day09 May 18, 2017
+## Day10 May 19, 2017
 Learn about Swift's **`Function`**.    
 Not only just the grammar difference from the past language, but also for the new usage of the function type and the **`Nested function`** is also great help!
+
+## Day11 May 22, 2017
+Learn about **`Closures`**.
+The **`escaping closures`** and **`autoclosures`** are the most import part for writing a marvelous closures.     
+The concept of closures remains to be understood.
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
