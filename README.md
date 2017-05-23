@@ -10,16 +10,16 @@ Some usage and grammar for `constant`, `variable`, `sets`, `control flow`.
 It is only the brief introduction of basic use.
 
 ## Day02 May 9, 2017
-1. **`Function`** includes **`closures`** usage of swift.
-2. **`Objects`** and **`classes's`** creation, also about its subclass and keywords such as `willSet`, `didSet`, `override`, `init`.    
+1. **`Function`** includes **`Closures`** usage of swift.
+2. **`Objects`** and **`Classes`**'s creation, also about its subclass and keywords such as `willSet`, `didSet`, `override`, `init`.    
 Remeber to the initializer of subclass needs three different steps:    
 	1. Setting the value of properties that subclass declares.
 	2. Calling the superclass's initializer.
 	3. Changing the value of properties defined by the superclass. Any additional setup work that use methods, getters, or setters can also be done at this point.
-3. **`Enumeration`** and **`struct`** creation.	
+3. **`Enumeration`** and **`Structure`** creation.	
 
 ## Day03 May 10, 2017
-1. **`Protocol`** and **`extension`** usage for expand original type such as classes, enumerations, strcture...
+1. **`Protocol`** and **`Extension`** usage for expand original type such as classes, enumerations, strcture...
 2. **`Error handling`**. Use `error` and `do-catch` with `try` to handle error that you use `throw` to throw it out.
 3. **`Generics`** is to defined the specified type of the function or type.
 
@@ -51,7 +51,7 @@ Knows its common usage and convenient method 'updateValue(_:forKey:)' to check o
 1. Make **`Conditional Statements`** which take high attention to **`switch`** usage, separate from **`Control Flow`**.    
 And also many extraordinary apply of **`Interval Matching`**, **`Tuples`**, **`Value Bindings`** and so on.
 2. Focus on the difference of **`Control Transfer Statement`** between Swift and C.    
-By using **`labeled statements`** to make it more clear when control statement needs to be terminated, and use **`guard`** for requirements improves the readability of code, compare to doing the same check with an **`if`** statement.
+By using **`Labeled Statements`** to make it more clear when control statement needs to be terminated, and use `guard` for requirements improves the readability of code, compare to doing the same check with an `if` statement.
 
 ## Day10 May 19, 2017
 Learn about Swift's **`Function`**.    
@@ -65,7 +65,7 @@ The concept of closures remains to be understood.
 ## Day12 May 23, 2017
 1. **`Enumerations`**.    
 Not just the extension for enumeration cases' type of string, character, or any value of any integer of floating point, **`Associated Values`** and **`Raw Values`** is quiet different from the original enumeration.    
-A **`recursive enumeration`** is also allowed to make a better code structure.
+A **`Recursive Enumeration`** is also allowed to make a better code structure.
 2. **`Classes`** and **`Structures`**.    
 It declares the difference types between themselves, and also when you choosing one of them to build you program, you have some simply ways to balance.
 
