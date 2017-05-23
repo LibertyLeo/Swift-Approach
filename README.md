@@ -62,5 +62,10 @@ Learn about **`Closures`**.
 The **`escaping closures`** and **`autoclosures`** are the most import part for writing a marvelous closures.     
 The concept of closures remains to be understood.
 
+## Day12 May 23, 2017
+**`Enumerations`**.    
+Not just the extension for enumeration cases' type of string, character, or any value of any integer of floating point, **`Associated Values`** and **`Raw Values`** is quiet different from the original enumeration.    
+A **`recursive enumeration`** is also allowed to make a better code structure.
+
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
