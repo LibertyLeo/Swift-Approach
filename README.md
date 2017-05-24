@@ -70,8 +70,11 @@ A **`Recursive Enumeration`** is also allowed to make a better code structure.
 It declares the difference types between themselves, and also when you choosing one of them to build you program, you have some simply ways to balance.
 
 ## Day13 May 24, 2017
-**`Properties`** usage.
-Besides `Stored Properties` and `Computed Properties`, Swift also provide `Property Observer` through `willSet` and `didSet` observer. In that way, we can know the `newValue` and `oldValue` that we assign just now. 
+1. **`Properties`** usage.
+Besides `Stored Properties` and `Computed Properties`, Swift also provide `Property Observer` through `willSet` and `didSet` observer. In that way, we can know the `newValue` and `oldValue` that we assign just now.
+2. **`Methods`**.    
+Not just know the `Instance Methods`, we introduce `Type Methods` as well now.    
+And also the experiment LevelTracker is great help for understood this chapter.
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
