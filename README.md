@@ -1,4 +1,4 @@
-# Swift_Learning
+# Swift-Approach
 A repository created for swift learning recording.    
 The comment follwed by `(Exp)` are the experiment declared by the Apple Inc.    
 You can download the [Swift's Official][Official] for reading and get a better understanding as you wish.    
@@ -82,5 +82,5 @@ What makes difference is we can set multiple parameters as it is appropriate for
 2. **`Inheritance`** in Swift is much similar to that in Objc.    
 And you can also add `final` prefix by methods, properties, or subscript's to prevent being modified.
 
-[Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
-[Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
+[Official]:https://github.com/LibertyLeo/Swift-Approach/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
+[Chinese]:https://github.com/LibertyLeo/Swift-Approach/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
