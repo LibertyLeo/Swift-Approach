@@ -49,7 +49,7 @@ import Foundation
 //  MARK: Definition Syntax
 /*
  Classes and structures have a similar definition syntax.
- You introduce classes with the 'class' keyword and structures with the 'struct'
+ You introduce classes with the class keyword and structures with the struct
  keyword.
  */
 class someClass {
@@ -62,11 +62,11 @@ struct someStructure {
 
 /*
  NOTE:
- Give types UpperCamelCase names (such as 'SomeClass' and 'SomeStructure' here)
- to match the capitalization of standard Swift types (such as 'String', 'Int',
- and 'Bool').
- Conversely, always give properties and methods 'lowerCamelCase' names (such as
- 'frameRate' and 'incrementCount') to different them from type names.
+ Give types UpperCamelCase names (such as SomeClass and SomeStructure here)
+ to match the capitalization of standard Swift types (such as String, Int,
+ and Bool).
+ Conversely, always give properties and methods lowerCamelCase names (such as
+ frameRate and incrementCount) to different them from type names.
  */
 struct Resolution {
     var width = 0
@@ -102,8 +102,8 @@ print("The width of someSoulution is \(someSoulution.width)")
 //  Prints "The width of someSoulution is 0"
 
 /*
- You can drill down into sub-properties, such as the 'width' property in the 
- 'resolution' property of a 'VideoMode'
+ You can drill down into sub-properties, such as the width property in the 
+ resolution property of a VideoMode
  */
 print("The width of someVideoMode is \(someViedeoMode.resolution.width)")
 //  Prints ""The width of someVideoMode is 0"
@@ -117,9 +117,9 @@ print("The width of someVideoMode is now \(someViedeoMode.resolution.width)")
  NOTE:
  Unlike Objective-C, Swift enables you to set sub-properties of a structure
  property directly.
- In the last example above, the 'width' property of the 'resoulution' property
- of 'someVideoMode' is set directly, without your needing to set the entire
- 'resolution' property to a new value.
+ In the last example above, the width property of the resoulution property
+ of someVideoMode is set directly, without your needing to set the entire
+ resolution property to a new value.
  */
 
 
@@ -151,33 +151,33 @@ let vga = Resolution(width: 640, height: 480)
 let hd = Resolution(width: 1920, height: 1080)
 var cinema = hd
 /*
- Because 'Resolution' is a structure, a copy of the existing instance is made, 
- and this new copy is assigned to 'cinema'. Even though 'hd' and 'cinema' now 
+ Because Resolution is a structure, a copy of the existing instance is made, 
+ and this new copy is assigned to cinema. Even though hd and cinema now 
  have the same width and height, they are two completely different instances
  behind the scenes.
  */
 cinema.width = 2048
 
 /* 
- Checking the 'width' property of 'cinema' shows that it has indeed changed to
- be '2048'
+ Checking the width property of cinema shows that it has indeed changed to
+ be 2048
  */
 print("cinema is now \(cinema.width) pixels wide")
 //  Prints "cinema is now 2048 pixels wide"
 
 /*
- However, the 'width' property of the original 'hd' instance still has the old 
- value of '1920'
+ However, the width property of the original hd instance still has the old 
+ value of 1920
  */
 print("hd is still \(hd.width) pixels wide")
 //  Prints "hd is still 1920 pixels wide"
 
 /*
- When 'cinema' was given the current value of 'hd', the values stored in 'hd'
- were copied into the new 'cinema' instance. The end result is two completely
+ When cinema was given the current value of hd, the values stored in hd
+ were copied into the new cinema instance. The end result is two completely
  separate instances, which just happened to contain the same numeric value.
- Because they are separate instances, setting the width of 'cinema' to '2048'
- doesn't affect the width stored in 'hd'.
+ Because they are separate instances, setting the width of cinema to 2048
+ doesn't affect the width stored in hd.
  */
 enum CompassPoint {
     case north, south, east, west
@@ -205,28 +205,28 @@ tenEighty.name = "1080i"
 tenEighty.frameRate = 25.0
 
 /*
- 'tenEighty' is assigned to a new constant, called 'alsoTenEighty', and the 
- frame rate of 'alsoTenEighty' is modified.
+ tenEighty is assigned to a new constant, called alsoTenEighty, and the 
+ frame rate of alsoTenEighty is modified.
  */
 let alsoTenEighty = tenEighty
 alsoTenEighty.frameRate = 30.0
 
 /*
- Because classes are reference types, 'tenEighty' and 'alsoTenEighty' actually
- both refer to the same 'VideioMode' instance. Effectively, they are just two
+ Because classes are reference types, tenEighty and alsoTenEighty actually
+ both refer to the same VideioMode instance. Effectively, they are just two
  different names for the same single instance.
  */
 print("The frameRate property of tenEighty is now \(tenEighty.frameRate)")
 //  Prints "The frameRate property of tenEighty is now 30.0"
 
 /*
- Note that 'tenEighty' and 'alsoTenEighty' are declared as constants, rather
- than variables. However, you can still change 'tenEighty.frameRate' and 
- 'alsoTenEighty.frameRate' because the values of the 'tenEighty' and 
- 'alasoTenEighty' constants themselves do not actually change.
- 'tenEighty' and 'alsoTenEighty' themeselves do not "store" the 'Video' instance.
- It is the 'frameRate' property of the underlying 'VideoMode' that is changed,
- not the values of the constant references to that 'VideoMode'.
+ Note that tenEighty and alsoTenEighty are declared as constants, rather
+ than variables. However, you can still change tenEighty.frameRate and 
+ alsoTenEighty.frameRate because the values of the tenEighty and 
+ alasoTenEighty constants themselves do not actually change.
+ tenEighty and alsoTenEighty themeselves do not "store" the Video instance.
+ It is the frameRate property of the underlying VideoMode that is changed,
+ not the values of the constant references to that VideoMode.
  */
 
 
@@ -294,19 +294,19 @@ if tenEighty === alsoTenEighty {
  existing type.
  
  Example of good candidates for structures include:
-    - The size of a geometric shape, perhaps encapsulating a 'width' property
- and a 'height' property, both of type 'Double'.
-    - A way to refer to ranges within a series, perhaps encapsulating a 'start'
- property and a 'length' property, both of type 'Int'.
+    - The size of a geometric shape, perhaps encapsulating a width property
+ and a height property, both of type Double.
+    - A way to refer to ranges within a series, perhaps encapsulating a start
+ property and a length property, both of type Int.
     - A point in a 3D coordinate system, perhaps encapsulating x, y and z
- properties, each of type 'Double'.
+ properties, each of type Double.
  */
 
 
 
 //  MARK: - Assignment and Copy Behavior for Strings, Arrays, and Dictionaries
 /*
- In Swift, many basic data types such as 'String', 'Array', and 'Dictionary' are
+ In Swift, many basic data types such as String, Array, and Dictionary are
  implemented as structures. This means that data such as strings, arrays, and 
  dictionaries are copied when they are assigned to a new constant or variable,
  or when they are passed to a function or method.

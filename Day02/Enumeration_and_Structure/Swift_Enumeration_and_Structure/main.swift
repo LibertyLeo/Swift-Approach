@@ -38,7 +38,7 @@ let aceRawValue = ace.rawValue;
 print("The first rank is \(ace), and its raw value is \(aceRawValue).")
 
 /*
- Write a function that compares two 'Rank' values by comparing their raw 
+ Write a function that compares two Rank values by comparing their raw 
  values.  (Exp)
  */
 enum RankExp: Int {
@@ -76,7 +76,7 @@ let paramB = RankExp.queen
 print(paramA.compare(param: paramB))
 
 /*
- Use the 'init?(rawValue:)' intializer to make an instance of an enumeration
+ Use the init?(rawValue:) intializer to make an instance of an enumeration
  from a raw value. It returns either the enumeration case matching the raw
  value or nil if there is no matching Rank.
  */
@@ -183,7 +183,7 @@ case let .noresponse(message):
 
 //  MARK: Structure
 /*
- Use 'struct' to create a structure. Structures support many of the same
+ Use struct to create a structure. Structures support many of the same
  behavior as classes, including methods and initalizers. One of the most
  important differences between structures and classes is that structures
  are always copied when they are passed around in your code, but classes

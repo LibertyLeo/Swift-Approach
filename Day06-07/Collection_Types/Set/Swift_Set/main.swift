@@ -14,7 +14,7 @@ import Foundation
  ordering.
  You can use a set instead of an array when the order of items is not important,
  or when you need to ensure that an item only appears once.
- Swift's 'Set' type is bridged to Foundation's 'NSSet' class.
+ Swift's Set type is bridged to Foundation's NSSet class.
  */
 
 
@@ -22,22 +22,22 @@ import Foundation
 //  MARK: Hash Values for Set Types
 /*
  A type must be hashable in order to stored in a set.
- All of Swift's basic types (such as 'String', 'Int', 'Double', and 'Bool') are
+ All of Swift's basic types (such as String, Int, Double, and Bool) are
  hashable by default, and can be used as set value types or dictionary key types.
  Enumeration case values without associated values are also hashable by default.
  */
 /*
  NOTE:
  You can use your own custom types as set value types or dictionary key types by
- making them conform to the 'Hashable' protocol from Swift's standard library.
- Types that conform to the 'Hashable' protocol must provide a gettable 'Int'
- property called 'hashValue'. 
- The value returned by a type's 'hashValue' property is not required to be the
+ making them conform to the Hashable protocol from Swift's standard library.
+ Types that conform to the Hashable protocol must provide a gettable Int
+ property called hashValue. 
+ The value returned by a type's hashValue property is not required to be the
  same across different of the same program, or in different programs.
- Because the 'Hashable' protocol conforms to 'Equatable', confrom types must
+ Because the Hashable protocol conforms to Equatable, confrom types must
  also provide an implementation of the equals operator (==).
  An implementation of == must satify the following three conditions, for all 
- values 'a', 'b', and 'c'.
+ values a, b, and c.
     /*
     a == a (Reflexivity)
     a == b implies b == a (Symmetry)
@@ -49,7 +49,7 @@ import Foundation
 
 //  MARK: Set Type Syntax
 /*
- The type of a Swift set is written as Set<Element>, where 'Element' is the type
+ The type of a Swift set is written as Set<Element>, where Element is the type
  that the set is allowed to store.
  Unlike arrays, sets do not have an equivalent shorthand form.
  */
@@ -83,7 +83,7 @@ var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
 // favoriteGenres has been initialized with three initial items
 
 /*
- A set type cannot be inferred from an array literal alone, so the type 'Set'
+ A set type cannot be inferred from an array literal alone, so the type Set
  must be explicitly declared.
  However, because of Swift's type inference, you don't have to write the type of
  the set if you're initializing it with an array literal containing values of 
@@ -95,14 +95,14 @@ var favoriteGenresShort: Set = ["Rock", "Classical", "Hip hop"]
 
 //  MARK: Accessing and Modifying a Set
 /*
- To find out the number of items in a set, check ites read-only 'count' property;
+ To find out the number of items in a set, check ites read-only count property;
  */
 print("I have \(favoriteGenres) favorite music genres.")
 // Prints "I have 3 favorite music genres.")
 
 /*
- Use the Boolean 'isEmpty' property as shortcut for checking whether the 'count'
- property is equal to '0'
+ Use the Boolean isEmpty property as shortcut for checking whether the count
+ property is equal to 0
  */
 if favoriteGenres.isEmpty {
     print("As far as music goes, I'm not picky")
@@ -111,15 +111,15 @@ if favoriteGenres.isEmpty {
 }
 //  Prints "I have particular music preferences."
 
-//  You can add a new item into a set by calling the set's 'insert(_:)' method.
+//  You can add a new item into a set by calling the set's insert(_:) method.
 favoriteGenres.insert("Jazz")
 //  favoriteGeneras now contains 4 items
 
 /*
- You can remove an item from a set by calling the set's 'remove(_:)' method,
+ You can remove an item from a set by calling the set's remove(_:) method,
  which removes the item if it's a member of the set, and returns the removed 
- value, or return 'nil' if the set did not contain it.
- Alternatively, all items in a set can be removed with its 'removeAll()' method.
+ value, or return nil if the set did not contain it.
+ Alternatively, all items in a set can be removed with its removeAll() method.
  */
 if let removedGenre = favoriteGenres.remove("Rock") {
     print("\(removedGenre)? I'm over it.")
@@ -129,7 +129,7 @@ if let removedGenre = favoriteGenres.remove("Rock") {
 //  Prints "Rock? I'm over it.
 
 /*
- To check whether a set contains a particular item, use the 'contains(_:)' method.
+ To check whether a set contains a particular item, use the contains(_:) method.
  */
 if favoriteGenres.contains("Funk") {
     print("I get up on the good foot")
@@ -149,9 +149,9 @@ for genre in favoriteGenres {
 //  Classical
 
 /*
- Swift's 'Set' type does not have a defined ordering.
- To iterate over the values of a set in a specific order, use 'sorted()' method,
- which returns the set's elements as an array sorted using the '<' operator.
+ Swift's Set type does not have a defined ordering.
+ To iterate over the values of a set in a specific order, use sorted() method,
+ which returns the set's elements as an array sorted using the < operator.
  */
 for genre in favoriteGenres.sorted() {
     print("\(genre)")
@@ -164,16 +164,16 @@ for genre in favoriteGenres.sorted() {
 
 //  MARK: Fundamental Set Operations
 /*
- The case below describes two sets--'a' and 'b'--with the results of various set
+ The case below describes two sets--a and b--with the results of various set
  operations.
 
-        Use the 'intersection(_:)' method to create a new set with only the values
+        Use the intersection(_:) method to create a new set with only the values
     common to both sets.
-        Use the 'symmetricDifference(_:)' method to create a new set with values
+        Use the symmetricDifference(_:) method to create a new set with values
     in either set, but not both.
-        Use the 'union(_:)' method to create a new set with all of the values
+        Use the union(_:) method to create a new set with all of the values
     in both sets.
-        Use the 'subtracting(_:)' method to create a new set with values not in
+        Use the subtracting(_:) method to create a new set with values not in
     the specified set.
  */
 let oddDigits: Set = [1, 3, 5, 7, 9]
@@ -193,24 +193,24 @@ oddDigits.symmetricDifference(singleDigitPrimeNumber).sorted()
 
 //  MARK: Set Membership and Equality
 /*
- The case below describes three sets--'a', 'b' and 'c'--with the representing of
+ The case below describes three sets--a, b and c--with the representing of
  elments shared among sets.
- Set 'a' is a superseet of set 'b', because 'a' contains all elements in 'b'.
- Conversely, set 'b' is a subset of set 'a', because all elements in 'b' are 
- also contained by 'a'.
- Set 'b' and Set 'c' are disjoint with one another, because they share no 
+ Set a is a superseet of set b, because a contains all elements in b.
+ Conversely, set b is a subset of set a, because all elements in b are 
+ also contained by a.
+ Set b and Set c are disjoint with one another, because they share no 
  elements in common.
 
         Use the "is equal" operator (==) to determine whether two sets contain 
     all of the same values.
-        Use the 'isSubset(of:)' method to determine whether all of the values of
+        Use the isSubset(of:) method to determine whether all of the values of
     a set are contained in the specified set.
-        Use the 'isSuperset(of:)' method to determine whether a set contains all
+        Use the isSuperset(of:) method to determine whether a set contains all
     of the values in a specified set.
-        Use the 'isStrictSubset(of:)' or 'isStrictSuperSet(of:)' methods to
+        Use the isStrictSubset(of:) or isStrictSuperSet(of:) methods to
     determine whether a set is a subset or superset, but not equal to, a 
     specified set.
-        Use the 'isDisjoint(with:)' method to determine whether two sets have no
+        Use the isDisjoint(with:) method to determine whether two sets have no
     values in common.
  */
 let houseAnimals: Set = ["🐶", "🐱"]

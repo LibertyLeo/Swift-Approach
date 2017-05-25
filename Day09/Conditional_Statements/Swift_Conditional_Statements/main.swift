@@ -10,18 +10,18 @@ import Foundation
 
 //  MARK: Conditional Statements
 /*
- Swift provides two ways to add conditional branches to your code: the 'if'
- statement and the 'switch' statement.
- Typically, you use the 'if' statement to evaluate simple conditions with only a
+ Swift provides two ways to add conditional branches to your code: the if
+ statement and the switch statement.
+ Typically, you use the if statement to evaluate simple conditions with only a
  few possible outcomes.
- The 'switch' statement is better suited to more complex conditions with multiple
+ The switch statement is better suited to more complex conditions with multiple
  possible permutations and is useful in situations where pattern matching can
  help select an appropriate code branch to execute.
  */
 
 //  MARK: - If
 /*
- In its simplest form, the 'if' statement has a single if condition.
+ In its simplest form, the if statement has a single if condition.
  */
 var temperatureInFahrenheit = 30
 if temperatureInFahrenheit <= 32 {
@@ -30,8 +30,8 @@ if temperatureInFahrenheit <= 32 {
 //  Prints "It's very code. Consider wearing a scarf."
 
 /*
- The 'if' statement can provide an alternative set of statements, known as an
- else clause, for situations when the 'if' condition is false.
+ The if statement can provide an alternative set of statements, known as an
+ else clause, for situations when the if condition is false.
  */
 temperatureInFahrenheit = 40
 if temperatureInFahrenheit <= 32 {
@@ -42,7 +42,7 @@ if temperatureInFahrenheit <= 32 {
 //  Prints "It's not that cold. Wear a t-shirt."
 
 /*
- You can chain multiple 'if' statements together to consider additional clauses.
+ You can chain multiple if statements together to consider additional clauses.
  */
 temperatureInFahrenheit = 90
 if temperatureInFahrenheit <= 32 {
@@ -55,7 +55,7 @@ if temperatureInFahrenheit <= 32 {
 //  Prints "It's really warm. Don't forget to wear sunscreen."
 
 /*
- The final 'else' clause is optional, however, and can be excluded if the set of
+ The final else clause is optional, however, and can be excluded if the set of
  conditions does not need to be complete.
  */
 temperatureInFahrenheit = 72
@@ -67,9 +67,9 @@ if temperatureInFahrenheit <= 32 {
 
 //  MARK: - Switch
 /*
- A 'switch' statement considers a value and compares it against several possible
+ A switch statement considers a value and compares it against several possible
  matching patterns.
- A 'switch' statement provides an alternative to the 'if' statement for
+ A switch statement provides an alternative to the if statement for
  responding to multiple potential states.
 
  ///    switch <#some value to consider#> {
@@ -82,12 +82,12 @@ if temperatureInFahrenheit <= 32 {
  ///    <#otherwise, do somthing else#>
  ///    }
 
- Every 'switch' statement consists of multiple posiible cases, each of which
- begins with the 'case' keyword.
- Every 'switch' statement must be exhaustive. That is, every possible value of
- the type begin considered must be matched by one of the 'switch' cases.
+ Every switch statement consists of multiple posiible cases, each of which
+ begins with the case keyword.
+ Every switch statement must be exhaustive. That is, every possible value of
+ the type begin considered must be matched by one of the switch cases.
  If it's not appropriate to provide a case for every possible value, you can
- define a default case indicated by the 'default' keyword, and must always appear
+ define a default case indicated by the default keyword, and must always appear
  last.
  */
 let someCharacter: Character = "z"
@@ -105,14 +105,14 @@ default:
 
 //  MARK: No implicit Fallthrough
 /*
- 'switch' statements in Swift do not fall through the bottom of each case and
+ switch statements in Swift do not fall through the bottom of each case and
  into the next one by default.
- The entire 'switch' statement finishes its executing as soon as the first
- matching 'switch' case is completed, without requiring an explict 'break'
+ The entire switch statement finishes its executing as soon as the first
+ matching switch case is completed, without requiring an explict break
  statement.
 
  NOTE:
- Although 'break' is not required in Swift, you can use a 'break' statement to
+ Although break is not required in Swift, you can use a break statement to
  match and ignore a particular case or to break out of a matched case before
  that case has completed its execution.
  */
@@ -134,7 +134,7 @@ default:
 /*
  This approach avoid accidental fallthrough from one case to another and makes
  for safe code that is clearer in its intent.
- To make a 'switch' with a single case that matches both "a" and "A", combine
+ To make a switch with a single case that matches both "a" and "A", combine
  the two values into a compound case, separating the values with commas.
  */
 let anotherCharacterCombine: Character = "a"
@@ -149,14 +149,14 @@ default:
  For readability, a compound case can also be written over multiple lines.
 
  NOTE:
- To explicitly fall through at the end of a particular 'switch' case, use the
- 'fallthrough' keyword.
+ To explicitly fall through at the end of a particular switch case, use the
+ fallthrough keyword.
  */
 
 
 
 //  MARK: Interval Matching
-//  Value in 'switch' case can be checked for their inclusion in an interval.
+//  Value in switch case can be checked for their inclusion in an interval.
 let approximateCount = 62
 let countedThings = "moons orbiting Saturn"
 let naturalCount: String
@@ -181,7 +181,7 @@ print("There are \(naturalCount) \(countedThings).")
 
 //  MARK: Tuples
 /*
- You can use tuples to test multiple values in the same 'switch' statement.
+ You can use tuples to test multiple values in the same switch statement.
  Each element of the tuple can be tested against a different value or interval
  of values.
  Alternatively, use the underscore character (_), also known as the wildcard
@@ -204,7 +204,7 @@ default:
 /*
  In fact, the point (0, 0) could match all four of the cases in this example.
  However, if multiple matches are possible, the first matching case is always
- used. The point (0, 0) would match 'case (0, 0)' first, and so all other 
+ used. The point (0, 0) would match case (0, 0) first, and so all other 
  matching cases would be ignore.
  */
 
@@ -212,7 +212,7 @@ default:
 
 //  MARK: Value Bindings
 /*
- A 'switch' case can name the value or values it matches to temporary constants
+ A switch case can name the value or values it matches to temporary constants
  or variables, for use in the body of the case.
  This behavior is known as value binding, because the values are bound to 
  temporary constants or variables within the case's body.
@@ -228,18 +228,18 @@ case let (x, y):
 }
 // Prints "on the x-axis with an x value of 2"
 /*
- The 'switch' statement does not have a 'default' case.
- The final case, 'case let (x, y)', declares a tuple of two placehoder constants
+ The switch statement does not have a default case.
+ The final case, case let (x, y), declares a tuple of two placehoder constants
  that can match any value.
- Because 'anotherPoint' is always a tuple of two values, this case matches all
- possible remaining values, and a 'default' case is not needed to make the
- 'switch' statement exhaustive.
+ Because anotherPoint is always a tuple of two values, this case matches all
+ possible remaining values, and a default case is not needed to make the
+ switch statement exhaustive.
  */
 
 
 
 //  MARK: Where
-//  A 'switch' case can use a 'where' clause to check for additional conditions.
+//  A switch case can use a where clause to check for additional conditions.
 let yetAnotherPoint = (1, -1)
 switch yetAnotherPoint {
 case let (x, y) where x == y:
@@ -285,7 +285,7 @@ default:
 }
 // Prints "On an axis, 9 from the origin"
 /*
- Both patterns include a binding for 'distance' and 'distance' is an integer in
- both patterns--which means that the code in the body of the 'case' can always a
- value for 'distance'
+ Both patterns include a binding for distance and distance is an integer in
+ both patterns--which means that the code in the body of the case can always a
+ value for distance
  */

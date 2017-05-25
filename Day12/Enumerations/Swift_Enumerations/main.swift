@@ -21,14 +21,14 @@ import Foundation
 
 //  MARK: - Enumeration Syntax
 /*
- You introduce enumerations with the 'enum' keyword and place their entire 
+ You introduce enumerations with the enum keyword and place their entire 
  definition with a pair of braces.
  */
 enum someEnumeration {
     //  enumeration definition goes here
 }
 
-//  You use the 'case' keyword to introduce new enumeration cases.
+//  You use the case keyword to introduce new enumeration cases.
 enum CompassPoint {
     case north
     case south
@@ -41,7 +41,7 @@ enum CompassPoint {
  Unlike C and Objective-C, Swift enumeration cases are not assigned a default
  integer value when they are created.
  Instead, the different enumeration cases are fully-fledged values in their own
- right, with an explicitly-defined type of 'CompassPoint'.
+ right, with an explicitly-defined type of CompassPoint.
  */
 
 //  Multiple cases can appear on a single line, separated by commas
@@ -58,15 +58,15 @@ enum Planet {
 var directionToHead = CompassPoint.west
 
 /*
- Once 'directionToHead' is declared as a 'CompassPoint', you can set it to a 
- different 'CompassPoint' value using a short dot syntax.
+ Once directionToHead is declared as a CompassPoint, you can set it to a 
+ different CompassPoint value using a short dot syntax.
  */
 directionToHead = .east
 
 
 
 //  MARK: Matching Enumeration Values with a Switch Statement
-//  You can math individual enumeration values with a 'switch' statement
+//  You can math individual enumeration values with a switch statement
 directionToHead = .south
 switch directionToHead {
 case .north:
@@ -83,8 +83,8 @@ case .west:
 /*
  Requiring exhaustiveness ensures that enumeration cases are not accidently 
  omiited.
- When it is not appropriate to provide a 'case' for every enumeration case, you
- can provide a 'default' case to cover any cases that are not addressed 
+ When it is not appropriate to provide a case for every enumeration case, you
+ can provide a default case to cover any cases that are not addressed 
  explicitly.
  */
 let somePlanet = Planet.earth
@@ -118,9 +118,9 @@ enum Barcode {
 }
 
 /*
- This definition does not provide any actual 'Int' or 'String' values - it just
- defines the type of associated values that 'Barcode' constants and variables
- can store when they are equal to 'Barcode.upc' or 'Barcode.qrCode'
+ This definition does not provide any actual Int or String values - it just
+ defines the type of associated values that Barcode constants and variables
+ can store when they are equal to Barcode.upc or Barcode.qrCode
  */
 var productBarcode = Barcode.upc(8, 85909, 51226, 3)
 productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
@@ -129,8 +129,8 @@ productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
  The different barcode types can be checked using a switch statement, as before.
  This time, however, the associated values can be extracted as part of the 
  switch statement.
- You extract each associated values as a constant (with the 'let' prefix) or a
- variable (with the 'var' prefix) for use within the 'switch' case's body.
+ You extract each associated values as a constant (with the let prefix) or a
+ variable (with the var prefix) for use within the switch cases body.
  */
 switch productBarcode {
 case .upc(let numberSystem, let manufacturer, let product, let check):
@@ -142,8 +142,8 @@ case .qrCode(let productCode):
 
 /*
  If all of the associated values for an enumeration case are extracted as 
- constants, or if all are extracted as variables, you can place a single 'var'
- or 'let' annotation before the case name, for brevity
+ constants, or if all are extracted as variables, you can place a single var
+ or let annotation before the case name, for brevity
  */
 switch productBarcode {
 case let .upc(numberSystem, manufacturer, product, check):
@@ -202,7 +202,7 @@ enum CompassPointImplicitly: String {
     case north, south, east, west
 }
 
-//  You access the raw value of an enumeration case with its 'rawValue' property
+//  You access the raw value of an enumeration case with its rawValue property
 let earthsOrder = PlanetImplicitly.earth.rawValue
 //  earthsOrder is 3
 let sunsetDirection = CompassPointImplicitly.west.rawValue
@@ -214,17 +214,17 @@ let sunsetDirection = CompassPointImplicitly.west.rawValue
 /*
  If you define an enumeration with a raw-value type, the enumeration 
  automatically receives an intializer that takes a value of the raw value's type
- (as a parameter called 'rawValue') and returns either an enumeration case or
- 'nil'.
+ (as a parameter called rawValue) and returns either an enumeration case or
+ nil.
  */
 let possiblePlanet = PlanetImplicitly(rawValue: 7)
 /*  
  possiblePlanet is of type PlanetImplicitly? and equals
  PlanetImplicityly.uranus.
- Not all possible 'Int' values will find a matching planet, however. Because of 
+ Not all possible Int values will find a matching planet, however. Because of 
  this, the raw value initializer always returns an optional enumeration case.
- In the example above, 'possiblePlanet' is of type 'PlanetImplicitly?', or
- "optional 'PlanetImplicitly'."
+ In the example above, possiblePlanet is of type PlanetImplicitly?, or
+ "optional PlanetImplicitly."
  
  NOTE:
  The raw value initializer is a failable intializer, because not every raw 
@@ -232,8 +232,8 @@ let possiblePlanet = PlanetImplicitly(rawValue: 7)
  */
 
 /*
- If you try to find a planet with a position of '11', the optional 
- 'PlanetImplicitly' value returned by the raw value initializer will be 'nil'.
+ If you try to find a planet with a position of 11, the optional 
+ PlanetImplicitly value returned by the raw value initializer will be nil.
  */
 let positionToFind = 11
 if let somePlanet = PlanetImplicitly(rawValue: positionToFind) {
@@ -254,7 +254,7 @@ if let somePlanet = PlanetImplicitly(rawValue: positionToFind) {
 /*
  A recursive enumeration is an enumeration that has another instance of the
  enumeration as the associated value for one or more of the enumeration cases.
- You indicate that an enumeration case is recursive by writing 'indirect' before
+ You indicate that an enumeration case is recursive by writing indirect before
  it, which tells the compiler to insert the necessary layer of indirection.
  */
 enum ArithmeticExpression {
@@ -264,7 +264,7 @@ enum ArithmeticExpression {
 }
 
 /*
- You can also write 'indirect' before the beginning of the enumeration, to 
+ You can also write indirect before the beginning of the enumeration, to 
  enable indirection for all of the enumeration's cases that need it.
  
  This enumeration can store three kinds of arithmetic expressions:
@@ -278,13 +278,13 @@ indirect enum ArithmeticExpressions {
 }
 
 /*
- For example, the expression '(5 + 4) * 2' has number on the right hand side of
+ For example, the expression (5 + 4) * 2 has number on the right hand side of
  the multiplication and another expression on the left hand side of the
  multiplication.
  Because the data is nested, the enumeration used to store the data also need to
  support nesting.
- The code below shows the 'ArithmeticExpression' recursive enumeration being
- created for '(5 + 4) * 2'
+ The code below shows the ArithmeticExpression recursive enumeration being
+ created for (5 + 4) * 2
  */
 let five = ArithmeticExpression.number(5)
 let four = ArithmeticExpression.number(4)

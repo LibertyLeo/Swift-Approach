@@ -39,15 +39,15 @@ import Foundation
 /*
  An array stores values of the same type in an ordered list.
  The same value can appear in an array multiple times at different positions.
- Swift's 'Array' type is bridged to Foundation's 'NSArray' class.
+ Swift's Array type is bridged to Foundation's NSArray class.
  */
 
 
 
 //  MARK: Array Type Shorthand Syntax
 /*
- The type of a Swift array is written in full as 'Array<Element>', where
- 'Element' is the type of values the array is allowed to store.
+ The type of a Swift array is written in full as Array<Element>, where
+ Element is the type of values the array is allowed to store.
  You can also write the type of an array in shorthand form as [Element] which is
  preferred.
  */
@@ -60,7 +60,7 @@ print("someInts is of type [Int] with \(someInts.count) items.")
 // Prints "someInts is of type [Int] with 0 items."
 
 /*
- Note that the type of the 'someInts' variable is inferred to be [Int] from the
+ Note that the type of the someInts variable is inferred to be [Int] from the
  type of the initializer.
  Alternatively, if the context already provides type information, such as a
  function argument or an already typed variable or constant, you can create an
@@ -76,10 +76,10 @@ someInts = []
 
 //  MARK: Creating an Array with a Default Value
 /*
- Swift's 'Array' type also provides an intializer for creating an array of a
+ Swift's Array type also provides an intializer for creating an array of a
  certain size with all of its values set to the same default value.
- You pass initializer a default value of the appropriate type (called 'repeating'),
- and the number of times that value is repeated in the new array (called 'count').
+ You pass initializer a default value of the appropriate type (called repeating),
+ and the number of times that value is repeated in the new array (called count).
  */
 var threeDoubles = Array(repeating: 0.0, count: 3)
 // threeDoubles is of type [Double], and equal to [0.0, 0.0, 0.0]
@@ -127,8 +127,8 @@ print("The shopping list contains \(shoppingList.count) items.")
 // Prints "The shopping list contains 2 items."
 
 /*
- Use the Boolean 'isEmpty' property as a shortcut for checking whether the
- 'count' property is equal to '0'
+ Use the Boolean isEmpty property as a shortcut for checking whether the
+ count property is equal to 0
  */
 if shoppingList.isEmpty {
     print("The shopping list is empty.")
@@ -139,7 +139,7 @@ if shoppingList.isEmpty {
 
 /*
  You can add a new item to the end of an array by calling the array's
- 'append(_:)' method, or with the additon assignment operator (+=).
+ append(_:) method, or with the additon assignment operator (+=).
  */
 shoppingList.append("Flour")
 // shoppingList now contains 3 items, and someone is making pancakes.
@@ -159,7 +159,7 @@ var firstItem = shoppingList[0]
 
 /*
  NOTE:
- The first item in the array has an index of '0', not '1'.
+ The first item in the array has an index of 0, not 1.
  Arrays in Swift are always zero-indexed.
  */
 
@@ -169,7 +169,7 @@ shoppingList[0] = "Six eggs"
 
 /*
  When you use subscript syntax, the index you specify need to be valid.
- For example, writing 'shoppingList[shoppingList.count] = "Salt"' to try to
+ For example, writing shoppingList[shoppingList.count] = "Salt" to try to
  append an item to the end of the array result in a runtime error.
 
  You can also use subscript syntax to change a range of values at once, even if
@@ -181,14 +181,14 @@ shoppingList[4...6] = ["Bananas", "Apples"]
 
 /*
  To insert an item into the array at a specified index, call the array's
- 'insert(_:at:)' method
+ insert(_:at:) method
  */
 shoppingList.insert("Maple Syrup", at: 0)
 // shoppingList now contains 7 items
 // "Maple Syrup" is now the first item in the list
 
 /*
- Similarly, you remove an item from the array with the 'remove(at:)' method.
+ Similarly, you remove an item from the array with the remove(at:) method.
  This method removes the item at the specified index and returns the removed
  item (although you can ignore the returned value if you do not need it)
  */
@@ -201,21 +201,21 @@ let mapleSyrup = shoppingList.remove(at: 0)
  NOTE:
  If you try to access or modify a value for an index that is outside of an
  array's existing bounds, you will trigger a runtime error.
- The largest valid index in an array is 'count-1' because arrays are indexed
- from zero--however, when 'count' is '0' (meaning the array is empty), there are
+ The largest valid index in an array is count-1 because arrays are indexed
+ from zero--however, when count is 0 (meaning the array is empty), there are
  no valid indexes.
  */
 
 /*
  Any gaps in an array are closed when an item is removed, and so the value at
- index '0' is once again equal to '"Six eggs"'
+ index 0 is once again equal to "Six eggs"
  */
 firstItem = shoppingList[0]
 // firstItem is now equal to "Six eggs"
 
 /*
- If you want to remove the final item from an array, use the 'removeLast()'
- method rather the 'remove(at:)' method to avoid the need to query the array's
+ If you want to remove the final item from an array, use the removeLast()
+ method rather the remove(at:) method to avoid the need to query the array's
  count property.
  */
 let apples = shoppingList.removeLast()
@@ -228,7 +228,7 @@ let apples = shoppingList.removeLast()
 //  MARK: Iterating Over an Array
 /*
  You can iterate over the entire sets of values in an array with the
- 'for-in' loop
+ for-in loop
  */
 for item in shoppingList {
     print(item)
@@ -241,8 +241,8 @@ for item in shoppingList {
 
 /*
  If you need the integer index of each item as well as its values, use the
- 'enumerated()' method to iterate over the array instead.
- For each item in the array, the 'enumerated()' method returns a tuple composed
+ enumerated() method to iterate over the array instead.
+ For each item in the array, the enumerated() method returns a tuple composed
  of an integer and the item.
  If you enumerate over a whole array, these integers match the items' indices.
  You can decompose the tuple into temporary constant or variables as part of the

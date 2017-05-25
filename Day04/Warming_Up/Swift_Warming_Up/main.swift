@@ -30,12 +30,12 @@ let cat = "🐱"; print(cat)
 
 /*
  You can access the minimum and maximum values of each integer type with its
- 'min' and 'max' properties.
+ min and max properties.
  In most cases, you don't need to pick a specific size of integer to use in your
- code. Swift provides an additional integer type, 'Int', which has the same size
+ code. Swift provides an additional integer type, Int, which has the same size
  as the current platform's native word size:
-    On a 32-bit platform, 'Int' is the same size as Int32.
-    On a 64-bit platform, 'Int' is the same size as Int64.
+    On a 32-bit platform, Int is the same size as Int32.
+    On a 64-bit platform, Int is the same size as Int64.
  */
 let minValue = UInt8.min    //  minValue is equal to 0, and is of type UInt8
 let maxValue = UInt8.max    //  maxValue is equal to 255, and is of type UInt8
@@ -43,8 +43,8 @@ let maxValue = UInt8.max    //  maxValue is equal to 255, and is of type UInt8
 /*
  Integer literals can be written as:
     A decimal number, with no prefix
-    A binary number, with a '0b' prefix
-    An octal number, with a '0o' prefix
+    A binary number, with a 0b prefix
+    An octal number, with a 0o prefix
     A hexadecimal number, with a 0x prefix
  */
 let decimalInteger = 17
@@ -53,12 +53,12 @@ let octalInteger = 0o21         //  17 in octal notation
 let hexadecimalInteger = 0x11   //  17 in hexadeciamlInteger notation
 
 /*
- For decimal numbers with an exponent of 'exp', the base number is
+ For decimal numbers with an exponent of exp, the base number is
  multiplied by 10^exp.
     1.25e2 means 1.25 x 10^2, or 125.0
     1.25e-2 means 1.25 x 10^(-2), or 0.0125
 
- For hexadecimal numbers with an exponent of 'exp', the base number is 
+ For hexadecimal numbers with an exponent of exp, the base number is 
  multiplied by 2^exp.
     0xFp2 means 15 x 2^2, or 60.0
     0xFp-2 means 15 x 2^(-2), or 3.75
@@ -101,7 +101,7 @@ let pointOneFourOneFiveNine = 0.14159
 let pi = Double(three) + pointOneFourOneFiveNine
 //  pi equals 3.14159, and is inferred to be of type Double.
 
-//  An integer type can be initialized with a 'Double' or 'Float' value
+//  An integer type can be initialized with a Double or Float value
 let intergerPi = Int(pi)
 //  integerPi equals 3, and is inferred to be of type Int
 
@@ -118,14 +118,14 @@ var maxAmplitudeFound = AudioSample.min
 //  MARK: Control Flow
 /*
  Boolean values are referred to as logical, because they can only ever be true
- or false.Swift provides two Boolean constant values, 'true' adn 'false'.
+ or false.Swift provides two Boolean constant values, true adn false.
  */
 let orangeAreOrange = true
 let turnipsAreDelicious = false
 
 /*
  Boolean values are particularly useful when you work with conditional statements 
- such as the 'if' statement.
+ such as the if statement.
  */
 if turnipsAreDelicious {
     print("Mmm, tasty turnips!")
@@ -135,7 +135,7 @@ if turnipsAreDelicious {
 //  Prints "Eww, turnips are horrible."
 
 /*
- Swift's type safety prevents non-Boolean values from being substitued for 'Bool'.
+ Swift's type safety prevents non-Boolean values from being substitued for Bool.
  */
 let i = 1
 if i {
@@ -200,10 +200,10 @@ print("The status message is \(http200Status.description)")
 
 //  MARK: - Optionals
 /*
- Because the initializer might fail, it returns an optional 'Int', rather than
- an 'Int'.
- An optional 'Int' is written as 'Int?', not 'Int'. The question mark indicates
- it might constains some 'Int' value, or it might contain no value at all.
+ Because the initializer might fail, it returns an optional Int, rather than
+ an Int.
+ An optional Int is written as Int?, not Int. The question mark indicates
+ it might constains some Int value, or it might contain no value at all.
  */
 let possibleNumber = "123"
 let convertedNumber = Int(possibleNumber)
@@ -211,7 +211,7 @@ let convertedNumber = Int(possibleNumber)
 
 /*
  You set an optional variable to a valueless state by assigning it the special
- value 'nil'.
+ value nil.
  */
 var serverResponseCode: Int? = 404
 //  serverResponseCode contains an actual Int value of 404
@@ -220,14 +220,14 @@ serverResponseCode = nil
 
 /*
  If you define an optional variable with out providing a default value, the
- variable is automatically set to 'nil' for you
+ variable is automatically set to nil for you
  */
 var surverAnswer: String?
 //  surverAnswer is automatically set to nil
 
 /*
- You can use an 'if' statement to find out whether an optional contains a value
- by comparing the optional against 'nil.
+ You can use an if statement to find out whether an optional contains a value
+ by comparing the optional against nil.
  If an optioanal has a value, it is considered to be "not equal to" nil
  */
 if convertedNumber != nil {
@@ -251,7 +251,7 @@ if convertedNumber != nil {
 
 /*
  You use optional binding to find out whether an optioanl contanins a value.
- Write an optional binding for an 'if' statement as follows.
+ Write an optional binding for an if statement as follows.
  */
 if let actualNumber = Int(possibleNumber) {
     print("\"\(possibleNumber)\" has an integer value of \(actualNumber)")
@@ -260,16 +260,16 @@ if let actualNumber = Int(possibleNumber) {
 }
 //  Prints ""123" has an integer value of 123"
 /*
- If you want to manipulate the value of 'actualNumber' within the first branch 
- of the 'if' statement,You could write 'if var actualNumber' instead.
+ If you want to manipulate the value of actualNumber within the first branch 
+ of the if statement,You could write if var actualNumber instead.
  */
 
 /*
  You can include as many optional bindings and Boolean conditions in a single
- 'if' statement as you need to, separated by commas.
- If any of the values in the optional bindings are 'nil' or any Boolean condition
- evaluates to 'false', the whole 'if' statement's condition is considered to be 
- 'false.
+ if statement as you need to, separated by commas.
+ If any of the values in the optional bindings are nil or any Boolean condition
+ evaluates to false, the whole if statement's condition is considered to be 
+ false.
  Example as follows are equivalent.
  */
 if let firstNumber = Int("4"), let secondNumber = Int("42"),
@@ -306,7 +306,7 @@ let assumedString: String! = "An implicitly unwrapped optional string."
 let implicitString: String = assumedString  //  no need for an exclamation mark
 /*
  NOTE:  
- If an implicitly unwrapped optional is 'nil' and you try to access its wrapped
+ If an implicitly unwrapped optional is nil and you try to access its wrapped
  value, you'll trigger a runtime error.
  */
 
@@ -331,15 +331,15 @@ if let definiteString = assumedString {
 /*
  NOTE:  
  Do not use an implicitly unwrapped optional when there is a possibility of a 
- variable becoming 'nil' at a later point. Always use a normal optional type 
- if you need to check for a 'nil' value during the lifetime of a variable.
+ variable becoming nil at a later point. Always use a normal optional type 
+ if you need to check for a nil value during the lifetime of a variable.
  */
 
 
 
 //  MARK: - Error Handling
 /*
- A function indicates that it can throw an error by including the 'throws' 
+ A function indicates that it can throw an error by including the throws 
  keyword in its declaration.
  */
 func canThrowsAnError() throws {
@@ -347,10 +347,10 @@ func canThrowsAnError() throws {
 }
 
 /*
- When you call a function that can throw an error, you prepared the 'try' 
+ When you call a function that can throw an error, you prepared the try 
  keyword to the expression.
  Swift automatically propagates errors out of their current scope until they
- are handled by a 'catch' clause.
+ are handled by a catch clause.
  */
 do {
     try canThrowsAnError()
@@ -360,7 +360,7 @@ do {
 }
 
 /*
- A 'do' statement creates a new containing scope, which allows errors to be 
+ A do statement creates a new containing scope, which allows errors to be 
  propagated to one or more catch clasuse.
  */
 enum SandwichError: Error {
@@ -400,7 +400,7 @@ do {
  You can trigger an assertion in your code to end code execution and to provide
  an opportunity to debug the cause of the absent or invalid value.
  You write an assertion by calling the Swift standard library global
- 'assert(_:_:file:line:)' function.
+ assert(_:_:file:line:) function.
  */
 let age = -3
 assert(age >= 0, "A person's age cannot be less than zero")
@@ -423,6 +423,6 @@ assert(age >= 0)
  but the subscript index value could be too low or too high.
     A value is passed to a function, but an invalid value means that the 
  function cannot fulfill its task.
-    An optional value is currently 'nil', but a 'non-nil' value is essential
+    An optional value is currently nil, but a non-nil value is essential
  for scusequent code to execute successfully,
  */

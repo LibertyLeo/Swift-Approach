@@ -22,7 +22,7 @@ import Foundation
 
 
 //  MARK: Arithmetic Operator
-//  The additional operator is also supported for 'String' concatenation.
+//  The additional operator is also supported for String concatenation.
 if ("hello, " + "world") == "hello, world" {
     print("The additional operator can be supported for String concatenation.")
 }
@@ -31,8 +31,8 @@ if ("hello, " + "world") == "hello, world" {
 
 //  MARK: Remainder Operator
 /*
- The sign of 'b' is ignored for negative value of 'b'.
- This means that 'a % b' and 'a % -b' always given the same answer.
+ The sign of b is ignored for negative value of b.
+ This means that a % b and a % -b always given the same answer.
  */
 if (-9 % 4) == (-9 % (-4)) {
     print("Both expression's result are just same.")
@@ -54,7 +54,7 @@ if (-9 % 4) == (-9 % (-4)) {
  Swift also provides two identity operators (=== and !==), which you use to 
  test whether two object refrences both refer to the same object instance.
 
- Both 'Int' and 'String' can be compared, which means tuples of the type 
+ Both Int and String can be compared, which means tuples of the type 
  (Int, String) can be compared.
  Tuples are compared from left to right, one value at a time, until the
  comparision find two values that aren't equal.
@@ -83,7 +83,7 @@ if (4, "dog") == (4, "dog") {
 //  MARK: Ternary Conditional Operator
 /*
  The ternary conditional operator is a special operator with three parts, which
- takes the form 'question ? answer1 : answer2'.
+ takes the form question ? answer1 : answer2.
  The ternary conditional operator provides an efficient shorthand for deciding
  which of two expression to consider. But its conciseness can lead to 
  hard-to-read code if overused. Avoid combining multiple instances of the 
@@ -94,8 +94,8 @@ if (4, "dog") == (4, "dog") {
 
 //  MARK: Nil-Coalescing Operator
 /*
- The nil-coalescing operator (a ?? b) unwraps an optional 'a' if it contains a
- value, or returns a default value 'b' is 'a' is 'nil'.
+ The nil-coalescing operator (a ?? b) unwraps an optional a if it contains a
+ value, or returns a default value b is a is nil.
  The nil-coalescing operator is shorthand for the code(a != nil ? a! : b).
  The nil-coalescing operator provides a more elegant way to encapsulate this
  conditional checking and unwrapping in a concise and readable form.(a ?? b)
@@ -106,17 +106,17 @@ if (4, "dog") == (4, "dog") {
 //  MARK: - Range Operators
 //  MARK: Closed Range Operator
 /*
- The closed range operator (a...b) defines a range that returns from 'a' to 'b',
- and includes the values 'a' and 'b'.
- The value of 'a' must not be greater than 'b'.
+ The closed range operator (a...b) defines a range that returns from a to b,
+ and includes the values a and b.
+ The value of a must not be greater than b.
  */
 
 
 
 //  MARK: Half-Open Range Operator
 /*
- The half-open range operator (a..<b) defines a range that runs from 'a' to 'b',
- but does not include 'b'.
+ The half-open range operator (a..<b) defines a range that runs from a to b,
+ but does not include b.
  */
 
 
@@ -124,7 +124,7 @@ if (4, "dog") == (4, "dog") {
 //  MARK: Combining Logical Operators
 /*
  You can combine multiple logical operator to create longer compound expressions.
- However, the '&&' amd '||' operators still operator on only two values, so this
+ However, the && amd || operators still operator on only two values, so this
  is actually three smaller expressions chained together.
  The example can be read as:
  If we've entered the correct door code and passed the retina scan, or if we
@@ -144,7 +144,7 @@ if enteredDoorCode && passedRetinaScan || hasDoorKey || knowsOverridePassword {
 
 /*
  NOTE:
- The Swift logical operators '&&' and '||' are left-associative, meaning that
+ The Swift logical operators && and || are left-associative, meaning that
  compound expressions with multiple logical operators evaluate the leftmost
  subexpression first.
  */

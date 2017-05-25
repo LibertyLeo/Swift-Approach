@@ -81,7 +81,7 @@ for tickMark in 0..<minutes {
 
 /*
  Some users might want fewer tick marks in their UI.
- They could prefer one mark ever 5 minutes instead. Use the 'stride(from:to:by:)'
+ They could prefer one mark ever 5 minutes instead. Use the stride(from:to:by:)
  function to skip the unwanted marks.
  */
 let minuteInterval = 5
@@ -90,7 +90,7 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 }
 
 /*
- Closed ranges are also available, by using 'stride(from:through:by:)' instead
+ Closed ranges are also available, by using stride(from:through:by:) instead
  */
 let hours = 12
 let hourInterval = 3
@@ -102,17 +102,17 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
 //  MARK: - While Loops
 /*
- A 'while' loop performs a set of statements until a conditon becomes false.
+ A while loop performs a set of statements until a conditon becomes false.
  These kinds of loops are best used when the number of iteration is not known 
  before the first iteration begins.
  Swift provides two kind of while loops:
-    'while' evaluates its condition at the start of each pass through the loop.
-    'repeat-while' evaluates its condition at the end of each pass through the loop.
+    while evaluates its condition at the start of each pass through the loop.
+    repeat-while evaluates its condition at the end of each pass through the loop.
  */
 
 //  MARK: While
 /*
- A 'while' loop starts by evaluating a single condition. If the condition is 
+ A while loop starts by evaluating a single condition. If the condition is 
  true, a set of statement is repeated until the condition become false.
 
  Take a simple games of Snakes and Ladders as a example.
@@ -159,32 +159,32 @@ print("Game over!")
 
 /*
  The example above uses a very simple approach to dice rolling. Instead of 
- generating a random number, it starts with a 'diceRoll' value of 0.
- Each time through the while loop, 'diceRoll' is incremented by one and is then
+ generating a random number, it starts with a diceRoll value of 0.
+ Each time through the while loop, diceRoll is incremented by one and is then
  checked to see whether it has become too large.
  Whenever this return value equals 7, the dice roll has become too large and is 
  reset to a value of 1. 
- The result is a sequence of 'diceRoll' values that is always 1, 2, 3, 4, 5, 6,
+ The result is a sequence of diceRoll values that is always 1, 2, 3, 4, 5, 6,
  1, 2 and so on.
- After rolling the dice, the player moves forward by 'diceRoll' squares. 
+ After rolling the dice, the player moves forward by diceRoll squares. 
  It's possible that the dice roll may have moved the player beyond square 25, 
  in which case the game is over. To cope with this scenario, the codee checks 
- that 'square' is less than the 'board' array's count property.
- If 'square' is valid, the value stored in 'board[square]' is added to the 
- current 'square' value to move the player up or down any ladders or snakes.
+ that square is less than the board array's count property.
+ If square is valid, the value stored in board[square] is added to the 
+ current square value to move the player up or down any ladders or snakes.
  */
 
 /*
  NOTE:
- If this check is not performed, 'board[square]' might try to access a value
- outside the bounds of the 'board' array, which would trigger a runtime error.
+ If this check is not performed, board[square] might try to access a value
+ outside the bounds of the board array, which would trigger a runtime error.
  */
 
 
 
 //  MARK: Repeat-While
 /*
- The other variation of the 'while' loop, known as the repeat-while loop, 
+ The other variation of the while loop, known as the repeat-while loop, 
  performs a single pass through the loop block first, before considering the
  loop's condition.
  
@@ -214,9 +214,9 @@ repeat {
 print("Game over!")
 
 /*
- In the 'repeat-while' loop above, 'square += board[square]' is always executed
- immediately after the loop's 'while' condition confirms that 'square' is still
+ In the repeat-while loop above, square += board[square] is always executed
+ immediately after the loop's while condition confirms that square is still
  on the board.
- This behavior removes the need for the array bounds check seen in the 'while'
+ This behavior removes the need for the array bounds check seen in the while
  loop version of the game described earlier.
  */

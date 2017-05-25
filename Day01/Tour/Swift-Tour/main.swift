@@ -10,7 +10,7 @@ import Foundation
 
 //  MARK: Simple Value and Print
 /*
- Use 'let' to make a constant and 'var' to make a variable, the value must 
+ Use let to make a constant and var to make a variable, the value must 
  assign exactly once.
  */
 var myVariable = 42
@@ -22,7 +22,7 @@ let implicitInteger = 70
 let impllicitDouble = 70.0
 let explicitDouble: Double = 70
 
-//  Creating a constant with an explicit type of 'Float' and a value of 4.   (Exp)
+//  Creating a constant with an explicit type of Float and a value of 4.   (Exp)
 let explicitFloat: Float = 4
 print("The explicit value is \(explicitFloat).")
 
@@ -35,12 +35,12 @@ let width = 100
 let widthLabel = label + String(width)
 
 /*
- Try removing the conversion to 'String' from the last line.
+ Try removing the conversion to String from the last line.
  What error do you get? (Exp)
- A: Binary operator '+' cannot be applied to different type.
+ A: Binary operator + cannot be applied to different type.
  */
 
-//  '\()' usage for combine.
+//  \() usage for combine.
 let apples = 3
 let oranges = 5
 let appleSummary = "I have \(apples) apples."
@@ -49,8 +49,8 @@ print(appleSummary)
 print(fruitSummary)
 
 /*
- Use '\()' to include a floating-point calculation in a string and to include
- someone's name in a greeting.  (Exp)
+ Use \() to include a floating-point calculation in a string and to include
+ someones name in a greeting.  (Exp)
  */
 let heightA = 110.4
 let heightB = 64.2
@@ -63,7 +63,7 @@ print(nameGreeting)
 //  MARK: Array and Dictionary
 /* 
  Create arrays and dictionaries using brackets([]).
- ',' is allowed after last element.
+ , is allowed after last element.
  */
 var shoppingList = ["catfish", "water", "tulips", "blue paint"]
 shoppingList[1] = "bottle of water"
@@ -81,8 +81,8 @@ let emptyArray = [String]()
 let emptyDictionary = [String: Float]()
 
 /*
- Or if the array or dicionary's type can be inferred. 
- You can write it as '[]' and '[:]'
+ Or if the array or dicionary's type can be inferred.
+ You can write it as [] and [:]
  */
 shoppingList = []
 occupations = [:]
@@ -91,8 +91,8 @@ occupations = [:]
 
 //  MARK: Control Flow
 /*
- Use 'if' and 'switch' to make contidionals, and use 'for-in', 'for', 'while',
- and 'repeat-while' to make loops.
+ Use if and switch to make contidionals, and use for-in, for, while,
+ and repeat-while to make loops.
  In a if statement, the conditional must be a Boolean expression, which means 
  the code such as if score { ... } is an error.
  */
@@ -114,7 +114,7 @@ var optionalString: String? = "Hello"
 print(optionalString == nil)
 
 /*
- Use 'if' and 'let' together to work, when the constant is nil, the code in 
+ Use if and let together to work, when the constant is nil, the code in 
  braces is skipped.
  */
 var optionalName: String? = "John Appleseed"
@@ -125,8 +125,8 @@ if let name = optionalName {
 print("Greeting official: \(greeting)")
 
 /*
- Change 'optionalName' to 'nil'. What greeting do you get? Add an else clasue
- that sets a different greeting if optionalName is 'nil'.   (Exp)
+ Change optionalName to nil. What greeting do you get? Add an else clasue
+ that sets a different greeting if optionalName is nil.   (Exp)
  A: I got "Hello!".
  */
 var optionName: String? = nil
@@ -139,7 +139,7 @@ if let name = optionName {
 print("Greeting custom: \(greetingCustom)")
 
 /*
- One way to handler optional values is to provide a default value using the '??' 
+ One way to handler optional values is to provide a default value using the ?? 
  operator.
  */
 let nickName: String? = nil;
@@ -167,7 +167,7 @@ default:
 }
 
 /*
- You use 'for-in' to iterate over items in a dictionary by providing a pair of
+ You use for-in to iterate over items in a dictionary by providing a pair of
  names to use for each key-value pair.
  Add variable to keep track of which kind of number was the largest (Exp)
  */
@@ -203,7 +203,7 @@ for (kind, numbers) in interestingNumbers {
 print("\(largestKind) has largest number \(largest)")
 
 /*
- Use 'while' to repeat a block of code until a condition changes.
+ Use while to repeat a block of code until a condition changes.
  The condition of loop can be at the end instead, ensuring that the loop is run
  at least once.
  */
@@ -220,8 +220,8 @@ repeat {
 print(m)
 
 /*
- Keep an index in a loop by using '..<' to make a range of indexes that omits
- its upper value, and use '...' to make a range that incldes both values.
+ Keep an index in a loop by using ..< to make a range of indexes that omits
+ its upper value, and use ... to make a range that incldes both values.
  */
 var total = 0
 for i in 0..<4 {

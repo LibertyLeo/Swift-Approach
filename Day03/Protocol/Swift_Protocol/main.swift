@@ -8,7 +8,7 @@
 
 import Foundation
 
-//  Use 'protocol' to declare a protocol.
+//  Use protocol to declare a protocol.
 protocol ExamlpleProtocol {
     var simpleDescription: String { get }
     mutating func adjust()
@@ -29,9 +29,9 @@ let classDescription = testClass.simpleDescription
 print(classDescription)
 
 /*
- The use of the 'mutating' keyword in the declaration of 'SimpleStructure' to
+ The use of the mutating keyword in the declaration of SimpleStructure to
  mark a method that modifies the structure.
- The declaration of 'SimpleClass' doesn't need any of its methods marked as 
+ The declaration of SimpleClass doesn't need any of its methods marked as 
  mutating because methods on a class can always modify the class.
  */
 struct SimpleStructure: ExamlpleProtocol {
@@ -69,7 +69,7 @@ let enumDescription = testEnum.simpleDescription
 print(enumDescription)
 
 /*
- Use 'extension' to add functionality to an existing type, such as new methods
+ Use extension to add functionality to an existing type, such as new methods
  and computed properties. You can use an extension to add protocol conformance
  to a type that is declared elsewhere, or even to a type that you imported from
  a library or framework.
@@ -90,7 +90,7 @@ testInt.adjust()
 print(testInt.simpleDescription)
 
 /*  
- Write an extension for the 'Double' type that adds an 'absoluteValue'
+ Write an extension for the Double type that adds an absoluteValue
  property.  (Exp)
  */
 extension Double: ExamlpleProtocol {

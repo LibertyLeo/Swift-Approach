@@ -8,7 +8,7 @@
 
 import Foundation
 
-//  Use 'class' followed by the class's name to create a class.
+//  Use class followed by the class's name to create a class.
 class Shape {
     var numberOfSides = 0
     
@@ -18,7 +18,7 @@ class Shape {
 }
 
 /*
- Add a constant property with 'let', and add another method that takes an 
+ Add a constant property with let, and add another method that takes an 
  argument.   (Exp)
  */
 class ShapeExp {
@@ -78,9 +78,9 @@ print(test.area())
 print(test.simpleDescription())
 
 /*  
- Make another subclass of 'NamedShape' called 'Circle' that takes an radius and 
- a name as arguments to ites initializer. Implement an Implement an 'area()'
- and a 'simpleDescription()' method on the 'Circle' class.  (Exp)
+ Make another subclass of NamedShape called Circle that takes an radius and 
+ a name as arguments to ites initializer. Implement an Implement an area()
+ and a simpleDescription() method on the Circle class.  (Exp)
  */
 class Circle: NamedShape {
     var radius: Double
@@ -144,7 +144,7 @@ print(triangle.sideLength)
 
 /* 
  If you don't need to compute the property but still need to provide code that
- is run before and after setting a new value, use 'willSet' and 'didSet'.
+ is run before and after setting a new value, use willSet and didSet.
  The class below ensures that the side length of its triangle is always the 
  same as the side length of its square.
  */
@@ -175,10 +175,10 @@ print(triangleAndSquare.triangle.sideLength)
 print(triangleAndSquare.square.sideLength)
 
 /* 
- When working with optional values, you can write '?' before operations like
- methods, properties, and subscripting. If the value before the '?' is 'nil',
- everything after the '?' is ignored and the value of the whole expression 
- is 'nil'.
+ When working with optional values, you can write ? before operations like
+ methods, properties, and subscripting. If the value before the ? is nil,
+ everything after the ? is ignored and the value of the whole expression 
+ is nil.
  */
 let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
 let sideLength = optionalSquare?.sideLength

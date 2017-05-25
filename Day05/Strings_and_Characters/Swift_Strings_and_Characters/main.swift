@@ -10,14 +10,14 @@ import Foundation
 
 /*
  NOTE:
- Swift's 'String' tyoe is bridge with Foundation's 'NSString' class.
- If you import Foundation, you can access those 'NSString' methods on 'String'
+ Swift's String tyoe is bridge with Foundation's NSString class.
+ If you import Foundation, you can access those NSString methods on String
  without casting.
  */
 
 //  MARK: String Literals
 /*
- You can include predefined 'String' values within your code as string literals.
+ You can include predefined String values within your code as string literals.
  Use a string literal as an initial value for a constant or variable
  */
 let someString = "Some string literal value"
@@ -26,16 +26,16 @@ let someString = "Some string literal value"
 
 //  MARK: Initializing an Empty String
 /*
- To create an empty 'String' value as the starting point for building a longer
+ To create an empty String value as the starting point for building a longer
  string, either assign an empty string literal to a variable, or initialize a 
- new 'String' instance with initializer syntax.
+ new String instance with initializer syntax.
  */
 var emptyString = ""    //  empty string literal
 var anotherEmptyString = String()   //  initializer syntax
 //  These two strings are both empty, and are equivalent to each other
 
 /*
- Find out whether a 'String' value is empty by checking its Boolean 'isEmpty'
+ Find out whether a String value is empty by checking its Boolean isEmpty
  property.
  */
 if emptyString.isEmpty {
@@ -47,7 +47,7 @@ if emptyString.isEmpty {
 
 //  MARK: String Mutability
 /*
- You indicate whether a particular 'String' can be modified(or mutated) by 
+ You indicate whether a particular String can be modified(or mutated) by 
  assigning it to a variable(in which case it can be modified), or to a constant
  (in which case it cannot be modified)
  */
@@ -63,9 +63,9 @@ let constantString = "Highlander"
 
 //  MARK: String Are Value Types
 /*
- Swift's 'String' type is a value type.
- Swift's copy-by-default 'String' behavior ensures that when a funciton or method 
- passes you a 'String' value, it is clear that you own that exact 'String' value, 
+ Swift's String type is a value type.
+ Swift's copy-by-default String behavior ensures that when a funciton or method 
+ passes you a String value, it is clear that you own that exact String value, 
  regardless of where it came from.
  Behind the scenes, Swift's compiler optimizes string usage so that actual
  copying takes place only when absolutely necessary.
@@ -75,8 +75,8 @@ let constantString = "Highlander"
 
 //  MARK: Working with Characters
 /*
- You can access the individual 'Character' values for a 'String' by iterating
- over its 'characters' property with a 'for-in' loop.
+ You can access the individual Character values for a String by iterating
+ over its characters property with a for-in loop.
  */
 for character in "Dog!🐶".characters {
     print(character)
@@ -89,13 +89,13 @@ for character in "Dog!🐶".characters {
 //  🐶
 
 /*
- Alternatively, you can create a stand-alone 'Charcter' constant or variable
- from a single-character string literal by providing a 'Charcter' type annotation.
+ Alternatively, you can create a stand-alone Charcter constant or variable
+ from a single-character string literal by providing a Charcter type annotation.
  */
 let exclamationMark: Character = "!"
 
 /*
- 'String' values can be constructed by passing an array of 'Character' values
+ String values can be constructed by passing an array of Character values
  as an argument to its initializer
  */
 let catCharacter: [Character] = ["C", "a", "t", "!", "🐱"]
@@ -107,10 +107,10 @@ print(catString)
 
 //  MARK: Concatenating Strings and Characters
 /*
- 'String' value can be added together (or concatenated) in three ways:
-    With the addition operator (+) to create a new 'String' value.
+ String value can be added together (or concatenated) in three ways:
+    With the addition operator (+) to create a new String value.
     With the addition assignment operator (+=).
-    With the 'String' type's 'append()' method.
+    With the String type's append() method.
  */
 let string1 = "hello"
 let string2 = " there"
@@ -127,15 +127,15 @@ welcome.append(exclamaMark)
 
 /*
  NOTE: 
- You can't append a 'String' or 'Character' to an existing 'Character' variable,
- because a 'Character' value must contain a single character only.
+ You can't append a String or Character to an existing Character variable,
+ because a Character value must contain a single character only.
  */
 
 
 
 //  MARK: String Interpolation
 /*
- String interpolation is a way to construct a new 'String' value from a mix
+ String interpolation is a way to construct a new String value from a mix
  of constants, variables, literals, and expressions by including their values
  inside a string literal.
  Each item that you insert into the string literal is wrapped in a pair of 
@@ -157,18 +157,18 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 /*
  Unicode is an international standard for encoding, representing, and processing
  text in different writing systems.
- Swift's native 'String' type is built from Unicode scalar values.
+ Swift's native String type is built from Unicode scalar values.
  A Unicode scalar is a unique 21-bit number for a character or modifier, such as
- 'U+0061' for 'LATIN SMALL LETTER A ("a")', or 'U+1F425' for 'FRONT_FACING BABY
+ U+0061 for 'LATIN SMALL LETTER A ("a")', or U+1F425 for 'FRONT_FACING BABY
  CHICK("🐥")'
  */
 
 /*
  NOTE:
- A Unicode scalar is any Unicode code point in the range 'U+0000' to 'U+D7FF'
- inclusive or 'U+E000' to 'U+10FFFF' inclusive. Unicode scalars do not include
+ A Unicode scalar is any Unicode code point in the range U+0000 to U+D7FF
+ inclusive or U+E000 to U+10FFFF inclusive. Unicode scalars do not include
  the Unicode surrogate pair code points, which are the code points in the range 
- 'U+D800' to 'U+DFFF' inclusive.
+ U+D800 to U+DFFF inclusive.
  */
 
 
@@ -176,10 +176,10 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 //  MARK: Special Characters in String Literals
 /*
  String literal can include the follwing special characters:
-    The escaped special characters '\0' (null character), '\\' (backslash),
-'\t' (horizontal tab), '\n' (line feed), '\r' (carriage return), 
- '\"' (double quote) and '\'' (single quote)
-    An arbitrary Unicode scalar, written as '\u{n}', where n is a 1-8 digit 
+    The escaped special characters \0 (null character), \\ (backslash),
+\t (horizontal tab), \n (line feed), \r (carriage return), 
+ \" (double quote) and \' (single quote)
+    An arbitrary Unicode scalar, written as \u{n}, where n is a 1-8 digit 
  hexadecimal number with a value equal to a valid Unicode code point.
  Unicode scalar format example:
  */
@@ -191,11 +191,11 @@ let sparklingHeart = "\u{1F496}"    //  💖, Unicode scalar U+1F496
 
 //  MARK: Extended Grapheme Clusters
 /*
- Every instance of Swift's 'Character' type represents a single extended 
+ Every instance of Swift's Character type represents a single extended 
  grapheme cluster.
- The letter 'é' can be representd as the single Unicode scalar 'é' (LATEN SMALL
+ The letter é can be representd as the single Unicode scalar é (LATEN SMALL
  LETTER E WITH ACUTE, or U+00E9). However, the same letter can also be
- represented as a pair of scalars--a standard letter 'e' (LATIN SMALL LETTER E,
+ represented as a pair of scalars--a standard letter e (LATIN SMALL LETTER E,
  or U+0065), followed by the 'COMBINING ACUTE ACCENT' scalar(U+0301).
  */
 let eAcute: Character = "\u{E9}"                //  é
@@ -204,7 +204,7 @@ let combinedEAcute: Character = "\u{65}\u{301}" //  é followed by '
 
 /*
  Extended grapheme clusters are a flexiblle way to represent many complex script 
- characters as a single 'Character' vallue.
+ characters as a single Character vallue.
  For example, Hangul syllables from the Korean alphabet can be represented as 
  precomposed or decomposed sequence.
  */
@@ -214,7 +214,7 @@ let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"  //  ᄒ   ᅡ   ᆫ
 
 /*
  Extended grapheme clusters enable scalars for enclosing marks to enclose other 
- Unicode scalars as part of a single 'Character' value.
+ Unicode scalars as part of a single Character value.
  */
 let enclosedEAcute: Character = "\u{E9}\u{20DD}"
 // enclosedEAcute is é⃝
@@ -229,15 +229,15 @@ let regionalIndicatorForUS: Character = "\u{1F1F8}"
 
 //  MARK: Counting Characters
 /*
- To retrieve a count of the 'Character' values in a string, use the 'count'
- property of the string's 'characters' property
+ To retrieve a count of the Character values in a string, use the count
+ property of the string's characters property
  */
 let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐫"
 print("unusualMenagerie has \(unusualMenagerie.characters.count) charcters")
 // Prints "unusualMenagerie has 40 characters
 
 /*
- Swift's use of extended grapheme clusters for 'Character' values means that
+ Swift's use of extended grapheme clusters for Character values means that
  string concatenation and modification may not always affect a string's 
  character count.
  */
@@ -253,12 +253,12 @@ print("the number of chacters in \(word) is \(word.characters.count)")
 
 //  MARK: Accessing and Modifying a String
 /*
- Each 'String' value has an associated index type, 'String.Index', which 
- corresponds to the position of each 'Character' in the String.
- In order to determine which 'Characters' is at a particular position, you
- must iterate over each Unicode scalar from the start or end of the 'String'.
+ Each String value has an associated index type, String.Index, which 
+ corresponds to the position of each Character in the String.
+ In order to determine which Characters is at a particular position, you
+ must iterate over each Unicode scalar from the start or end of the String.
  For this reason, Swift strings cannot be indexed by integer values.
- You can use subscript syntax to access the 'Character' at a particular 'String'
+ You can use subscript syntax to access the Character at a particular String
  index.
  */
 let greeting = "Guten Tag!"
@@ -273,14 +273,14 @@ let index = greeting.index(greeting.startIndex, offsetBy: 7)
 greeting[index]
 
 /*
- Attempting to access an index outside of a string's range or a 'Chacter' at an
+ Attempting to access an index outside of a string's range or a Chacter at an
  index outside of a string's range will trigger a runtime error.
  */
 //greeting[greeting.endIndex]                 // Error
 //greeting.index(after: greeting.endIndex)    // Error
 
 /*
- Use the 'indices' property of the 'character' property to access all of the 
+ Use the indices property of the character property to access all of the 
  indices of individual charaters in a string.
  */
 for index in greeting.characters.indices {
@@ -291,10 +291,10 @@ print("")
 
 /*
  NOTE: 
- You can use the 'startIndex' and 'endIndex' properties and the
- '(index(before:)', 'index(after:)', and '(index(_:offsetBy:)' methods on any
- type that conforms to the 'Collection' protocol. This includes 'String', as
- shown here, as well as collection types such as 'Array', 'Dictionary', and 'Set'.
+ You can use the startIndex and endIndex properties and the
+ (index(before:), index(after:), and (index(_:offsetBy:) methods on any
+ type that conforms to the Collection protocol. This includes String, as
+ shown here, as well as collection types such as Array, Dictionary, and Set.
  */
 
 
@@ -302,8 +302,8 @@ print("")
 //  MARK: Inserting and Removing
 /*
  To insert a single character into a string at a specified index, use the
- 'insert(_:at:) method, and to insert the contents of another string at a 
- specified index, use the 'insert(contentsOf:at:)' method.
+ insert(_:at:) method, and to insert the contents of another string at a 
+ specified index, use the insert(contentsOf:at:) method.
  */
 var welcomeInsert = "hello"
 welcomeInsert.insert("!", at: welcomeInsert.endIndex)
@@ -315,8 +315,8 @@ welcomeInsert.insert(contentsOf: " there".characters,
 
 /*
  To remove a single character from a string at a specified index, use the
- 'remove(at:)' method, and to remove a substring at a specified range, use the
- 'removeSubrange(_:) method
+ remove(at:) method, and to remove a substring at a specified range, use the
+ removeSubrange(_:) method
  */
 welcomeInsert.remove(at: welcomeInsert.index(before: welcomeInsert.endIndex))
 // welcome now equals "hello there"
@@ -327,9 +327,9 @@ welcomeInsert.removeSubrange(range)
 
 /*
  NOTE: 
- Above methods on any type that conforms the 'RangeReplaceableCollection'
- protocol. This includes 'String' as shown here, as well as collection types
- such as 'Array', 'Dictionary', and 'Set'.
+ Above methods on any type that conforms the RangeReplaceableCollection
+ protocol. This includes String as shown here, as well as collection types
+ such as Array, Dictionary, and Set.
  */
 
 
@@ -351,7 +351,7 @@ if quotation == sameQuotation {
 // Prints "These two strings are considered equal"
 
 /*
- Two 'String' values (or two 'Character' values) are considered equal if their
+ Two String values (or two Character values) are considered equal if their
  extended grapheme clusters are canonically equivalent. Extend grapheme clusters
  are canonically equivalent if they have the same linguistic meaning and
  appearance, even if they are composed from different Unicode scalars behind
@@ -391,8 +391,8 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 //  MARK: Prefix and Suffix Equality
 /*
  To check whether a string has a particular string prefix or suffix, call the 
- string's 'hasPrefix(_:)' and 'hasSuffix(_:)' methods, both of which take a 
- single argument of type 'String' and return a Boolean value.
+ string's hasPrefix(_:) and hasSuffix(_:) methods, both of which take a 
+ single argument of type String and return a Boolean value.
  */
 let romeoAndJuliet = [
     "Act 1 Scene 1: Verona, A public place",
@@ -409,7 +409,7 @@ let romeoAndJuliet = [
 ]
 
 /*
- You can use the 'hasPrefix(_:)' method with the 'romeoAndJuilet' array to count
+ You can use the hasPrefix(_:) method with the romeoAndJuilet array to count
  the number of scenens in Act 1 of the play.
  */
 var act1SceneCount = 0
@@ -423,7 +423,7 @@ print("There are \(act1SceneCount) scenes in Act 1")
 // Prints "There are 5 scenes in Act 1"
 
 /*
- Similarly, use the 'hasSuffix(_:)' method to count the number of scenes that 
+ Similarly, use the hasSuffix(_:) method to count the number of scenes that 
  take place in or around Capulet's mansion and Friar Lawrence's cell.
  */
 var mansionCount = 0
@@ -441,7 +441,7 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
 
 /*
  NOTE: 
- The 'hasPrefix(_:)' and 'hasSuffix(_:)' methods perform a character-by-character
+ The hasPrefix(_:) and hasSuffix(_:) methods perform a character-by-character
  canonical equivalence comparison between the extended grapheme clusters in each 
  string.
  */
@@ -454,20 +454,20 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
  Unicode scalars in that string are encoded in one of several Unicode-defined
  encoding forms.
  Each form encodes the string in small chunks known as code units.
- You can iterate over the string with a 'for-in' statement, to access its 
- individual 'Character' values as Unicode extended grapheme clusters.
+ You can iterate over the string with a for-in statement, to access its 
+ individual Character values as Unicode extended grapheme clusters.
 
-    Alternatively, access a 'String' value in one of three other
+    Alternatively, access a String value in one of three other
     Unicode-compliant epresentations:
-        A collection of UTF-8 code units (accessed with the string's 'utf8' 
+        A collection of UTF-8 code units (accessed with the string's utf8 
     property)
-        A collection of UTF-16 code units (accessed with the string's 'utf16'
+        A collection of UTF-16 code units (accessed with the string's utf16
     property)
         A collection of 21-bit Unicode scalar values, equivalent to string's
-    UTF-32 encoding form (accessed with the string's 'unicodeScalars' property)
+    UTF-32 encoding form (accessed with the string's unicodeScalars property)
 
     Each example below shows a different representation of the following string,
-    which is made up of the characters 'D', 'o', 'g', '!!' (DOUBLE EXCLAMATION
+    which is made up of the characters D, o, g, !! (DOUBLE EXCLAMATION
     MARK, or Unicode scalar U+203C), and the 🐶 character (DOG FACE, or
     Unicode scalar U+1F436)
  */
@@ -475,8 +475,8 @@ let dogString = "Dog‼🐶"
 
 /*
  UTF-8 Representation
- You can access a UTF-8 representation of a 'String' by iterating over its 'utf8'
- property. This property is of type 'String.UTF8View', which is a collection of
+ You can access a UTF-8 representation of a String by iterating over its utf8
+ property. This property is of type String.UTF8View, which is a collection of
  unsigned 8-bit (UInt8) values, one for each byte in the string's UTF-8 
  representation.
 
@@ -497,18 +497,18 @@ print("")
 
 /*
  In the example above:
- The first three decimal 'codeUnit' values (68, 111, 103) represent the 
- characters 'D', 'o', and 'g', whost UTF-8 representation is the same as their 
+ The first three decimal codeUnit values (68, 111, 103) represent the 
+ characters D, o, and g, whost UTF-8 representation is the same as their 
  ASCII representations.
- The next three decimal 'codeUnit' values (226, 128, 188) are a three-byte UTF-8
+ The next three decimal codeUnit values (226, 128, 188) are a three-byte UTF-8
  representation of the 'DOUBLE EXCLAMATION MARK' character.
- The last four 'codeUnit' values (240, 159, 144, 182) are a four-byte UTF-8 
+ The last four codeUnit values (240, 159, 144, 182) are a four-byte UTF-8 
  representation of the 'DOG FACE' character.
  */
 
 /*
  UTF-16 Representation
- Access for 'utf16' property which is of type 'String.UTF16View'.
+ Access for utf16 property which is of type String.UTF16View.
 
  Character     D       o       g       ‼         🐶
             U+0044  U+006F   U+0067  U+203C    U+1F436
@@ -526,8 +526,8 @@ print("")
 
 /*
  Unicode Scalar Representation
- Access for 'unicodeScalars' property which is of type 'UnicodeScalarView', is 
- a collection of values of type 'UnicodeScalar'.
+ Access for unicodeScalars property which is of type UnicodeScalarView, is 
+ a collection of values of type UnicodeScalar.
 
  Character     D       o       g       ‼         🐶
             U+0044  U+006F   U+0067  U+203C    U+1F436
@@ -545,8 +545,8 @@ print("")
 //  Prints "68 111 103 8252 128054"
 
 /*
- As an alternatively to querying their 'value' properties, each 'UnicodeScalar'
- value can also be used to construct a new 'String' value, such as with string
+ As an alternatively to querying their value properties, each UnicodeScalar
+ value can also be used to construct a new String value, such as with string
  interpolation
  */
 for scalar in dogString.unicodeScalars {

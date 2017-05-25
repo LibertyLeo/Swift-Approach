@@ -28,7 +28,7 @@ import Foundation
 
 //  MARK: - Continue
 /*
- The 'continue' statement tells a loop to stop what it is doing and start again
+ The continue statement tells a loop to stop what it is doing and start again
  at the beginning of the next iteration through the loop.
  It says "I am done with the current loop iteration" without leaving the loop
  together.
@@ -46,7 +46,7 @@ for character in puzzleInput.characters {
 print(puzzleOutput)
 //  Prints "grtmndsthnklk"
 /*
- The code above calls the 'continue' keyword whenever it matches a vowel or a 
+ The code above calls the continue keyword whenever it matches a vowel or a 
  space, causing the current iteration of the llop to end immediately and to jump
  straight to the start of the next iteration.
  */
@@ -55,26 +55,26 @@ print(puzzleOutput)
 
 //  MARK: Break
 /*
- The 'break' statement ends execution of an entire control flow statement
+ The break statement ends execution of an entire control flow statement
  immediately.
  
     Break in a Loop Statement:
-    When used inside a loop statement, 'break' ends the loop's execution
+    When used inside a loop statement, break ends the loop's execution
  immediately and transfers control to the code after the loop's closing brace(}).
     No further code from the current iteration of the loop is executed, and no
  further iterations of the loop are started.
  
     Break in a Switch statement:
-    When used inside a switch statement, 'break' casuse the 'switch' statement
+    When used inside a switch statement, break casuse the switch statement
  to ends its execution immediately and to transfer control to the code
- after 'switch' statement's closing brace (}).
-    You do this by writting the 'break' statement as the entire body of the case
+ after switch statement's closing brace (}).
+    You do this by writting the break statement as the entire body of the case
  you want to ignore.
 
  NOTE:
- A 'switch' case that contains only a comment is reported as compile-time error.
- Comments are not statement and do not cause a 'switch' case to be ignored.
- Always use a 'break' statemtn to ignore a 'switch' case.
+ A switch case that contains only a comment is reported as compile-time error.
+ Comments are not statement and do not cause a switch case to be ignored.
+ Always use a break statemtn to ignore a switch case.
  */
 let numberSymbol: Character = "三"   //  Chinese symbol for the number 3
 var possibleIntegerValue: Int?
@@ -97,7 +97,7 @@ if let integerValue = possibleIntegerValue {
 }
 // Prints "The integer value of 三 is 3."
 /*
- This example checks 'numberSymbol' to determine whether it is a Latin, Arabic,
+ This example checks numberSymbol to determine whether it is a Latin, Arabic,
  Chinese, or Thai symbol for the numbers 1 to 4.
  */
 
@@ -105,13 +105,13 @@ if let integerValue = possibleIntegerValue {
 
 //  MARK: Fallthrough
 /*
- In Swift, 'switch' statements don't fall through the bottom of each case and
+ In Swift, switch statements don't fall through the bottom of each case and
  into the next one.
- Avoiding default fallthrough means that Swift 'switch' statements are much more
+ Avoiding default fallthrough means that Swift switch statements are much more
  concise and predictable than their counterparts in C, and thus they avoid 
- executing multiple 'switch' cases by mistak.
+ executing multiple switch cases by mistak.
  If you need C-style fallthrough behavior, you can opt in to this behavior on 
- a case-by-case basis with the 'fallthrough' keyword.
+ a case-by-case basis with the fallthrough keyword.
  */
 let integerToDescribe = 5
 var description = "The number \(integerToDescribe) is"
@@ -126,10 +126,10 @@ print(description)
 // Prints "The number 5 is a prime number, and also an integer."
 /*
  NOTE:
- The 'fallthrough' keyword does not check the case conditions for the 'switch'
- case that it causes execution to fall into. The 'fallthrough' keyword simply
+ The fallthrough keyword does not check the case conditions for the switch
+ case that it causes execution to fall into. The fallthrough keyword simply
  causes code execution to move directly to the statements inside the next case
- (or 'default' case) block, as in C's standard 'switch' statement behavior.
+ (or default case) block, as in Cs standard switch statement behavior.
  */
 
 
@@ -138,7 +138,7 @@ print(description)
 /*
  In Swift, you can nest loops and conditional statements inside other loops and
  conditional statements to create complex control flow structures. However, loops 
- and conditional statements can both use the 'break' statement to end their 
+ and conditional statements can both use the break statement to end their 
  execution prematurely.
  To achieve these aims, you can mark a loop statement or conditional statement 
  with a statement label.
@@ -149,8 +149,8 @@ print(description)
  ///    <#statements#>
  ///    }
  
- The following example uses the 'break' and 'continue' statements with a labels
- 'while' loop for an adapted version of the Snakes and Ladders game. This time
+ The following example uses the break and continue statements with a labels
+ while loop for an adapted version of the Snakes and Ladders game. This time
  around, the game has an extra rule:
     To win, you must land exactly on square 25.
 
@@ -165,7 +165,7 @@ var square = 0
 var diceRoll = 0
 
 /*
- The 'while' loop has a statement label called 'gameLoop' to indicate that it is
+ The while loop has a statement label called gameLoop to indicate that it is
  the main game loop for the Snakes and Ladders game.
  */
 gameLoop: while square != finalSquare {
@@ -187,21 +187,21 @@ gameLoop: while square != finalSquare {
 print("Game over!")
 /*
  If the dice roll will move the player onto the final square, the game is over.
- The 'break gameLoop' statement transfers control to the first line of code
- outside of the 'while' loop, which ends the game.
+ The break gameLoop statement transfers control to the first line of code
+ outside of the while loop, which ends the game.
  
  If the dice roll will move the player beyond the final square, the move is 
  invalid and the player need to roll again. The continue gameLoop statement ends
- the current 'while' loop iteration and begins the next iteration of the loop.
+ the current while loop iteration and begins the next iteration of the loop.
  
  In all other cases, the dice roll is a valid move. The player moves forward by
- 'diceRoll' squares, and the game logic checks for any snakes and ladders. The
- loop the ends, and control return to the 'while' condition to decide whether
+ diceRoll squares, and the game logic checks for any snakes and ladders. The
+ loop the ends, and control return to the while condition to decide whether
  another turn is required.
  
  NOTE:
- If the 'break' statement above did not use the 'gameLoop' label, it would break
- out of the 'switch' statement, not the 'while' statement. Using the 'gameLoop' 
+ If the break statement above did not use the gameLoop label, it would break
+ out of the switch statement, not the while statement. Using the gameLoop 
  label makes it clear which control statement should be terminated.
  */
 
@@ -209,12 +209,12 @@ print("Game over!")
 
 //  MARK: Early Exit
 /*
- A 'guard' statement, like an 'if' statement, executes statements depending on 
+ A guard statement, like an if statement, executes statements depending on 
  the Boolean value of an expression.
- You use a 'guard' statement to require that a condition must be true in order
- for the code after the 'guard' statement to be executed.
- Unlike an 'if' statement, a 'guard' statement always has an 'else' clauses--the
- code inside the 'else' clauses is executed if the condition is not true.
+ You use a guard statement to require that a condition must be true in order
+ for the code after the guard statement to be executed.
+ Unlike an if statement, a guard statement always has an else clauses--the
+ code inside the else clauses is executed if the condition is not true.
  */
 func greet(person: [String: String]) {
     guard let name = person["name"] else {
@@ -239,19 +239,19 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 //  Prints "I hope the weather is nice in Cupertino."
 
 /*
- If the 'guard' statement's condition is met, code execution continues after the
- 'guard' statement's closing brace.
+ If the guard statement's condition is met, code execution continues after the
+ guard statement's closing brace.
 
- If that condition is not met, the code inside the 'else' branch is executed.
- That branch must transfer control to exit the code block in which the 'guard'
+ If that condition is not met, the code inside the else branch is executed.
+ That branch must transfer control to exit the code block in which the guard
  statement appears. It can do this with a control transfer statement such as
- 'return', 'break', 'continue', or 'throw', or it can call a function or method
- that doesn't return, such as 'fatalError(_:file:line:)'.
+ return, break, continue, or throw, or it can call a function or method
+ that doesn't return, such as fatalError(_:file:line:).
  
- Using a 'guard' statement for requirements improves the readability of your
- code, compared to doing the same check with an 'if' statement.
+ Using a guard statement for requirements improves the readability of your
+ code, compared to doing the same check with an if statement.
  It lets you write the code that's typically executed without wrapping it in an
- 'else' block, and it lets you keep the code that handles a violated requirement
+ else block, and it lets you keep the code that handles a violated requirement
  next to the requirement.
  */
 
@@ -263,7 +263,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
  Swift reports an error at compile time if you try to use an API that isn't
  available.
  
- You use an availability conditon in an 'if' or 'guard' statement to conditionally
+ You use an availability conditon in an if or guard statement to conditionally
  execute a block of code, depending on whether the APIs you want to use are 
  available at runtime.
  */
@@ -274,10 +274,10 @@ if #available(iOS 10, macOS 10.12, *) {
 }
 
 /*
- The availability condition above specifies that in iOS, the body of the 'if'
+ The availability condition above specifies that in iOS, the body of the if
  statement executes only in iOS 10 and later; in macOS, only in macOS 10.12 and
  later.
- The last argument '*', is required and specifies that on any other platform, the
+ The last argument *, is required and specifies that on any other platform, the
  body of the if executes on the minimum deployment target specified by your target.
  
  In its general form, the availability condition takes a list of platform names

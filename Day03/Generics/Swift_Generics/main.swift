@@ -56,7 +56,7 @@ let commonElements: Bool = anyCommonElements([1, 2, 3], [3])
 print(commonElements)
 
 /*
- Modify the 'anyCommonElements(_:_:)' function to make a function that returns 
+ Modify the anyCommonElements(_:_:) function to make a function that returns 
  an array of the elements that any two sequences have in common.   (Exp)
  */
 func anyCommonElementsInArray<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [T.Iterator.Element]

@@ -10,8 +10,8 @@ import Foundation
 
 //  MARK: Function and Closures
 /*
- Use 'func' to declare a function. 
- Use '->' to separate the parameter names and types from the function's return 
+ Use func to declare a function. 
+ Use -> to separate the parameter names and types from the function's return 
  type.
  */
 func greet(person: String, day: String) -> String {
@@ -21,7 +21,7 @@ func greet(person: String, day: String) -> String {
 print(greet(person: "Bob", day: "Tuesday"))
 
 /*
- Remove the 'day' parameter. Add a parameter to include today's lunch special
+ Remove the day parameter. Add a parameter to include today's lunch special
  in the greeting.   (Exp)
  */
 func greetWithLunch(person: String, lunch: String) -> String {
@@ -140,7 +140,7 @@ print(hasAnyMatches(list: numbers, condition: lessThanTen))
  Functions are actually a special case of closures: blocks of code that can be 
  called later.
  You can write a closure without a name by surrounding code with braces ({}).
- Use 'in' to separate the argument and return type from the body.
+ Use in to separate the argument and return type from the body.
  */
 let multipliedNumber = numbers.map({ (number: Int) -> Int in
     let result = 3 * number
@@ -158,7 +158,7 @@ let oddNumbers = numbers.map({ (number: Int) -> Int in
 print("All even numbers are \(oddNumbers).")
 
 /*
- When a closure's type is already known, such as the callback for a delegate, 
+ When a closures type is already known, such as the callback for a delegate, 
  you can omit the type of its parameter, its return type, or both.
  */
 let mappedNumbers = numbers.map({ number in 3 * number})

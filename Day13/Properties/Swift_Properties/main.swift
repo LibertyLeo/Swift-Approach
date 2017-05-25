@@ -24,7 +24,7 @@ import Foundation
  In its simplest form, a stored property is a constant or variable that is 
  stored as part of an instance of a particular class or structure.
  Stored properties can be either variable stored properties (introduced by the 
- 'var' keyword) or constant stored properties (introduced by the 'let' keyword).
+ var keyword) or constant stored properties (introduced by the let keyword).
 
  You can provide a default value for a stored property as part of its 
  definition.
@@ -41,7 +41,7 @@ var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
 rangeOfThreeItems.firstValue = 6
 //  the range now represents integer values 6, 7, 8
 /*
- In the example above, 'length' is initialized when the new range is created and
+ In the example above, length is initialized when the new range is created and
  cannot be changed thereafter, because it is a constant property.
  */
 
@@ -421,8 +421,8 @@ struct AudioChannel {
  */
 
 /*
- Also, we can use the 'AudioChaneel' structure to create two new audio channels
- called 'leftChannel' and 'rightChannel', to represent the audio levels of a
+ Also, we can use the AudioChaneel structure to create two new audio channels
+ called leftChannel and rightChannel, to represent the audio levels of a
  stereo sound system.
  */
 var leftChannel = AudioChannel()

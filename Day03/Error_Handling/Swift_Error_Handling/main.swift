@@ -8,7 +8,7 @@
 
 import Foundation
 
-//  You represent errors using any type that adopts the 'Error' protocol.
+//  You represent errors using any type that adopts the Error protocol.
 enum PrinterError: Error {
     case outOfPaper
     case noToner
@@ -16,7 +16,7 @@ enum PrinterError: Error {
 }
 
 /* 
- Use 'throw' to throw an error and 'throws' to mark a function that can throw an
+ Use throw to throw an error and throws to mark a function that can throw an
  error. If you throw an error in a function, the function returns immediately
  and the code that called the function hadnles the error.
  */
@@ -28,10 +28,10 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 }
 
 /*
- There are several ways to handle errors. One way is to use 'do-catch'. 
- Inside the 'do' block, you mark code that can throw an error by writing 'try'
+ There are several ways to handle errors. One way is to use do-catch. 
+ Inside the do block, you mark code that can throw an error by writing try
  in front of it. 
- Inside the 'catch' block, the error is automatically given the name 'error' 
+ Inside the catch block, the error is automatically given the name error 
  unless you give it a different name.
  */
 do {
@@ -53,8 +53,8 @@ do {
 }
 
 /*
- You can provide multiple 'catch' blocks that handle specific errors. 
- You write a pattern after 'catch' just as you do after 'case' in a 'switch'.
+ You can provide multiple catch blocks that handle specific errors. 
+ You write a pattern after catch just as you do after case in a switch.
  */
 do {
     let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
@@ -68,8 +68,8 @@ do {
 }
 
 /*
- Add code to trow an error inside the 'do' block. What kind of error do you need
- to throw so that the error is handled by the first 'catch' block? What about
+ Add code to trow an error inside the do block. What kind of error do you need
+ to throw so that the error is handled by the first catch block? What about
  the second and third block?    (Exp)
  */
 do {
@@ -92,9 +92,9 @@ do {
 }
 
 /*
- Another way to handle errors is to use 'try?' to convert the result to an 
+ Another way to handle errors is to use try? to convert the result to an 
  optional. If the function throws an error, the specific error is discarded 
- and the result is 'nil'. Otherwise, the result is an optional containg the
+ and the result is nil. Otherwise, the result is an optional containg the
  value that the function returned.
  */
 let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
@@ -103,7 +103,7 @@ print(printerSuccess)
 print(printerFailure)
 
 /*
- Use 'defer' to write a block of code that is executed after all other code in 
+ Use defer to write a block of code that is executed after all other code in 
  the function, just before the function returns. The code is executed regardless 
  of whether the function throws an error.
  */
@@ -117,7 +117,7 @@ func fridgeContains(_ food: String) -> Bool {
          Since you put the food into fridge, the fridge should be open,
          after you finish put the food in, you should close the fridge, 
          defer is just the action that you did.
-         Comment this 'defer', you will see fridge remains open
+         Comment this defer, you will see fridge remains open
          */
         fridgeIsOpen = false
     }

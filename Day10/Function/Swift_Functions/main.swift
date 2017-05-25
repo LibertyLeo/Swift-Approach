@@ -36,8 +36,8 @@ func greet(person: String) -> String {
 }
 /*
  All of this information is rolled up into the function's definition, which is 
- prefixed with the 'func' keyword.
- You indivate the function's return type with the return arrow '->' (a hyphen
+ prefixed with the func keyword.
+ You indivate the function's return type with the return arrow -> (a hyphen
  followed by a right angle bracket), which is followed by the name of the type
  to return.
  */
@@ -54,7 +54,7 @@ print(greet(person: "Brian"))
 
 /*
  NOTE:
- The 'print(_:separator:terminator:)' function doesn't have a label for its first
+ The print(_:separator:terminator:) function doesn't have a label for its first
  argument, and its other arguments are optional because they have a default value.
  */
 
@@ -98,10 +98,10 @@ func greet(person: String, alreadyGreeted: Bool) -> String {
 print(greet(person: "Tim", alreadyGreeted: true))
 // Prints "Hello again, Tim!"
 /*
- Note that this function is distinct from the 'greet(person:)' function shown 
- above. Although both function have names that begin with 'greet', the
- 'greet(person:alreadyGreeted:)' function takes two arguments but the 
- 'greet(person:)' function takes only one.
+ Note that this function is distinct from the greet(person:) function shown 
+ above. Although both function have names that begin with greet, the
+ greet(person:alreadyGreeted:) function takes two arguments but the 
+ greet(person:) function takes only one.
  */
 
 
@@ -118,9 +118,9 @@ greetWithNoReturn(person: "Dave")
  include the return arrow (->) or a return type.
  
  NOTE:
- Strictly speaking, this version of the 'greet(person:)' function does still 
+ Strictly speaking, this version of the greet(person:) function does still 
  return a value, even through no return value is defined.
- Functions without a defined return type return a special value of type 'Void'.
+ Functions without a defined return type return a special value of type Void.
  This is simply an empty tuple, which is written as ().
  */
 
@@ -186,7 +186,7 @@ print("min is \(bounds.min) and max is \(bounds.max)")
 /*
  If the tuple type to be returned from a function has the potential to have "no
  value" for the entire tuple, you can use an optional tuple return type to 
- reflect the fact that the entire tuple can be 'nil'.
+ reflect the fact that the entire tuple can be nil.
  You write an optional tuple return type by placing a question mark after the
  tuple type's closing parenthesis, such as (Int, Int)? or (String, Int, Bool)?.
  
@@ -196,9 +196,9 @@ print("min is \(bounds.min) and max is \(bounds.max)")
  entire tuple is optional, not just each individual value within the tuple.
  
  However, the function does not perform any safety checks on the array it is 
- passed. If the 'array' argument contains an empty array, the 'mixMax(array:)'
+ passed. If the array argument contains an empty array, the mixMax(array:)
  function, as defined above, will trigger a runtime error when attempting to
- access 'array[0]'.
+ access array[0].
  */
 func minMaxSafety(array: [Int]) -> (min: Int, max: Int)? {
     if array.isEmpty { return nil }
@@ -215,8 +215,8 @@ func minMaxSafety(array: [Int]) -> (min: Int, max: Int)? {
 }
 
 /*
- You can use optional binding to check whether this version of 'minMax(array:)'
- function return an actual tuple value or 'nil'
+ You can use optional binding to check whether this version of minMax(array:)
+ function return an actual tuple value or nil
  */
 if let bounds = minMaxSafety(array: [8, -6, 2, 109, 3, 71]) {
     print("min is \(bounds.min) and max is \(bounds.max)")
@@ -252,7 +252,7 @@ func someFunction(argumentLabel parameterName: Int) {
 }
 
 /*
- Here's a variation of the 'greet(person:)' function that takes a person's name
+ Here's a variation of the greet(person:) function that takes a person's name
  and hometown and returns a greeting:
  */
 func greet(person: String, from hometown: String) -> String {
@@ -339,7 +339,7 @@ arithmeticMean(3, 8.25, 18.75)
  changes to persist after the function call has ended, define that parameter
  as an in-out parameter instead.
  
- You write an in-out parameter by placing the 'inout' keyword right before a 
+ You write an in-out parameter by placing the inout keyword right before a 
  parameter's type. An in-out parameter has value that is passed in to the
  function, is modified by the function, and is passed back out of the function
  to replace the original value.
@@ -359,9 +359,9 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int) {
 }
 
 /*
- You can call the 'swapTwoInts(_:_:)' function with two variables of type 'Int'
- to swap their values. Note that the names of 'someInt' and 'anotherInt' are
- prefixed with an ampersand when they are passed to the 'swapTwoInts(_:_:)' 
+ You can call the swapTwoInts(_:_:) function with two variables of type Int
+ to swap their values. Note that the names of someInt and anotherInt are
+ prefixed with an ampersand when they are passed to the swapTwoInts(_:_:) 
  function
  */
 var someInt = 3
@@ -371,8 +371,8 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 //  someInt is now 107, and anotherInt is now 3
 /*
  In-out parameters are not the same as returning a value from a function.
- The 'swapTwoInts' example above does not define a return type or return a value,
- but it still modifies the values of 'someInt' and 'anotherInt'.
+ The swapTwoInts example above does not define a return type or return a value,
+ but it still modifies the values of someInt and anotherInt.
  In-out parameters are an alternative way for a function to have an effect outside
  of the scope of its function body.
  */
@@ -391,9 +391,9 @@ func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
     return a * b
 }
 /*
- The type of both of these function is '(Int, Int) -> (Int)'. This can be read as
-    "A function that has two parameters, both of type 'Int', and that returns a
- value of type 'Int.'"
+ The type of both of these function is (Int, Int) -> (Int). This can be read as
+    "A function that has two parameters, both of type Int, and that returns a
+ value of type Int."
  */
 
 //  Here's another example, for a function with no parameters or return value
@@ -401,8 +401,8 @@ func printHelloWorld() {
     print("hello, world")
 }
 /*
- The type of this function is '() -> Void', or "a function that has no paramters,
- and returns 'Void'".
+ The type of this function is () -> Void, or "a function that has no paramters,
+ and returns Void".
  */
 
 
@@ -416,14 +416,14 @@ func printHelloWorld() {
 var mathFunction: (Int, Int) -> Int = addTwoInts
 /*
  This can be read as
- "Define a variable called 'mathFunction', which has a type of 'a function that
- takes two 'Int' values, and returns an 'Int' vlaue.' Set this new variable to
- refer to the function called 'addTwoInts."
+ "Define a variable called mathFunction, which has a type of a function that
+ takes two Int values, and returns an Int vlaue. Set this new variable to
+ refer to the function called addTwoInts."
  
- The 'addTwoInts(_:_:)' function has the same type as the 'mathFunction'
+ The addTwoInts(_:_:) function has the same type as the mathFunction
  variable, and so this assignment is allowed by Swift's type-checker.
  
- You can now call the assigned function with the name 'mathFunction':
+ You can now call the assigned function with the name mathFunction:
  */
 print("Result: \(mathFunction(2, 3))")
 //  Prints "Result: 5"
@@ -447,7 +447,7 @@ let anotherMathFunction = addTwoInts
 
 //  MARK: Function Types as Parameter Types
 /*
- You can use a function type such as '(Int, Int) -> Int' as a parameter type
+ You can use a function type such as (Int, Int) -> Int as a parameter type
  for another function. This enables you to leave some aspects of a function's
  implementation for the funciton's caller to provide when the function is called.
  */
@@ -457,11 +457,11 @@ func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
 printMathResult(addTwoInts, 3, 5)
 //  Prints "Result: 8"
 /*
- The role of 'printMathResult(_:_:_:)' is to print the result of a call to a 
+ The role of printMathResult(_:_:_:) is to print the result of a call to a 
  math function of an appropriate type.
- It doesn't matters what that function's implementation actually does--it matters
+ It doesnt matters what that functions implementation actually does--it matters
  only that the function is of the correct type.
- This enables 'printMathResult(_:_:_:)' to hand off its functionality to the
+ This enables printMathResult(_:_:_:) to hand off its functionality to the
  caller of the function in a type-safe way,
  */
 
@@ -481,7 +481,7 @@ func chooseStepFunction(backward: Bool) -> (Int) -> Int {
 }
 
 /*
- You can now use 'chooseStepFunction(backward:)' to obtain a function that will
+ You can now use chooseStepFunction(backward:) to obtain a function that will
  step in one direction or the other
  */
 var currentValue = 3
@@ -489,7 +489,7 @@ let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
 //  moveNearerToZero now refers to the stepBackward() function
 
 /*
- Now that 'moveNearerToZero' refers to the correct function, it can be used to 
+ Now that moveNearerToZero refers to the correct function, it can be used to 
  count to zero.
  */
 print("Counting to zero")

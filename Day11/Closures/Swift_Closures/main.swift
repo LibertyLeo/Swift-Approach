@@ -43,13 +43,13 @@ import Foundation
 
 //  MARK: The Sorted Method
 /*
- Swift's standard library provides a method called 'sorted(by:)', which sorts 
+ Swift's standard library provides a method called sorted(by:), which sorts 
  an array of values of a known type, based on the output of a storing closure
  that you provide.
- Once it completes the sorting process, the 'sorted(by:)' method return a new
+ Once it completes the sorting process, the sorted(by:) method return a new
  array of the same type and size as the old one, with its elements in the
  correct sorted order.
- The original array is not modified bby the 'sorted(by:)' method.
+ The original array is not modified bby the sorted(by:) method.
  */
 let names = ["Chris", "Alex", "Ewa", "Barry", "Dainella"]
 
@@ -79,7 +79,7 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
 })
 
 /*
- The start of the closure's body is introduced by the 'in' keyword.
+ The start of the closure's body is introduced by the in keyword.
  This keyword indicates that the difinition of the closure's parameters and 
  return type has finished, and the body of the closure is about to begin.
  
@@ -95,9 +95,9 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1
  Because the sorting closure is passed as an arguments to a method, Swift can
  infer the types of its parameters and the type of the value it returns.
 
- The 'sorted(by:)' method is being called on an array of strings, so its 
- argument must be a function of type '(String, String) -> Bool'. This means
- that the '(String, String))' and 'Bool' types do not need to be written as
+ The sorted(by:) method is being called on an array of strings, so its 
+ argument must be a function of type (String, String) -> Bool. This means
+ that the (String, String)) and Bool types do not need to be written as
  part of the closure expression's definition.
  Because all of the types can be inferred, the return arrow (->) and the 
  parenthese around the names of the parameters can also be omitted.
@@ -109,12 +109,12 @@ reversedNames = names.sorted(by: { s1, s2 in return s1 > s2})
 //  MARK: Implict Returns from Single-Expression Closures
 /*
  Single-expression closures can implicitly return the result of their single
- expression by omitting the 'return' keyword from their declaration.
+ expression by omitting the return keyword from their declaration.
  */
 reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
 /*
  Because the closures' body contains a single expression (s1 > s2) that returns
- a 'Bool' value, there is no ambiguity, and the 'return' keyword can be omitted.
+ a Bool value, there is no ambiguity, and the return keyword can be omitted.
  */
 
 
@@ -136,9 +136,9 @@ reversedNames = names.sorted(by: { $0 > $1 })
 
 //  MARK: Operator Methods
 /*
- Swift's 'String' type defines its string-specific implementaion of the 
+ Swift's String type defines its string-specific implementaion of the 
  greater-than operator (>) as a method that has two parameters of type 
- 'String', and returns a value of type 'Bool'.
+ String, and returns a value of type Bool.
  */
 reversedNames = names.sorted(by: >)
 
@@ -169,7 +169,7 @@ someFunctionThatTakesAClosure() {
 }
 
 /*
- The string-sorting closure above can be written outside of the 'sorted(by:)'
+ The string-sorting closure above can be written outside of the sorted(by:)
  method's parentheese as  a trailing closure.
  */
 reversedNames = names.sorted() { $0 > $1 }
@@ -184,12 +184,12 @@ reversedNames = names.sorted { $0 > $1 }
 /*
  Trailing closures are most useful when the closure is sufficiently long that
  it is not possible to write it inline on a single line.
- As an example, Swift's 'Array' type has a 'map(_:)'method which takes a 
+ As an example, Swift's Array type has a map(_:)method which takes a 
  closure expression as its single argument.
  The nature of the mapping and the type of the returned value is left up to the
  closure to specify.
  
- After applying the provided closure to each array element, the 'map(_:)' 
+ After applying the provided closure to each array element, the map(_:) 
  method returns a new array containing all of the new mapped values, in the
  same order as their corresponding values in the original array.
  */
@@ -216,10 +216,10 @@ let strings = numbers.map { (number) -> String in
 //  its value is ["OneSix", "FiveEight", "FiveOneZero"]
 
 /*
- The closure expression builds a string called 'output' each time it is called.
+ The closure expression builds a string called output each time it is called.
  
  NOTE:
- The call to the 'digitalNames' dictionary's subscript is followed by an 
+ The call to the digitalNames dictionary's subscript is followed by an 
  exclamation mark(!), because dictionary subscripts return an optional value to
  indicate that the dictionary lookup can fail if the key does not exist.
  */
@@ -244,18 +244,18 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 }
 
 /*
- When considered in isolation, the nested 'incrementer()' function might seem
+ When considered in isolation, the nested incrementer() function might seem
  unusual.
 
- The 'incrementer()' function doesn't have any parameters, and yet it refers to
- 'runningTotal' and 'amount' from within its function body.
+ The incrementer() function doesn't have any parameters, and yet it refers to
+ runningTotal and amount from within its function body.
 
- It does this by capturing a reference to 'runningTotal' and 'amount' from the 
+ It does this by capturing a reference to runningTotal and amount from the 
  surrounding function and using them within its own function body.
 
- Capturing by reference ensures that 'runningTotal' and 'amount' do not 
- disappear when the call to 'makeIncrementer' ends, and also ensures that 
- 'runningTotal' is available the next time the 'incrementer' function is called.
+ Capturing by reference ensures that runningTotal and amount do not 
+ disappear when the call to makeIncrementer ends, and also ensures that 
+ runningTotal is available the next time the incrementer function is called.
  
  NOTE:
  As an optimization, Swift may instead capture and store a copy of a value if
@@ -267,7 +267,7 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 let incrementByTen = makeIncrementer(forIncrement: 10)
 
 /*
- An incrementer function that adds '10' to its 'runningTotal' variable each 
+ An incrementer function that adds 10 to its runningTotal variable each 
  time it is called. Calling the function multiple times shows this behavior 
  in action.
  */
@@ -280,7 +280,7 @@ incrementByTen()
 
 /*
  If you create a second incrementer, it will have its own stored reference to a 
- new, separate 'runningTotal' variable.
+ new, separate runningTotal variable.
  */
 let incrementBySeven = makeIncrementer(forIncrement: 7)
 incrementBySeven()
@@ -288,8 +288,8 @@ incrementBySeven()
 
 /*
  Calling hte original incrementer (incrementByTen) agagin continues to 
- increment its own 'runningTotal' variable, and does not affect the variable
- captured by 'incrementBySeven'
+ increment its own runningTotal variable, and does not affect the variable
+ captured by incrementBySeven
  */
 incrementByTen()
 //  returns a value of 40
@@ -306,11 +306,11 @@ incrementByTen()
 
 //  MARK: Closures Are Reference Types
 /*
- In the example above, 'incrementBySeven' and 'incrementByTen' are constants,
+ In the example above, incrementBySeven and incrementByTen are constants,
  but the closure these constants refer to are still able to increment the
- 'runningTotal' variables that they have captures.
+ runningTotal variables that they have captures.
  This is because functions and closures are reference types.
- It is the choice of closure that 'incrementByTen' refers to that is constant,
+ It is the choice of closure that incrementByTen refers to that is constant,
  and not the contens of the closure itself. This also means that if you assign
  a closure to two different constants or variable, both of those constants or 
  variables will refer to the same closure
@@ -326,7 +326,7 @@ alsoIncrementByTen()
  A closure is said to escape a function when the closure is passed as an 
  argument to the function, but is called after the function returns.
  When you declare a function that takes a closure as one of its parameters, you
- can write '@escaping' before the parameter's type to indicate that the closure
+ can write @escaping before the parameter's type to indicate that the closure
  is allowed to escape.
  */
 var completionHandlers: [() -> Void] = []
@@ -334,15 +334,15 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping() -> Void) {
     completionHandlers.append(completionHandler)
 }
 /*
- If you didn't mark the parameter of this function with '@escaping', you would
+ If you didn't mark the parameter of this function with @escaping, you would
  get a compile-time error.
- Marking a closure with '@escaping' means you have to refer to 'self' 
+ Marking a closure with @escaping means you have to refer to self 
  explicitly within the closure.
  
- The closure passed to 'someFunctionWithEscapingClosure(_:)' is an escaping 
- closure, which means it need to refer to 'self' explicitly.
- In contrast, the closure passed to 'someFunctionWithNonescapingClosure(_:)' is
- a nonescaping closure, which means it can refer to 'self' implicitly.
+ The closure passed to someFunctionWithEscapingClosure(_:) is an escaping 
+ closure, which means it need to refer to self explicitly.
+ In contrast, the closure passed to someFunctionWithNonescapingClosure(_:) is
+ a nonescaping closure, which means it can refer to self implicitly.
  */
 func someFunctionWithNonescapingClosure(closure: () -> Void) {
     closure()
@@ -393,7 +393,7 @@ print(customersInLine.count)
 //  Prints "4"
 
 /*
- Even though the first element of the 'customersInLine' array is removed by the
+ Even though the first element of the customersInLine array is removed by the
  code inside the closure, the array element isn't removed until the closure is
  actually called.
  
@@ -408,11 +408,11 @@ serve(customer: { customersInLine.remove(at: 0) })
 //  Prints "Now serving Alex!"
 
 /*
- The 'serve(customer:)' function in the listing above takes an explicit closure
+ The serve(customer:) function in the listing above takes an explicit closure
  that returns a customer's name.
- The version of 'serve(customer:)' below performs the same operation but, 
+ The version of serve(customer:) below performs the same operation but, 
  instead of taking an explicit closure, it takes an autoclosure by marking its
- parameter's type with the '@autoclosure' attribute.
+ parameters type with the @autoclosure attribute.
  */
 //  customersInLIne is ["Ewa", "Barry", "Daniella"]
 func serve(customer customerProvider: @autoclosure () -> String) {
@@ -429,7 +429,7 @@ serve(customer: customersInLine.remove(at: 0))
 
 /*
  If you want an autoclosure that is allowed to escape, use both the
- '@autoclosure' and '@escaping' attributed.
+ @autoclosure and @escaping attributed.
  */
 //  customersInLIne is ["Barry", "Daniella"]
 var customerProviders: [() -> String] = []
@@ -450,10 +450,10 @@ for customerProvider in customerProviders {
 //  Prints "Now serving Daniella!"
 
 /*
- The 'collectCustomerProviders(_:)' function appends the closure to the
- 'customerProviders' array.
+ The collectCustomerProviders(_:) function appends the closure to the
+ customerProviders array.
  The array is declared outside the scope of the function, which means the 
  closures in the array can be executed after the function returns.
- As a result, the value of the 'customerProvider' argument must be allowed to
+ As a result, the value of the customerProvider argument must be allowed to
  escape the function's scope.
  */
