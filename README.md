@@ -77,8 +77,10 @@ Not just know the `Instance Methods`, we introduce `Type Methods` as well now.
 And also the experiment LevelTracker is great help for understood this chapter.
 
 ## Day14 May 25, 2017
-**`Subscripts`** is much similar usage both in Swift and Objc.    
+1. **`Subscripts`** is much similar usage both in Swift and Objc.    
 What makes difference is we can set multiple parameters as it is appropriate for our types.
+2. **`Inheritance`** in Swift is much similar to that in Objc.    
+And you can also add `final` prefix by methods, properties, or subscript's to prevent being modified.
 
 [Official]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift_Learning/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
