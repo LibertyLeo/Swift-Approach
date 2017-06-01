@@ -4,3 +4,7 @@ I recommend you to look through the comments in first part, or you can skip into
 the second part as well.  
 In this project, it introduces `Designated`、 `Convenience`、 `Failable` and `Required` initializers.   
 Each of them has its own function declared in detail in project.
+
+## Day1 Jun 1, 2017
+Use a simple Bank and Player example to explain the **`Deinitializations`**.  
+Remember deinitializer is only avaiable on class types.
