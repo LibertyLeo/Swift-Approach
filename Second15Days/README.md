@@ -13,6 +13,7 @@ To resolve `reference cycle` is also to break the strong link between each other
 Normally, you can use `weak` or `unowned` reference to resolve the cycle of property while use `capture list` to resolve cycle of closure.
 
 ## Day18 Jun 2, 2017
-**`Optional Chaining`** is a process for querying and calling properties, methos, and subscripts on
+1. **`Optional Chaining`** is a process for querying and calling properties, methos, and subscripts on
 an optional that might currently be nil.  
 It is a much graceful alternative to use optional chaining rather than forced unwrapping to handle optional type.
+2. Declare about **`Error Handling`** which is much resembling for that in other language, through using such as `try`, `do-catch` statements to handle errors.
