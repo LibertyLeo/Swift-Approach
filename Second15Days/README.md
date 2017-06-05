@@ -19,4 +19,5 @@ It is a much graceful alternative to use optional chaining rather than forced un
 2. Declare about **`Error Handling`** which is much resembling for that in other language, through using such as `try`, `do-catch` statements to handle errors.
 
 ## Day19 Jun 5, 2017
-Fulfill the rest of parts for **`Error Handling`**.
+1. Fulfill the rest of parts for **`Error Handling`**.
+2. Use **`Type Casting`** to check the type of an instance, or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy through `is` and `as` operators.
