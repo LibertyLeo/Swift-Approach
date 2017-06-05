@@ -21,3 +21,4 @@ It is a much graceful alternative to use optional chaining rather than forced un
 ## Day19 Jun 5, 2017
 1. Fulfill the rest of parts for **`Error Handling`**.
 2. Use **`Type Casting`** to check the type of an instance, or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy through `is` and `as` operators.
+3. **`Nested Types`** helps you more convenient to define utility classes and structures purely for use within the context of a more complex type rather than a separated and messed small pieces of classes.
