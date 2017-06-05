@@ -17,3 +17,6 @@ Normally, you can use `weak` or `unowned` reference to resolve the cycle of prop
 an optional that might currently be nil.  
 It is a much graceful alternative to use optional chaining rather than forced unwrapping to handle optional type.
 2. Declare about **`Error Handling`** which is much resembling for that in other language, through using such as `try`, `do-catch` statements to handle errors.
+
+## Day19 Jun 5, 2017
+Fulfill the rest of parts for **`Error Handling`**.
