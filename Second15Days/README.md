@@ -22,3 +22,7 @@ It is a much graceful alternative to use optional chaining rather than forced un
 1. Fulfill the rest of parts for **`Error Handling`**.
 2. Use **`Type Casting`** to check the type of an instance, or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy through `is` and `as` operators.
 3. **`Nested Types`** helps you more convenient to define utility classes and structures purely for use within the context of a more complex type rather than a separated and messed small pieces of classes.
+
+## Day20 Jun 7, 2017
+**`Extensions`** are similar to the categories in Objc, but without the name.  
+Extension in Swift can add computed instance properties and computed type properties, define instance methods and type methods, provide new initializers, define subscripts, define and use new nested types, mak an existing type confrom to a protocol.
