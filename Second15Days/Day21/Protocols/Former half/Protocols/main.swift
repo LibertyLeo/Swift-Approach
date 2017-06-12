@@ -322,9 +322,8 @@ class Dice {
 }
 
 /*
- “Here’s how the Dice class can be used to create a six-sided dice with a LinearCongruentialGenerator instance as its random number generator:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Here’s how the Dice class can be used to create a six-sided dice with a 
+ LinearCongruentialGenerator instance as its random number generator: 
  */
 var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
 for _ in 1...5 {
@@ -340,13 +339,16 @@ for _ in 1...5 {
 
 //  MARK: - Delegation
 /*
- “Delegation is a design pattern that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type. This design pattern is implemented by defining a protocol that encapsulates the delegated responsibilities, such that a conforming type (known as a delegate) is guaranteed to provide the functionality that has been delegated. Delegation can be used to respond to a particular action, or to retrieve data from an external source without needing to know the underlying type of that source.”
+ Delegation is a design pattern that enables a class or structure to hand off 
+ (or delegate) some of its responsibilities to an instance of another type. 
+ This design pattern is implemented by defining a protocol that encapsulates 
+ the delegated responsibilities, such that a conforming type (known as a 
+ delegate) is guaranteed to provide the functionality that has been delegated. 
+ Delegation can be used to respond to a particular action, or to retrieve data
+ from an external source without needing to know the underlying type of that
+ source.
 
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
- 
- “The example below defines two protocols for use with dice-based board games:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ The example below defines two protocols for use with dice-based board games:
  */
 protocol DiceGame {
     var dice: Dice { get }
@@ -360,12 +362,12 @@ protocol DiceGameDelegate {
 }
 
 /*
- “The DiceGame protocol is a protocol that can be adopted by any game that involves dice. The DiceGameDelegate protocol can be adopted by any type to track the progress of a DiceGame.”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
- Take a example of the Snakes and Ladders game, and make a version which is
- adapted to use a Dice instance for its dice-rolls; to adopt the DiceGame
- Protocol; and to notify a DiceGameDelegate about its progress:
+ The DiceGame protocol is a protocol that can be adopted by any game that 
+ involves dice. The DiceGameDelegate protocol can be adopted by any type to
+ track the progress of a DiceGame. Take a example of the Snakes and Ladders 
+ game, and make a version which is adapted to use a Dice instance for its 
+ dice-rolls; to adopt the DiceGame Protocol; and to notify a DiceGameDelegate
+ about its progress:
  */
 class SnakesAndLadders: DiceGame {
     let finalSquare = 25
@@ -400,9 +402,11 @@ class SnakesAndLadders: DiceGame {
 }
 
 /*
- “Because the delegate property is an optional DiceGameDelegate, the play() method uses optional chaining each time it calls a method on the delegate. If the delegate property is nil, these delegate calls fail gracefully and without error. If the delegate property is non-nil, the delegate methods are called, and are passed the SnakesAndLadders instance as a parameter.”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Because the delegate property is an optional DiceGameDelegate, the play()
+ method uses optional chaining each time it calls a method on the delegate. 
+ If the delegate property is nil, these delegate calls fail gracefully and 
+ without error. If the delegate property is non-nil, the delegate methods are 
+ called, and are passed the SnakesAndLadders instance as a parameter. 
  */
 
 /*
@@ -430,11 +434,13 @@ class DiceGameTracker: DiceGameDelegate {
 }
 
 /*
- “The gameDidStart(_:) method also accesses the dice property of the passed game parameter. Because game is known to conform to the DiceGame protocol, it is guaranteed to have a dice property, and so the gameDidStart(_:) method is able to access and print the dice’s sides property, regardless of what kind of game is being played.
+ The gameDidStart(_:) method also accesses the dice property of the passed game 
+ parameter. Because game is known to conform to the DiceGame protocol, it is 
+ guaranteed to have a dice property, and so the gameDidStart(_:) method is able
+ to access and print the dice’s sides property, regardless of what kind of game
+ is being played.
 
- Here’s how DiceGameTracker looks in action:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Here’s how DiceGameTracker looks in action: 
  */
 let tracker = DiceGameTracker()
 let game = SnakesAndLadders()
@@ -452,29 +458,27 @@ game.play()
 
 //  MARK: - Adding Protocol Conformance with an Extension
 /*
- “You can extend an existing type to adopt and conform to a new protocol, even if you do not have access to the source code for the existing type. Extensions can add new properties, methods, and subscripts to an existing type, and are therefore able to add any requirements that a protocol may demand”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
- 
+ You can extend an existing type to adopt and conform to a new protocol, even
+ if you do not have access to the source code for the existing type. Extensions 
+ can add new properties, methods, and subscripts to an existing type, and are 
+ therefore able to add any requirements that a protocol may demand
  NOTE:
- “Existing instances of a type automatically adopt and conform to a protocol when that conformance is added to the instance’s type in an extension.”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Existing instances of a type automatically adopt and conform to a protocol 
+ when that conformance is added to the instance’s type in an extension. 
  */
 
 /*
- “For example, this protocol, called TextRepresentable, can be implemented by any type that has a way to be represented as text. This might be a description of itself, or a text version of its current state:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ For example, this protocol, called TextRepresentable, can be implemented by
+ any type that has a way to be represented as text. This might be a description
+ of itself, or a text version of its current state: 
  */
 protocol TextRepresentable {
     var textualDescription: String { get }
 }
 
 /*
- “The Dice class from earlier can be extended to adopt and conform to TextRepresentable:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ The Dice class from earlier can be extended to adopt and conform to
+ TextRepresentable:
  */
 extension Dice: TextRepresentable {
     var textualDescription: String {
@@ -488,9 +492,8 @@ print(d12.textualDescription)
 // Prints "A 12-sided dice"
 
 /*
- “Similarly, the SnakesAndLadders game class can be extended to adopt and conform to the TextRepresentable protocol:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Similarly, the SnakesAndLadders game class can be extended to adopt and
+ conform to the TextRepresentable protocol:
  */
 extension SnakesAndLadders: TextRepresentable {
     var textualDescription: String {
@@ -504,9 +507,9 @@ print(game.textualDescription)
 
 //  MARK: Declaring Protocol Adoption with an Extension
 /*
- “If a type already conforms to all of the requirements of a protocol, but has not yet stated that it adopts that protocol, you can make it adopt the protocol with an empty extension:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks. 
+ If a type already conforms to all of the requirements of a protocol, but has
+ not yet stated that it adopts that protocol, you can make it adopt the protocol 
+ with an empty extension:
  */
 struct Hamster {
     var name: String
@@ -517,9 +520,8 @@ struct Hamster {
 extension Hamster: TextRepresentable {}
 
 /*
- “Instances of Hamster can now be used wherever TextRepresentable is the required type:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Instances of Hamster can now be used wherever TextRepresentable is the required
+ type:
  */
 let simonTheHamster = Hamster(name: "Simon")
 let somethingTextRepresentable: TextRepresentable = simonTheHamster
@@ -527,26 +529,24 @@ print(somethingTextRepresentable.textualDescription)
 // Prints "A hamster named Simon"
 
 /*
- “Types do not automatically adopt a protocol just by satisfying its requirements. They must always explicitly declare their adoption of the protocol.”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Types do not automatically adopt a protocol just by satisfying its 
+ requirements. They must always explicitly declare their adoption of the 
+ protocol.
  */
 
 
 
 //  MARK: Collections of Protocol Types
 /*
- “A protocol can be used as the type to be stored in a collection such as an array or a dictionary.”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
- This example creates an array of TextRepresentable things:
+ A protocol can be used as the type to be stored in a collection such as an
+ array or a dictionary. This example creates an array of TextRepresentable
+ things:
  */
 let things: [TextRepresentable] = [game, d12, simonTheHamster]
 
 /*
- “It is now possible to iterate over the items in the array, and print each item’s textual description:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ It is now possible to iterate over the items in the array, and print each 
+ item’s textual description:
  */
 for thing in things {
     print(thing.textualDescription)
@@ -556,18 +556,22 @@ for thing in things {
 // A hamster named Simon
 
 /*
- “Note that the thing constant is of type TextRepresentable. It is not of type Dice, or DiceGame, or Hamster, even if the actual instance behind the scenes is of one of those types. Nonetheless, because it is of type TextRepresentable, and anything that is TextRepresentable is known to have a textualDescription property, it is safe to access thing.textualDescription each time through the loop.”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ Note that the thing constant is of type TextRepresentable. It is not of type
+ Dice, or DiceGame, or Hamster, even if the actual instance behind the scenes 
+ is of one of those types. Nonetheless, because it is of type TextRepresentable,
+ and anything that is TextRepresentable is known to have a textualDescription 
+ property, it is safe to access thing.textualDescription each time through the 
+ loop.
  */
 
 
 
 //  MARK: Protocol Inheritance
 /*
- “A protocol can inherit one or more other protocols and can add further requirements on top of the requirements it inherits. The syntax for protocol inheritance is similar to the syntax for class inheritance, but with the option to list multiple inherited protocols, separated by commas:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ A protocol can inherit one or more other protocols and can add further 
+ requirements on top of the requirements it inherits. The syntax for protocol 
+ inheritance is similar to the syntax for class inheritance, but with the 
+ option to list multiple inherited protocols, separated by commas: 
  */
 protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
     // protocol definition goes here
@@ -582,11 +586,14 @@ protocol PrettyTextRepresentable: TextRepresentable {
 }
 
 /*
- “Anything that adopts PrettyTextRepresentable must satisfy all of the requirements enforced by TextRepresentable, plus the additional requirements enforced by PrettyTextRepresentable. In this example, PrettyTextRepresentable adds a single requirement to provide a gettable property called prettyTextualDescription that returns a String.
+ Anything that adopts PrettyTextRepresentable must satisfy all of the
+ requirements enforced by TextRepresentable, plus the additional requirements
+ enforced by PrettyTextRepresentable. In this example, PrettyTextRepresentable
+ adds a single requirement to provide a gettable property called 
+ prettyTextualDescription that returns a String.
 
- The SnakesAndLadders class can be extended to adopt and conform to PrettyTextRepresentable:”
-
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
+ The SnakesAndLadders class can be extended to adopt and conform to
+ PrettyTextRepresentable:
  */
 extension SnakesAndLadders: PrettyTextRepresentable {
     var prettyTextualDescription: String {
@@ -606,15 +613,20 @@ extension SnakesAndLadders: PrettyTextRepresentable {
 }
 
 /*
- “Anything that is PrettyTextRepresentable must also be TextRepresentable, and so the implementation of prettyTextualDescription starts by accessing the textualDescription property from the TextRepresentable protocol to begin an output string.”
+ Anything that is PrettyTextRepresentable must also be TextRepresentable, and 
+ so the implementation of prettyTextualDescription starts by accessing the 
+ textualDescription property from the TextRepresentable protocol to begin an
+ output string. It then iterates through the array of board squares, and 
+ appends a geometric shape to represent the contents of each square:
 
- 摘录来自: Apple Inc. “The Swift Programming Language (Swift 3.1)”。 iBooks.
- “It then iterates through the array of board squares, and appends a geometric shape to represent the contents of each square:
-
-    - If the square’s value is greater than 0, it is the base of a ladder, and is represented by ▲.
-    - If the square’s value is less than 0, it is the head of a snake, and is represented by ▼.
-    - Otherwise, the square’s value is 0, and it is a “free” square, represented by ○.
- The prettyTextualDescription property can now be used to print a pretty text description of any SnakesAndLadders instance:
+    - If the square’s value is greater than 0, it is the base of a ladder, and 
+ is represented by ▲.
+    - If the square’s value is less than 0, it is the head of a snake, and is
+ represented by ▼.
+    - Otherwise, the square’s value is 0, and it is a free” square, represented
+ by ○.
+ The prettyTextualDescription property can now be used to print a pretty text
+ description of any SnakesAndLadders instance:
 */
 print(game.prettyTextualDescription)
 // A game of Snakes and Ladders with 25 squares:
