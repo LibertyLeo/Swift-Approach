@@ -26,3 +26,8 @@ It is a much graceful alternative to use optional chaining rather than forced un
 ## Day20 Jun 7, 2017
 **`Extensions`** are similar to the categories in Objc, but without the name.  
 Extension in Swift can add computed instance properties and computed type properties, define instance methods and type methods, provide new initializers, define subscripts, define and use new nested types, mak an existing type confrom to a protocol.
+
+## Day21 Jun 12, 2017
+**`Protocols`** defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.  
+Though `protocol` do not actually implement any functionality themselves.  
+Nonetheless, any `protocol` you create will become a fully-fledged type for use in your code.
