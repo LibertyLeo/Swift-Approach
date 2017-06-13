@@ -32,5 +32,5 @@ Extension in Swift can add computed instance properties and computed type proper
 Though `protocol` do not actually implement any functionality themselves.  
 Nonetheless, any `protocol` you create will become a fully-fledged type for use in your code.
 
-## Day22 Jun 12, 2017
+## Day22 Jun 13, 2017
 Continue learns some **`Protocol`** standard, such as define some `constraints` to `protocol`, define `class-only` protocols, and also use `type casting` to check the protocol conformance and so on.
