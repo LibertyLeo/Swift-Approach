@@ -34,3 +34,7 @@ Nonetheless, any `protocol` you create will become a fully-fledged type for use 
 
 ## Day22 Jun 13, 2017
 Continue learns some **`Protocol`** standard, such as define some `constraints` to `protocol`, define `class-only` protocols, and also use `type casting` to check the protocol conformance and so on.
+
+## Day23 Jun 13, 2017
+The most powerful type **`Generic`** enables you to write flexible, reusable functions and types that can work with any type, subject to requirements that you define.  
+You can write code that avoids duplication and expresses its intent in a clear, abstracted manner.
