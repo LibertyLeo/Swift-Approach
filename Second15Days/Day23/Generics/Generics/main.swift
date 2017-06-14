@@ -246,3 +246,113 @@ let fromTheTop = stackOfStrings.pop()
  |__uno__| | |__uno__| | |__uno__| |
  ----------|-----------|-----------|
  */
+
+
+
+//  MARK: Extending a Generic Type
+/*
+ When you extend a generic type, you do not provide a type parameter list as 
+ part of the extension’s definition. Instead, the type parameter list from the
+ original type definition is available within the body of the extension, and 
+ the original type parameter names are used to refer to the type parameters 
+ from the original definition.
+ */
+extension Stack {
+    var topItem: Element? {
+        return items.isEmpty ? nil : items[items.count - 1]
+    }
+}
+
+/*
+ Note that this extension doesn’t define a type parameter list. Instead, the
+ Stack type’s existing type parameter name, Element, is used within the 
+ extension to indicate the optional type of the topItem computed property.
+ 
+ The topItem computed property can now be used with any Stack instance to
+ access and query its top item without removing it.
+ */
+if let topItem = stackOfStrings.topItem {
+    print("The top item on the stack is \(topItem).")
+}
+// Prints "The top item on the stack is tres."
+/*
+ Extensions of a generic type can also include requirements that instances of 
+ the extended type must satisfy in order to gain the new functionality.
+ */
+
+
+
+//  MARK: - Type Constraints
+/*
+ Type constraints specify that a type parameter must inherit from a specific
+ class, or conform to a particular protocol or protocol composition.
+
+ The requirement is enforced by a type constraint on the key type for 
+ Dictionary, which specifies that the key type must conform to the Hashable 
+ protocol, a special protocol defined in the Swift standard library. All of
+ Swift’s basic types (such as String, Int, Double, and Bool) are hashable by 
+ default.
+
+ You can define your own type constraints when creating custom generic types, 
+ and these constraints provide much of the power of generic programming. 
+ Abstract concepts like Hashable characterize types in terms of their
+ conceptual characteristics, rather than their concrete type.
+ */
+
+
+
+//  MARK: Type Constraint Syntax
+/*
+ You write type constraints by placing a single class or protocol constraint
+ after a type parameter’s name, separated by a colon, as part of the type 
+ parameter list.
+
+ The basic syntax for type constraints on a generic function is shown below 
+ (although the syntax is the same for generic types):
+ ///    func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
+ ///        // function body goes here
+ ///    }
+ */
+
+
+
+//  MARK: Type Constraints in Action
+/*
+ Here’s a nongeneric function called findIndex(ofString:in:), which is given
+ a String value to find and an array of String values within which to find it.
+ The findIndex(ofString:in:) function returns an optional Int value, which will
+ be the index of the first matching string in the array if it is found, or nil
+ if the string cannot be found:
+ */
+func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
+}
+
+/*
+ The findIndex(ofString:in:) function can be used to find a string value in 
+ an array of strings:
+ */
+let strings = ["cat", "dog", "llama", "parakeet", "terrapin"]
+if let foundIndex = findIndex(ofString: "llama", in: strings) {
+    print("The index of llama is \(foundIndex)")
+}
+// Prints "The index of llama is 2"
+
+/*
+ Note that the return type of this function is still Int?, because the function
+ returns an optional index number, not an optional value from the array.
+ Be warned, though—this function doesn’t compile, for reasons explained after the example:
+ */
+func findIndex<T>(of valueToFind: T, in array:[T]) -> Int? {
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
+}
