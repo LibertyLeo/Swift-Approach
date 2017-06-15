@@ -40,6 +40,8 @@ The most powerful type **`Generics`** enables you to write flexible, reusable fu
 You can write code that avoids duplication and expresses its intent in a clear, abstracted manner.
 
 ## Day24 Jun 15, 2017
-An associated type gives a placeholder name to a type that is used as part of the protocol.  
+1. An associated type gives a placeholder name to a type that is used as part of the protocol.  
 We adopt it to make more constraints for `Generics` extension.  
 A generic where clause enables us to require that an associated type must conform to a certain protocol, or that certain type parameters and associated types must be the same.
+2. Through **`Access Control`**, we can hide the implementation details of a specific piece of functionality.  
+By take good use of `access control`, we can easily control the self-zone.
