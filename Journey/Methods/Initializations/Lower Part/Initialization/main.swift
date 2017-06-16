@@ -8,7 +8,7 @@
 
 import Foundation
 
-//  MARK: - Class Inheritance and Initialization
+//  MARK: Class Inheritance and Initialization
 /*
  All of a class’s stored properties—including any properties the class inherits 
  from its superclass—must be assigned an initial value during initialization.
