@@ -45,3 +45,8 @@ We adopt it to make more constraints for `Generics` extension.
 A generic where clause enables us to require that an associated type must conform to a certain protocol, or that certain type parameters and associated types must be the same.
 2. Through **`Access Control`**, we can hide the implementation details of a specific piece of functionality.  
 By take good use of `access control`, we can easily control the self-zone.
+
+## Day25 Jun 16, 2017
+When using **`Advanced Operators`** in Swift, we should know the precedence and associativity.  
+We can easily use `bitwise operators`, `overflow operators` to the safety of our code.  
+And also use `operator methods`, even custom methods for making class or structure even convenient for some handler. 
