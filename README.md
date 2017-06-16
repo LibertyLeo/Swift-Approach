@@ -5,8 +5,7 @@ You may check it out during my commits, on take a look at my [records][Record].
 
 I must admit that the most of comments through each projects are provided by the Apple Inc., and with `(Exp)` signal marked are the official experiments by Apple as well.
 
-Also, I provide two version of Swift 3.0 book for reference.
-If you find it hard to read the [Official Version][Official], you can read the [Chinese Version][Chinese], but it take no responsible for any misleading on translation. :-)
+Also, I provide two version of Swift 3.0 book for reference. And the grammar in detail which is not contained in this repository, you can get it in the [Official Version][Official]. If you find it hard to read it, you can read the [Chinese Version][Chinese], but we take no responsible for any misleading on translation. :-)
 
 Finally, I reconstruct the whole repository based on my self understanding, you can take look as you like.
 
@@ -25,9 +24,9 @@ Finally, I reconstruct the whole repository based on my self understanding, you 
 	- [ClassesStructures](/Journey/Class_Struct_Enum/Class_and_Structure/Class_and_Structure/main.swift)
 	- [Enum](/Journey/Class_Struct_Enum/Enumeration/Enumeration/main.swift)
 - [Methods](/Journey/Methods)
-	- [Functions](/Journey/Methods/Function/Function/main.swift)
-    - [Methods](/Journey/Methods/Method/Method/main.swift)
-    - [Properties](/Journey/Methods/Property/Property/main.swift)
+	- [Function](/Journey/Methods/Function/Function/main.swift)
+    - [Method](/Journey/Methods/Method/Method/main.swift)
+    - [Property](/Journey/Methods/Property/Property/main.swift)
     - [Init](/Journey/Methods/Initializations)
     - [Deinit](/Journey/Methods/Deinitialization/Deinitialization/main.swift)
     - [Subscripts](/Journey/Methods/Subscripts/Subscripts/main.swift)
