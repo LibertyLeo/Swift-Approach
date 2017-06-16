@@ -7,7 +7,10 @@ But we take no responsibility of misunderstanding on the translation.:-)
 
 [First 15 days' learning][First] during May 8 to May 27.  
 With exactly total hours of 36.5.
+[Second 10 days' learning][Second] during May 31 to Jun 16.
+With exactly total hours of 16.7.
 
 [Official]:https://github.com/LibertyLeo/Swift-Approach/raw/master/Document/The%20Swift%20Programming%20Language%20(Swift%203.1).epub
 [Chinese]:https://github.com/LibertyLeo/Swift-Approach/raw/master/Document/The%20Swift%20Programming%20Language%20中文版3.0.epub
 [First]:/First15Days
+[Second]:/Second15Days
